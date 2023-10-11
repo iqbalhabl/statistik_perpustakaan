@@ -42,22 +42,22 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="/statistik_perpustakaan/index.html">
+                            <a class="nav-link" href="/statistik_perpustakaan/index.php">
                                 <h4>Home</h4>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/statistik_perpustakaan/input.html">
+                            <a class="nav-link active" aria-current="page" href="/statistik_perpustakaan/input.php">
                                 <h4>Input Data</h4>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/list">
+                            <a class="nav-link" href="/statistik_perpustakaan/list.php">
                                 <h4>List Data</h4>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/logout">
+                            <a class="nav-link" href="/statistik_perpustakaan/logout.php">
                                 <h4>Logout</h4>
                             </a>
                         </li>
