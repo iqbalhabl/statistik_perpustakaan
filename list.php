@@ -122,74 +122,97 @@ $selectedTableName = $tableNames[$selectedRuang];
                 <h1>Data Pengunjung</h1>
             </div>
 
-
+            <!-- checkbox start -->
             <div class="filter_data">
                 <form action="" method="post">
                     <label for="pilihRuang">Pilih ruang :</label>
-                    <select name="ruang" class="form-control">
-                        <option value="ruang1" <?php if ($selectedRuang === 'ruang1')
-                            echo 'selected'; ?>>Ruang Digital
-                        </option>
-                        <option value="ruang2" <?php if ($selectedRuang === 'ruang2')
-                            echo 'selected'; ?>>Ruang Langka
-                        </option>
-                        <option value="ruang3" <?php if ($selectedRuang === 'ruang3')
-                            echo 'selected'; ?>>Ruang Audio
-                            Visual
-                        </option>
-                        <option value="ruang4" <?php if ($selectedRuang === 'ruang4')
-                            echo 'selected'; ?>>Ruang Referensi
-                        </option>
-                        <option value="ruang5" <?php if ($selectedRuang === 'ruang5')
-                            echo 'selected'; ?>>Ruang Skripsi
-                            Budaya
-                        </option>
-                        <option value="ruang6" <?php if ($selectedRuang === 'ruang6')
-                            echo 'selected'; ?>>Ruang Koleksi
-                            Umum
-                        </option>
-                        <option value="ruang7" <?php if ($selectedRuang === 'ruang7')
-                            echo 'selected'; ?>>Ruang Braile
-                        </option>
-                        <option value="ruang8" <?php if ($selectedRuang === 'ruang8')
-                            echo 'selected'; ?>>Ruang Majalah
-                        </option>
-                        <option value="ruang9" <?php if ($selectedRuang === 'ruang9')
-                            echo 'selected'; ?>>Ruang Buku Anak
-                        </option>
-                        <option value="ruang10" <?php if ($selectedRuang === 'ruang10')
-                            echo 'selected'; ?>>Ruang Bermain
-                            Anak
-                        </option>
-                        <option value="ruang11" <?php if ($selectedRuang === 'ruang11')
-                            echo 'selected'; ?>>Ruang Musik
-                            Anak
-                        </option>
-                        <option value="ruang12" <?php if ($selectedRuang === 'ruang12')
-                            echo 'selected'; ?>>Ruang Mendongeng
-                        </option>
-                        <option value="ruang13" <?php if ($selectedRuang === 'ruang13')
-                            echo 'selected'; ?>>Ruang Bioskop
-                            6D
-                        </option>
-                        <option value="ruang14" <?php if ($selectedRuang === 'ruang14')
-                            echo 'selected'; ?>>Ruang Tandon
-                        </option>
-                        <option value="ruang15" <?php if ($selectedRuang === 'ruang15')
-                            echo 'selected'; ?>>JLC
-                        </option>
-                        <option value="ruang16" <?php if ($selectedRuang === 'ruang16')
-                            echo 'selected'; ?>>RBM
-                        </option>
-                    </select>
-
-                    <label for="tanggal">Pilih tanggal:</label>
-                    <input type="date" name="tgl_mulai">
-                    <label> - </label>
-                    <input type="date" name="tgl_akhir">
-                    <button type="submit" name="filter_tgl" class="btn btn-filter">Filter</button>
-                </form>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Ruang Digital
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Langka
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Audio Visual
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Referensi
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Skripsi Budaya
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Umum
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Braille
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Majalah
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Buku Anak
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Bermain
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Musik
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Mendongeng
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Bioskop
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Tandon
+                        </label>
+                    </div>
+                    <button class='btn btn-primary' onclick='#'>Tampilkan tabel</button>
             </div>
+            <!-- checkbox end -->
 
             <?php
             if (isset($_POST['filter_tgl'])) {
