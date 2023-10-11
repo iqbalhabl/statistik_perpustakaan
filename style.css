@@ -1,0 +1,84 @@
+.body {
+    background-color: #26425a;
+}
+
+
+.btn {
+    font-size: 19px;
+    font-family: 'Readex Pro', sans-serif;
+    padding: 10px 20px; /* Adjust padding for the desired width and height */
+    margin: 5px;
+    border: none;
+    outline: none;
+    color: #26425a;
+    background: #efeeee;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: white;
+    font-size: 20px;
+}
+
+/* Style for the flex container */
+.flex-container {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    border-radius: 20px; /* Apply border-radius to the container */
+    border: 1px solid #ccc; /* Add a border (optional) */
+    padding: 20px; /* Add padding to the container (adjust as needed) */
+    max-width: 600px; /* Set a maximum width for the container (adjust as needed) */
+    margin: 0 auto; /* Center the container horizontally (optional) */
+    background-color: red;
+}
+
+/* Style for individual sections within the container */
+.flex-container > div {
+    margin-bottom: 20px; /* Add margin between sections (adjust as needed) */
+}
+
+
+/* form page */
+
+.form {
+    max-width: 600px;
+    margin-left: 300px;
+    margin-top: 89px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-form {
+    padding: 10px 20px;
+    background-color: #212529;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
