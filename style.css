@@ -50,6 +50,10 @@
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.flex-container {
+    padding: 50px;
+}
+
 h1 {
     margin-top: 0;
 }
@@ -83,30 +87,17 @@ label {
     transition: background-color 0.3s;
 }
 
-.pill-container {
-    background-color: #3498db; /* Change this to your desired background color */
-    border-radius: 20px; /* Adjust the value to control the pill shape */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px; 
-    margin-top: 4px;
-}
-
-.pill-container label,
-.pill-container input,
-.pill-container button {
-    margin-right: 10px; /* Adjust spacing between elements */
-    color: white; /* Text color */
-    background-color: black;
-    font-size: 16px; /* Font size */
-}
-
-/* Style the button (adjust as needed) */
-.pill-container button {
-    background-color: #e74c3c; /* Change this to your desired button color */
-    padding: 5px 10px; /* Adjust button padding */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+select#statistikLD,
+select#statistikL1,
+select#statistikL2, 
+select#statistikJLC, 
+select#statistikRBM, 
+select#statistikPojokBaca, 
+select#statistikLayananKel,
+select#statistikLayananPaket,
+select#statistikDO
+ {
+    padding: 5px;
+    background-color: #fff;
+    color: #212529;
 }
