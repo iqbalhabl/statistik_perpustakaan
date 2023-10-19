@@ -2,7 +2,6 @@
     background-color: #26425a;
 }
 
-
 .btn {
     font-size: 19px;
     font-family: 'Readex Pro', sans-serif;
@@ -17,7 +16,7 @@
 
 .btn:hover {
     background: white;
-    font-size: 20px;
+    font-size: 19px;
 }
 
 /* Style for the flex container */
@@ -36,9 +35,6 @@
 .flex-container > div {
     margin-bottom: 20px; /* Add margin between sections (adjust as needed) */
 }
-
-
-/* form page */
 
 .form {
     max-width: 600px;
@@ -64,8 +60,6 @@ label {
     font-weight: bold;
 }
 
-
-
 .form-control {
     width: 100%;
     padding: 8px;
@@ -84,7 +78,7 @@ label {
 }
 
 .pill-container {
-    background-color: #3498db; /* Change this to your desired background color */
+    background-color: #EFAB8E; /* Change this to your desired background color */
     border-radius: 20px; /* Adjust the value to control the pill shape */
     display: flex;
     align-items: center;
