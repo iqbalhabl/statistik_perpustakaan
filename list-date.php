@@ -52,7 +52,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="/statistik_perpustakaan/list.php">
+                            <a class="nav-link active" href="/statistik_perpustakaan/list-date.php">
                                 <h4>List Data</h4>
                             </a>
                         </li>

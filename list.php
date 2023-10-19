@@ -116,6 +116,13 @@ $selectedTableName = $tableNames[$selectedRuang];
     </nav>
     <!-- nav section end -->
 
+    <?php
+        $rooms = $_POST["rooms"];
+        foreach ($rooms as $room) {
+            echo $room;
+        }
+    ?>
+
     <div class="list">
         <div class="data-pengunjung">
             <div>
@@ -127,90 +134,103 @@ $selectedTableName = $tableNames[$selectedRuang];
                 <form action="" method="post">
                     <label for="pilihRuang">Pilih ruang :</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Ruang Digital
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
+                            checked>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Langka
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
+                            checked>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Audio Visual
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
+                            checked>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Referensi
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
+                            checked>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Skripsi Budaya
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
+                            checked>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Umum
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
+                            checked>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Braille
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
+                            checked>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Majalah
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
+                            checked>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Buku Anak
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
+                            checked>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Bermain
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
+                            checked>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Musik
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
+                            checked>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Mendongeng
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
+                            checked>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Bioskop
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
+                            checked>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Tandon
                         </label>
                     </div>
-                    <button class='btn btn-primary' onclick='#'>Tampilkan tabel</button>
+                    <button class='btn btn-primary' type="submit" name="show" onclick=''>Tampilkan tabel</button>
             </div>
             <!-- checkbox end -->
 
