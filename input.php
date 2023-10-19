@@ -52,15 +52,13 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/statistik_perpustakaan/list.php">
+                            <a class="nav-link" href="/statistik_perpustakaan/list-date.php">
                                 <h4>List Data</h4>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/statistik_perpustakaan/logout.php">
-                                <h4>Logout</h4>
-                            </a>
-                        </li>
+                        <a class="nav-link" href="/statistik_perpustakaan/logout.php">
+                            <h4>Logout</h4>
+                        </a>
                     </ul>
                     <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -75,7 +73,7 @@
     <div class="mt-4 flex-container container-fluid bg-dark text-light" class="dropdownAllruangan">
         <div class="ruangan">
             <div>
-                <h2>Ruangan Perpustakaan</h2>
+                <h2>Grhatama Pustaka</h2>
             </div>
             <h4>Lantai Dasar</h4>
             <div class="mr-4">
