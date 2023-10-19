@@ -72,43 +72,51 @@
     </nav>
     <!-- nav section end -->
 
-    <div class="mt-4 flex-container container-fluid bg-dark text-light">
+    <div class="mt-4 flex-container container-fluid bg-dark text-light" class="dropdownAllruangan">
         <div class="ruangan">
             <div>
                 <h2>Ruangan Perpustakaan</h2>
             </div>
             <h4>Lantai Dasar</h4>
             <div class="mr-4">
-                <a href="../statistik_perpustakaan/LD/formBukuAnak.php" class="btn btn-bukuanak">Buku Anak</a>
-                <a href="../statistik_perpustakaan/LD/formBermain.php" class="btn btn-bermain">Bermain Anak</a>
-                <a href="../statistik_perpustakaan/LD/formMusik.php" class="btn btn-musik">Musik Anak</a>
-            </div>
-
-            <div class="gab-btn">
-                <a href="../statistik_perpustakaan/LD/formMendongeng.php" class="btn btn-mendongeng">Mendongeng</a>
-                <a href="../statistik_perpustakaan/LD/formBioskop.php" class="btn btn-bioskop">Bioskop 6D</a>
-                <a href="../statistik_perpustakaan/LD/formTandon.php" class="btn btn-tandon">Tandon</a>
+                <form name="webpage">
+                    <select name="statistikLD" id="statistikLD">
+                        <option value="#" disabled selected>Pilihan Lantai Dasar</option>
+                        <option value="../statistik_perpustakaan/LD/formBukuAnak.php">Buku Anak</option>
+                        <option value="../statistik_perpustakaan/LD/formBermain.php">Bermain Anak</option>
+                        <option value="../statistik_perpustakaan/LD/formMusik.php">Musik Anak</option>
+                        <option value="../statistik_perpustakaan/LD/formMendongeng.php">Mendongeng</option>
+                        <option value="../statistik_perpustakaan/LD/formBioskop.php">Bioskop 6D</option>
+                        <option value="../statistik_perpustakaan/LD/formTandon.php">Tandon</option>
+                    </select>
+                </form>
             </div>
 
             <h4>Lantai 1</h4>
             <div class="gab-btn">
-                <a href="../statistik_perpustakaan/L1/formKoleksiUmum.php" class="btn btn-umum">Koleksi Umum</a>
-                <a href="../statistik_perpustakaan/L1/formBraile.php" class="btn btn-braile">Braille</a>
-                <a href="../statistik_perpustakaan/L1/formMajalah.php" class="btn btn-Majalah">Majalah</a>
+                <form name="webpage">
+                    <select name="statistikL1" id="statistikL1">
+                        <option value="#" disabled selected>Pilihan Lantai 1</option>
+                        <option value="../statistik_perpustakaan/L1/formKoleksiUmum.php">Koleksi Umum</option>
+                        <option value="../statistik_perpustakaan/L1/formBraile.php">Braille</option>
+                        <option value="../statistik_perpustakaan/L1/formMajalah.php">Majalah</option>
+                    </select>
+                </form>
             </div>
 
             <h4>Lantai 2</h4>
             <div class="gab-btn">
-                <a href="../statistik_perpustakaan/L2/formDigital.php" class="btn btn-digital">Digital</a>
-                <a href="../statistik_perpustakaan/L2/formLangka.php" class="btn btn-langka">Langka</a>
-                <a href="../statistik_perpustakaan/L2/formReferensi.php" class="btn btn-referensi">Referensi</a>
+                <form name="webpage">
+                    <select name="statistikL2" id="statistikL2">
+                        <option value="#" disabled selected>Pilihan Lantai 2</option>
+                        <option value="../statistik_perpustakaan/L2/formDigital.php">Digital</option>
+                        <option value="../statistik_perpustakaan/L2/formLangka.php">Langka</option>
+                        <option value="../statistik_perpustakaan/L2/formReferensi.php">Referensi</option>
+                        <option value="../statistik_perpustakaan/L2/formSkripsiBudaya.php">Skripsi & Budaya</option>
+                        <option value="../statistik_perpustakaan/L2/formAudioVisual.php">Audio Visual</option>
+                    </select>
+                </form>
             </div>
-
-            <div class="gab-btn">
-                <a href="../statistik_perpustakaan/L2/formSkripsiBudaya.php" class="btn btn-skripsi">Skripsi & Budaya</a>
-                <a href="../statistik_perpustakaan/L2/formAudioVisual.php" class="btn btn-audiovisual">Audio Visual</a>
-            </div>
-
         </div>
 
         <div class="btn-ruang">
@@ -116,7 +124,12 @@
                 <h2>Jogja Library Center</h2>
             </div>
             <div class="gab-btn">
-                <a href="../statistik_perpustakaan/JLC/formJLC.php" class="btn btn-musik">JLC</a>
+                <form name="webpage">
+                    <select name="statistikJLC" id="statistikJLC">
+                        <option value="#" disabled selected>Pilihan JLC</option>
+                        <option value="../statistik_perpustakaan/JLC/formJLC.php">JLC</option>
+                    </select>
+                </form>
             </div>
         </div>
 
@@ -125,7 +138,119 @@
                 <h2>Rumah Belajar Modern</h2>
             </div>
             <div class="gab-btn">
-                <a href="../statistik_perpustakaan/RBM/formRBM.php" class="btn btn-musik">RBM</a>
+                <form name="webpage">
+                    <select name="statistikRBM" id="statistikRBM">
+                        <option value="#" disabled selected>Pilihan Rumah Belajar Modern</option>
+                        <option value="../statistik_perpustakaan/RBM/formRBM.php">RBM</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+
+        <div class="btn-ruang">
+            <div>
+                <h2>Pojok Baca</h2>
+            </div>
+            <div class="gab-btn">
+                <form name="webpage">
+                    <select name="statistikPojokBaca" id="statistikPojokBaca">
+                        <option value="#" disabled selected>Pilihan Lokasi Pojok Baca</option>
+                        <option value="#">BPRSR</option>
+                        <option value="#">BPRSW</option>
+                        <option value="#">Samsat Bantul</option>
+                        <option value="#">Samsat KP</option>
+                        <option value="#">KPP sleman</option>
+                        <option value="#">PN Yogya</option>
+                        <option value="#">DP3AP2</option>
+                        <option value="#">DPMPTSP</option>
+                        <option value="#">POLAIRUD</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+
+        <div class="btn-ruang">
+            <div>
+                <h2>Layanan Keliling</h2>
+            </div>
+            <div class="gab-btn">
+                <form name="webpage">
+                    <select name="statistikLayananKel" id="statistikLayananKel">
+                        <option value="#" disabled selected>Pilihan Lokasi Layanan Keliling</option>
+                        <option value="#">TK PKK Widodomartani</option>
+                        <option value="#">SD Jali Prambanan</option>
+                        <option value="#">SD Sinar Melati</option>
+                        <option value="#">SD Pendowoharjo</option>
+                        <option value="#">SD Rejodani</option>
+                        <option value="#">SD Tamanan 3 Kalasan</option>
+                        <option value="#">SD Berbah</option>
+                        <option value="#">SD Murten</option>
+                        <option value="#">SD Muh.Condong catur</option>
+                        <option value="#">TK Kalibulus</option>
+                        <option value="#">TK PKK Pajimatan</option>
+                        <option value="#">SD Muhammadiyah Babakan</option>
+                        <option value="#">TK ABA Sutopadan</option>
+                        <option value="#">SLB 1 Bantul</option>
+                        <option value="#">MA Mafasa</option>
+                        <option value="#">SD Ngentak Banguntapan</option>
+                        <option value="#">SD Jurugentong</option>
+                        <option value="#">SD Bunder</option>
+                        <option value="#">TK ABA Plembutan Asri</option>
+                        <option value="#">TK ABA Karangmojo I</option>
+                        <option value="#">SD Gedang Klutuk</option>
+                        <option value="#">SD Plembutan Asri</option>
+                        <option value="#">SLB I Yogyakarta</option>
+                        <option value="#">SMK Koperasi</option>
+                        <option value="#">SD Negeri Sidakan</option>
+                        <option value="#">SD Sorogenen 2 Kalasan</option>
+                        <option value="#">KB Kasih Ibu</option>
+                        <option value="#">MA Bin Baz</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+
+        <div class="btn-ruang">
+            <div>
+                <h2>Layanan Paket Buku</h2>
+            </div>
+            <div class="gab-btn">
+                <form name="webpage">
+                    <select name="statistikLayananPaket" id="statistikLayananPaket">
+                        <option value="#" disabled selected>Pilihan Lokasi Layanan Paket Buku</option>
+                        <option value="#">BRSBKL</option>
+                        <option value="#">Rutan Wates</option>
+                        <option value="#">Rutan Bantul</option>
+                        <option value="#">Rutan kota</option>
+                        <option value="#">Lapas Wirogunan</option>
+                        <option value="#">Lapas Cebongan</option>
+                        <option value="#">Lapas Wonosari</option>
+                        <option value="#">Lapas Narkotika</option>
+                        <option value="#">PONPES Pesawat</option>
+                        <option value="#">PA Nurul Haq</option>
+                        <option value="#">SPS Manggis</option>
+                        <option value="#">BPRSW Godean</option>
+                        <option value="#">Huntap Karang Kendal</option>
+                        <option value="#">BRSPA Bimomartani</option>
+                        <option value="#">BRSPA Budhi Bakti</option>
+                        <option value="#">PONPES Ibnul Qoyyim</option>
+                        <option value="#">BRTPD Pundong Bantul</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+
+        <div class="btn-ruang">
+            <div>
+                <h2>Delivery Order</h2>
+            </div>
+            <div class="gab-btn">
+                <form name="webpage">
+                    <select name="statistikDO" id="statistikDO">
+                        <option value="#" disabled selected>Pilihan Delivery Order</option>
+                        <option value=#">DO</option>
+                    </select>
+                </form>
             </div>
         </div>
     </div>
@@ -136,6 +261,105 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    <script type ="text/javascript">
+        var urlMenu = document.getElementById('statistikLD');
+        urlMenu.onchange = function()
+        {
+            var userOption = this.options[this.selectedIndex];
+            if (userOption.value != "nothing")
+                {
+                window.open(userOption.value, "HTML CSS javascript PHP", "");
+                }
+        }
+    </script>
+    <script type ="text/javascript">
+        var urlMenu = document.getElementById('statistikL1');
+        urlMenu.onchange = function()
+        {
+            var userOption = this.options[this.selectedIndex];
+            if (userOption.value != "nothing")
+                {
+                window.open(userOption.value, "HTML CSS javascript PHP", "");
+                }
+        }
+    </script>
+    <script type ="text/javascript">
+        var urlMenu = document.getElementById('statistikL2');
+        urlMenu.onchange = function()
+        {
+            var userOption = this.options[this.selectedIndex];
+            if (userOption.value != "nothing")
+                {
+                window.open(userOption.value, "HTML CSS javascript PHP", "");
+                }
+        }
+    </script>
+    <script type ="text/javascript">
+        var urlMenu = document.getElementById('statistikJLC');
+        urlMenu.onchange = function()
+        {
+            var userOption = this.options[this.selectedIndex];
+            if (userOption.value != "nothing")
+                {
+                window.open(userOption.value, "HTML CSS javascript PHP", "");
+                }
+        }
+    </script>
+    <script type ="text/javascript">
+        var urlMenu = document.getElementById('statistikRBM');
+        urlMenu.onchange = function()
+        {
+            var userOption = this.options[this.selectedIndex];
+            if (userOption.value != "nothing")
+                {
+                window.open(userOption.value, "HTML CSS javascript PHP", "");
+                }
+        }
+    </script>
+    <script type ="text/javascript">
+        var urlMenu = document.getElementById('statistikPojokBaca');
+        urlMenu.onchange = function()
+        {
+            var userOption = this.options[this.selectedIndex];
+            if (userOption.value != "nothing")
+                {
+                window.open(userOption.value, "HTML CSS javascript PHP", "");
+                }
+        }
+    </script>
+    <script type ="text/javascript">
+        var urlMenu = document.getElementById('statistikLayananKel');
+        urlMenu.onchange = function()
+        {
+            var userOption = this.options[this.selectedIndex];
+            if (userOption.value != "nothing")
+                {
+                window.open(userOption.value, "HTML CSS javascript PHP", "");
+                }
+        }
+    </script>
+    <script type ="text/javascript">
+        var urlMenu = document.getElementById('statistikLayananPaket');
+        urlMenu.onchange = function()
+        {
+            var userOption = this.options[this.selectedIndex];
+            if (userOption.value != "nothing")
+                {
+                window.open(userOption.value, "HTML CSS javascript PHP", "");
+                }
+        }
+    </script>
+    <script type ="text/javascript">
+        var urlMenu = document.getElementById('statistikDO');
+        urlMenu.onchange = function()
+        {
+            var userOption = this.options[this.selectedIndex];
+            if (userOption.value != "nothing")
+                {
+                window.open(userOption.value, "HTML CSS javascript PHP", "");
+                }
+        }
+    </script>
 </body>
 
 </html>
