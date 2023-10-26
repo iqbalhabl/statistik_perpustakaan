@@ -14,10 +14,7 @@
     cursor: pointer;
 }
 
-.btn:hover {
-    background: white;
-    font-size: 19px;
-}
+
 
 /* Style for the flex container */
 .flex-container {
@@ -33,7 +30,7 @@
 
 /* Style for individual sections within the container */
 .flex-container > div {
-    margin-bottom: 20px; /* Add margin between sections (adjust as needed) */
+    margin: 10px 0px 10px 35px; /* Add margin between sections (adjust as needed) */
 }
 
 .form {
@@ -71,11 +68,12 @@ label {
     padding: 10px 20px;
     background-color: #212529;
     border: none;
-    color: #fff;
+    color:#fff;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
 
 select#statistikLD,
 select#statistikL1,
@@ -93,29 +91,42 @@ select#statistikDO
 }
 
 .pill-container {
-    background-color: white; /* Change this to your desired background color */
+    background-color: #EFAB8E; /* Change this to your desired background color */
     border-radius: 20px; /* Adjust the value to control the pill shape */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px; 
-    margin-top: 4px;
+    padding: 10px; 
+    margin: 10vh 30vh 20vh 30vh;
+
 }
 
-.pill-container label,
+.pill-container label {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+
 .pill-container input,
 .pill-container button {
     margin-right: 10px; /* Adjust spacing between elements */
-    color: white; /* Text color */
-    background-color: black;
+    color: black; /* Text color */
     font-size: 16px; /* Font size */
 }
 
 /* Style the button (adjust as needed) */
 .pill-container button {
-    background-color: #e74c3c; /* Change this to your desired button color */
+    font-size: 15px;
+    margin : 0px 0px 0px 20px;
+    background-color: #ebd835; /* Change this to your desired button color */
     padding: 5px 10px; /* Adjust button padding */
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.pill-container button:hover {
+    background: #cfaf1e;
+    font-size: 15px;
 }
