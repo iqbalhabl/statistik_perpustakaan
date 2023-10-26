@@ -3,41 +3,11 @@ session_start(); // Start session
 
 require 'koneksi.php';
 
-// Handle the case where the form is submitted
-if (isset($_POST['filter_tgl'])) {
-    $_SESSION['selectedRuang'] = $_POST['ruang'];
-}
-
 // Check if user is logged in
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     header("Location: index.php");
     exit;
 }
-
-// Get the selected ruang from the session variable
-$selectedRuang = isset($_SESSION['selectedRuang']) ? $_SESSION['selectedRuang'] : 'ruang1';
-
-// Map the selected ruang to the corresponding table name
-$tableNames = [
-    'ruang1' => 'ruang_digital',
-    'ruang2' => 'ruang_langka',
-    'ruang3' => 'ruang_audiovisual',
-    'ruang4' => 'ruang_referensi',
-    'ruang5' => 'ruang_skripsibudaya',
-    'ruang6' => 'ruang_umum',
-    'ruang7' => 'ruang_braile',
-    'ruang8' => 'ruang_majalah',
-    'ruang9' => 'ruang_bukuanak',
-    'ruang10' => 'ruang_bermain',
-    'ruang11' => 'ruang_musik',
-    'ruang12' => 'ruang_mendongeng',
-    'ruang13' => 'ruang_bioskop',
-    'ruang14' => 'ruang_tandon',
-    'ruang15' => 'jlc',
-    'ruang16' => 'rbm'
-];
-$selectedTableName = $tableNames[$selectedRuang];
-
 ?>
 
 
@@ -116,17 +86,45 @@ $selectedTableName = $tableNames[$selectedRuang];
     </nav>
     <!-- nav section end -->
 
-    <?php
-        $rooms = $_POST["rooms"];
-        foreach ($rooms as $room) {
-            echo $room;
-        }
-    ?>
-
     <div class="list">
         <div class="data-pengunjung">
             <div>
-                <h1>Data Pengunjung</h1>
+                <h1>Data Pengunjung
+                    <?php if (isset($_POST['show']) || isset($_POST["rooms"])) {
+                        $rooms = $_POST["rooms"];
+                        $lastRoom = end($rooms);
+
+                        $newTables = [
+                            'ruang_digital' => 'Ruang Digital',
+                            'ruang_langka' => 'Ruang Langka',
+                            'ruang_audiovisual' => 'Ruang Audio Visual',
+                            'ruang_referensi' => 'Ruang Referensi',
+                            'ruang_skripsibudaya' => 'Ruang Skripsibudaya',
+                            'ruang_umum' => 'Ruang Umum',
+                            'ruang_braile' => 'Ruang Braile',
+                            'ruang_majalah' => 'Ruang Majalah',
+                            'ruang_bukuanak' => 'Ruang Bukuanak',
+                            'ruang_bermain' => 'Ruang Bermain',
+                            'ruang_musik' => 'Ruang Musik',
+                            'ruang_mendongeng' => 'Ruang Mendongeng',
+                            'ruang_bioskop' => 'Ruang Bioskop',
+                            'ruang_tandon' => 'Ruang Tandon',
+                            'jlc' => 'JLC',
+                            'rbm' => 'RBM'
+                        ];
+
+
+                        foreach ($rooms as $room) {
+                            if ($room === $lastRoom) {
+                                $selectedNewTables = $newTables[$room];
+                                echo $selectedNewTables;
+                            } else {
+                                $selectedNewTables = $newTables[$room];
+                                echo "$selectedNewTables, ";
+                            }
+                        }
+                    } ?>
+                </h1>
             </div>
 
             <!-- checkbox start -->
@@ -134,98 +132,89 @@ $selectedTableName = $tableNames[$selectedRuang];
                 <form action="" method="post">
                     <label for="pilihRuang">Pilih ruang :</label>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckDefault">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_digital"
+                            id="flexCheckDefault">
                         <label class="form-check-label" for="flexCheckDefault">
                             Ruang Digital
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
-                            checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_langka"
+                            id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Langka
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
-                            checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_audiovisual"
+                            id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Audio Visual
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
-                            checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_referensi"
+                            id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Referensi
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
-                            checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="runag_skripsibudaya" id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Skripsi Budaya
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
-                            checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_umum" id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Umum
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
-                            checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_braille" id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Braille
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
-                            checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_majalah" id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Majalah
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
-                            checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bukuanak" id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Buku Anak
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
-                            checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bermain" id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Bermain
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
-                            checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_musik" id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Musik
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
-                            checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_mendongeng" id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Mendongeng
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
-                            checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bioskop" id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Bioskop
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="a" id="flexCheckChecked"
-                            checked>
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_tandon" id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Tandon
                         </label>
@@ -235,56 +224,21 @@ $selectedTableName = $tableNames[$selectedRuang];
             <!-- checkbox end -->
 
             <?php
-            if (isset($_POST['filter_tgl'])) {
-                $ruang = $_POST['ruang'];
-                $tgl_mulai = $_POST['tgl_mulai'];
-                $tgl_akhir = $_POST['tgl_akhir'];
+            // $tgl_mulai = $_POST['tgl_mulai'];
+            // $tgl_akhir = $_POST['tgl_akhir'];
+            // echo $tgl_mulai;
+            // echo ", $tgl_akhir";
 
-                if ($ruang === 'ruang1') {
-                    $query = "SELECT * FROM ruang_digital WHERE tanggal BETWEEN '$tgl_mulai' AND '$tgl_akhir'";
-                } elseif ($ruang === 'ruang2') {
-                    $query = "SELECT * FROM ruang_langka WHERE tanggal BETWEEN '$tgl_mulai' AND '$tgl_akhir'";
-                } elseif ($ruang === 'ruang3') {
-                    $query = "SELECT * FROM ruang_audiovisual WHERE tanggal BETWEEN '$tgl_mulai' AND '$tgl_akhir'";
-                } elseif ($ruang === 'ruang4') {
-                    $query = "SELECT * FROM ruang_referensi WHERE tanggal BETWEEN '$tgl_mulai' AND '$tgl_akhir'";
-                } elseif ($ruang === 'ruang5') {
-                    $query = "SELECT * FROM ruang_skripsibudaya WHERE tanggal BETWEEN '$tgl_mulai' AND '$tgl_akhir'";
-                } elseif ($ruang === 'ruang6') {
-                    $query = "SELECT * FROM ruang_umum WHERE tanggal BETWEEN '$tgl_mulai' AND '$tgl_akhir'";
-                } elseif ($ruang === 'ruang7') {
-                    $query = "SELECT * FROM ruang_braile WHERE tanggal BETWEEN '$tgl_mulai' AND '$tgl_akhir'";
-                } elseif ($ruang === 'ruang8') {
-                    $query = "SELECT * FROM ruang_majalah WHERE tanggal BETWEEN '$tgl_mulai' AND '$tgl_akhir'";
-                } elseif ($ruang === 'ruang9') {
-                    $query = "SELECT * FROM ruang_bukuanak WHERE tanggal BETWEEN '$tgl_mulai' AND '$tgl_akhir'";
-                } elseif ($ruang === 'ruang10') {
-                    $query = "SELECT * FROM ruang_bermain WHERE tanggal BETWEEN '$tgl_mulai' AND '$tgl_akhir'";
-                } elseif ($ruang === 'ruang11') {
-                    $query = "SELECT * FROM ruang_musik WHERE tanggal BETWEEN '$tgl_mulai' AND '$tgl_akhir'";
-                } elseif ($ruang === 'ruang12') {
-                    $query = "SELECT * FROM ruang_mendongeng WHERE tanggal BETWEEN '$tgl_mulai' AND '$tgl_akhir'";
-                } elseif ($ruang === 'ruang13') {
-                    $query = "SELECT * FROM ruang_bioskop WHERE tanggal BETWEEN '$tgl_mulai' AND '$tgl_akhir'";
-                } elseif ($ruang === 'ruang14') {
-                    $query = "SELECT * FROM ruang_tandon WHERE tanggal BETWEEN '$tgl_mulai' AND '$tgl_akhir'";
-                } elseif ($ruang === 'ruang15') {
-                    $query = "SELECT * FROM jlc WHERE tanggal BETWEEN '$tgl_mulai' AND '$tgl_akhir'";
-                } elseif ($ruang === 'ruang16') {
-                    $query = "SELECT * FROM rbm WHERE tanggal BETWEEN '$tgl_mulai' AND '$tgl_akhir'";
-                }
-
-            } else {
-                $query = "SELECT * FROM $selectedTableName";
-            }
-
+            $query = "SELECT * FROM ruang_digital INNER JOIN ruang_audiovisual ON ruang_digital.id_digital = ruang_audiovisual.id_audiovisual";
+            // $qry = "SELECT * FROM ruang_audiovisual";
+            echo "query : $query";
+            // echo ", qry : $qry";
             $result = mysqli_query($conn, $query);
+            // $rslt = mysqli_query($conn, $qry);
             ?>
 
             <div class="list-table">
-
                 <table id="tblToExcl">
-
                     <thead class="table-dark">
                         <tr>
                             <th scope="col" rowspan="2">#</th>
@@ -294,7 +248,7 @@ $selectedTableName = $tableNames[$selectedRuang];
                             <th scope="col" colspan="2">Umum</th>
                             <th scope="col" rowspan="2">Jumlah</th>
                             <th scope="col" rowspan="2">Keterangan</th>
-                            <th scope="col" rowspan="2">Actions</th> <!-- Add a new column for actions -->
+                            <th scope="col" rowspan="2">Actions</th> 
                         </tr>
                         <tr>
                             <th>L</th>
@@ -307,106 +261,227 @@ $selectedTableName = $tableNames[$selectedRuang];
                     </thead>
                     <tbody>
                         <?php
-                        $count = 1;
-                        $totalPelajarL = 0;
-                        $totalPelajarP = 0;
-                        $totalMhsL = 0;
-                        $totalMhsP = 0;
-                        $totalUmumL = 0;
-                        $totalUmumP = 0;
+                            $count = 1;
+                            $totalPelajarL = 0;
+                            $totalPelajarP = 0;
+                            $totalMhsL = 0;
+                            $totalMhsP = 0;
+                            $totalUmumL = 0;
+                            $totalUmumP = 0;
 
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            echo "<tr>";
-                            echo "<td>" . $count . "</td>"; // Menampilkan angka urutan
-                            echo "<td>" . $row['tanggal'] . "</td>";
-                            echo "<td>" . $row['pelajarL'] . "</td>";
-                            echo "<td>" . $row['pelajarP'] . "</td>";
-                            echo "<td>" . $row['mhsL'] . "</td>";
-                            echo "<td>" . $row['mhsP'] . "</td>";
-                            echo "<td>" . $row['umumL'] . "</td>";
-                            echo "<td>" . $row['umumP'] . "</td>";
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                echo "<tr>";
+                                echo "<td>" . $count . "</td>"; // Menampilkan angka urutan
+                                echo "<td>" . $row['tanggal'] . "</td>";
+                                echo "<td>" . $row['pelajarL'] . "</td>";
+                                echo "<td>" . $row['pelajarP'] . "</td>";
+                                echo "<td>" . $row['mhsL'] . "</td>";
+                                echo "<td>" . $row['mhsP'] . "</td>";
+                                echo "<td>" . $row['umumL'] . "</td>";
+                                echo "<td>" . $row['umumP'] . "</td>";
 
-                            $throw = $row['tanggal'];
-                            $throwPP = $row['pelajarP'];
-                            $throwPL = $row['pelajarL'];
-                            $throwML = $row['mhsL'];
-                            $throwMP = $row['mhsP'];
-                            $throwUP = $row['umumP'];
-                            $throwUL = $row['umumL'];
+                                $throw = $row['tanggal'];
+                                $throwPP = $row['pelajarP'];
+                                $throwPL = $row['pelajarL'];
+                                $throwML = $row['mhsL'];
+                                $throwMP = $row['mhsP'];
+                                $throwUP = $row['umumP'];
+                                $throwUL = $row['umumL'];
 
-                            $totalPelajarL += $row['pelajarL'];
-                            $totalPelajarP += $row['pelajarP'];
-                            $totalMhsL += $row['mhsL'];
-                            $totalMhsP += $row['mhsP'];
-                            $totalUmumL += $row['umumL'];
-                            $totalUmumP += $row['umumP'];
+                                $totalPelajarL += $row['pelajarL'];
+                                $totalPelajarP += $row['pelajarP'];
+                                $totalMhsL += $row['mhsL'];
+                                $totalMhsP += $row['mhsP'];
+                                $totalUmumL += $row['umumL'];
+                                $totalUmumP += $row['umumP'];
 
-                            $total = $row['umumP'] + $row['umumL'] + $row['mhsP'] + $row['mhsL'] + $row['pelajarP'] + $row['pelajarL'];
-                            echo "<td>" . $total . "</td>";
-                            echo "<td>";
-                            switch ($selectedRuang) {
-                                case "ruang1":
-                                    echo "<form method='post' action='../statistikbalai/L2/formUpDigital.php'>";
-                                case "ruang2":
-                                    echo "<form method='post' action='../statistikbalai/L2/formUpLangka.php'>";
-                                case "ruang3":
-                                    echo "<form method='post' action='../statistikbalai/L2/formUpAV.php'>";
-                                case "ruang4":
-                                    echo "<form method='post' action='../statistikbalai/L2/formUpReferensi.php'>";
-                                case "ruang5":
-                                    echo "<form method='post' action='../statistikbalai/L2/formUpSkripsiBudaya.php'>";
-                                case "ruang6":
-                                    echo "<form method='post' action='../statistikbalai/L1/formUpUmum.php'>";
-                                case "ruang7":
-                                    echo "<form method='post' action='../statistikbalai/L1/formUpBraile.php'>";
-                                case "ruang8":
-                                    echo "<form method='post' action='../statistikbalai/L1/formUpMajalah.php'>";
-                                case "ruang9":
-                                    echo "<form method='post' action='../statistikbalai/LD/formUpBukuAnak.php'>";
-                                case "ruang10":
-                                    echo "<form method='post' action='../statistikbalai/LD/formUpBermain.php'>";
-                                case "ruang11":
-                                    echo "<form method='post' action='../statistikbalai/LD/formUpMusik.php'>";
-                                case "ruang12":
-                                    echo "<form method='post' action='../statistikbalai/LD/formUpMendongeng.php'>";
-                                case "ruang13":
-                                    echo "<form method='post' action='../statistikbalai/LD/formUpBioskop.php'>";
-                                case "ruang14":
-                                    echo "<form method='post' action='../statistikbalai/LD/formUpTandon.php'>";
-                                case "ruang15":
-                                    echo "<form method='post' action='../statistikbalai/JLC/formUpMJLC.php'>";
-                                case "ruang16":
-                                    echo "<form method='post' action='../statistikbalai/RBM/formUpRBM.php'>";
+                                $total = $row['umumP'] + $row['umumL'] + $row['mhsP'] + $row['mhsL'] + $row['pelajarP'] + $row['pelajarL'];
+                                echo "<td>" . $total . "</td>";
+                                echo "<td>";
+                                // switch ($selectedRuang) {
+                                //     case "ruang1":
+                                //         echo "<form method='post' action='../statistikbalai/L2/formUpDigital.php'>";
+                                //         break;
+                                //     case "ruang2":
+                                //         echo "<form method='post' action='../statistikbalai/L2/formUpLangka.php'>";
+                                //         break;
+                                //     case "ruang3":
+                                //         echo "<form method='post' action='../statistikbalai/L2/formUpAV.php'>";
+                                //         break;
+                                //     case "ruang4":
+                                //         echo "<form method='post' action='../statistikbalai/L2/formUpReferensi.php'>";
+                                //         break;
+                                //     case "ruang5":
+                                //         echo "<form method='post' action='../statistikbalai/L2/formUpSkripsiBudaya.php'>";
+                                //         break;
+                                //     case "ruang6":
+                                //         echo "<form method='post' action='../statistikbalai/L1/formUpUmum.php'>";
+                                //         break;
+                                //     case "ruang7":
+                                //         echo "<form method='post' action='../statistikbalai/L1/formUpBraile.php'>";
+                                //         break;
+                                //     case "ruang8":
+                                //         echo "<form method='post' action='../statistikbalai/L1/formUpMajalah.php'>";
+                                //         break;
+                                //     case "ruang9":
+                                //         echo "<form method='post' action='../statistikbalai/LD/formUpBukuAnak.php'>";
+                                //         break;
+                                //     case "ruang10":
+                                //         echo "<form method='post' action='../statistikbalai/LD/formUpBermain.php'>";
+                                //         break;
+                                //     case "ruang11":
+                                //         echo "<form method='post' action='../statistikbalai/LD/formUpMusik.php'>";
+                                //         break;
+                                //     case "ruang12":
+                                //         echo "<form method='post' action='../statistikbalai/LD/formUpMendongeng.php'>";
+                                //         break;
+                                //     case "ruang13":
+                                //         echo "<form method='post' action='../statistikbalai/LD/formUpBioskop.php'>";
+                                //         break;
+                                //     case "ruang14":
+                                //         echo "<form method='post' action='../statistikbalai/LD/formUpTandon.php'>";
+                                //         break;
+                                //     case "ruang15":
+                                //         echo "<form method='post' action='../statistikbalai/JLC/formUpMJLC.php'>";
+                                //         break;
+                                //     case "ruang16":
+                                //         echo "<form method='post' action='../statistikbalai/RBM/formUpRBM.php'>";
+                                //         break;
+                                //     default:
+                                //         echo "<form method='post' action='dashboard.php'>";
+                                // }
+                                // echo "
+                                // <input type='hidden' name='tanggal' value='" . $throw . "'>
+                                // <input type='hidden' name='pl' value='" . $throwPL . "'>
+                                // <input type='hidden' name='pp' value='" . $throwPP . "'>
+                                // <input type='hidden' name='ml' value='" . $throwML . "'>
+                                // <input type='hidden' name='mp' value='" . $throwMP . "'>
+                                // <input type='hidden' name='ul' value='" . $throwUL . "'>
+                                // <input type='hidden' name='up' value='" . $throwUP . "'>
+                                // <button type='submit' class='btn btn-edit' data-toggle='modal'>Edit</button>
+                                // </form>
+                                // </td>";
 
-                                    break;
-                                default:
-                                    echo "<form method='post' action='dashboard.php'>";
+                                // // Delete button
+                                // echo "<td>";
+                                // echo "<form method='post' action='delete.php'>";
+                                // echo "<input type='hidden' name='tanggal' value='" . $throw . "'>";
+                                // // echo "<input type='hidden' name='ruang' value='" . $selectedRuang . "'>";
+                                // echo "<button type='submit' class='btn btn-delete' data-toggle='modal'>Delete</button>";
+                                // echo "</form>";
+                                // echo "</td>";
+
+                                // echo "</tr>";
+
+                                $count++;
                             }
-                            echo "
-                            <input type='hidden' name='tanggal' value='" . $throw . "'>
-                            <input type='hidden' name='pl' value='" . $throwPL . "'>
-                            <input type='hidden' name='pp' value='" . $throwPP . "'>
-                            <input type='hidden' name='ml' value='" . $throwML . "'>
-                            <input type='hidden' name='mp' value='" . $throwMP . "'>
-                            <input type='hidden' name='ul' value='" . $throwUL . "'>
-                            <input type='hidden' name='up' value='" . $throwUP . "'>
-                          <button type='submit' class='btn btn-edit' data-toggle='modal'>Edit</button>
-                          </form>
-                        </td>";
 
-                            // Delete button
-                            echo "<td>";
-                            echo "<form method='post' action='delete.php'>"; // Replace 'delete.php' with your actual delete script
-                            echo "<input type='hidden' name='tanggal' value='" . $throw . "'>";
-                            echo "<input type='hidden' name='ruang' value='" . $selectedRuang . "'>";
-                            echo "<button type='submit' class='btn btn-delete' data-toggle='modal'>Delete</button>";
-                            echo "</form>";
-                            echo "</td>";
+                            // while ($row = mysqli_fetch_assoc($rslt)) {
+                            //     echo "<tr>";
+                            //     echo "<td>" . $count . "</td>"; // Menampilkan angka urutan
+                            //     echo "<td>" . $row['tanggal'] . "</td>";
+                            //     echo "<td>" . $row['pelajarL'] . "</td>";
+                            //     echo "<td>" . $row['pelajarP'] . "</td>";
+                            //     echo "<td>" . $row['mhsL'] . "</td>";
+                            //     echo "<td>" . $row['mhsP'] . "</td>";
+                            //     echo "<td>" . $row['umumL'] . "</td>";
+                            //     echo "<td>" . $row['umumP'] . "</td>";
 
-                            echo "</tr>";
+                            //     $throw = $row['tanggal'];
+                            //     $throwPP = $row['pelajarP'];
+                            //     $throwPL = $row['pelajarL'];
+                            //     $throwML = $row['mhsL'];
+                            //     $throwMP = $row['mhsP'];
+                            //     $throwUP = $row['umumP'];
+                            //     $throwUL = $row['umumL'];
 
-                            $count++;
-                        }
+                            //     $totalPelajarL += $row['pelajarL'];
+                            //     $totalPelajarP += $row['pelajarP'];
+                            //     $totalMhsL += $row['mhsL'];
+                            //     $totalMhsP += $row['mhsP'];
+                            //     $totalUmumL += $row['umumL'];
+                            //     $totalUmumP += $row['umumP'];
+
+                            //     $total = $row['umumP'] + $row['umumL'] + $row['mhsP'] + $row['mhsL'] + $row['pelajarP'] + $row['pelajarL'];
+                            //     echo "<td>" . $total . "</td>";
+                            //     echo "<td>";
+                                // switch ($selectedRuang) {
+                                //     case "ruang1":
+                                //         echo "<form method='post' action='../statistikbalai/L2/formUpDigital.php'>";
+                                //         break;
+                                //     case "ruang2":
+                                //         echo "<form method='post' action='../statistikbalai/L2/formUpLangka.php'>";
+                                //         break;
+                                //     case "ruang3":
+                                //         echo "<form method='post' action='../statistikbalai/L2/formUpAV.php'>";
+                                //         break;
+                                //     case "ruang4":
+                                //         echo "<form method='post' action='../statistikbalai/L2/formUpReferensi.php'>";
+                                //         break;
+                                //     case "ruang5":
+                                //         echo "<form method='post' action='../statistikbalai/L2/formUpSkripsiBudaya.php'>";
+                                //         break;
+                                //     case "ruang6":
+                                //         echo "<form method='post' action='../statistikbalai/L1/formUpUmum.php'>";
+                                //         break;
+                                //     case "ruang7":
+                                //         echo "<form method='post' action='../statistikbalai/L1/formUpBraile.php'>";
+                                //         break;
+                                //     case "ruang8":
+                                //         echo "<form method='post' action='../statistikbalai/L1/formUpMajalah.php'>";
+                                //         break;
+                                //     case "ruang9":
+                                //         echo "<form method='post' action='../statistikbalai/LD/formUpBukuAnak.php'>";
+                                //         break;
+                                //     case "ruang10":
+                                //         echo "<form method='post' action='../statistikbalai/LD/formUpBermain.php'>";
+                                //         break;
+                                //     case "ruang11":
+                                //         echo "<form method='post' action='../statistikbalai/LD/formUpMusik.php'>";
+                                //         break;
+                                //     case "ruang12":
+                                //         echo "<form method='post' action='../statistikbalai/LD/formUpMendongeng.php'>";
+                                //         break;
+                                //     case "ruang13":
+                                //         echo "<form method='post' action='../statistikbalai/LD/formUpBioskop.php'>";
+                                //         break;
+                                //     case "ruang14":
+                                //         echo "<form method='post' action='../statistikbalai/LD/formUpTandon.php'>";
+                                //         break;
+                                //     case "ruang15":
+                                //         echo "<form method='post' action='../statistikbalai/JLC/formUpMJLC.php'>";
+                                //         break;
+                                //     case "ruang16":
+                                //         echo "<form method='post' action='../statistikbalai/RBM/formUpRBM.php'>";
+                                //         break;
+                                //     default:
+                                //         echo "<form method='post' action='dashboard.php'>";
+                                // }
+                                // echo "
+                                // <input type='hidden' name='tanggal' value='" . $throw . "'>
+                                // <input type='hidden' name='pl' value='" . $throwPL . "'>
+                                // <input type='hidden' name='pp' value='" . $throwPP . "'>
+                                // <input type='hidden' name='ml' value='" . $throwML . "'>
+                                // <input type='hidden' name='mp' value='" . $throwMP . "'>
+                                // <input type='hidden' name='ul' value='" . $throwUL . "'>
+                                // <input type='hidden' name='up' value='" . $throwUP . "'>
+                                // <button type='submit' class='btn btn-edit' data-toggle='modal'>Edit</button>
+                                // </form>
+                                // </td>";
+
+                                // // Delete button
+                                // echo "<td>";
+                                // echo "<form method='post' action='delete.php'>";
+                                // echo "<input type='hidden' name='tanggal' value='" . $throw . "'>";
+                                // echo "<input type='hidden' name='ruang' value='" . $selectedRuang . "'>";
+                                // echo "<button type='submit' class='btn btn-delete' data-toggle='modal'>Delete</button>";
+                                // echo "</form>";
+                                // echo "</td>";
+
+                                // echo "</tr>";
+
+                                // $count++;
+                            // }
                         ?>
 
                         <tr>
