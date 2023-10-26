@@ -229,12 +229,41 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             // echo $tgl_mulai;
             // echo ", $tgl_akhir";
 
-            $query = "SELECT * FROM ruang_digital INNER JOIN ruang_audiovisual ON ruang_digital.id_digital = ruang_audiovisual.id_audiovisual";
-            // $qry = "SELECT * FROM ruang_audiovisual";
-            echo "query : $query";
-            // echo ", qry : $qry";
-            $result = mysqli_query($conn, $query);
-            // $rslt = mysqli_query($conn, $qry);
+
+            if (isset($_POST['show'])) {
+                if(sizeof($rooms) == 3) {
+                    $query1 = "SELECT * FROM $rooms[0]";
+                    $query2 = "SELECT * FROM $rooms[1]";
+                    $query3 = "SELECT * FROM $rooms[2]";
+                    
+                    echo "query1 : $query1";
+                    echo "query2 : $query2";
+                    echo "query3 : $query3";
+
+                    $result1 = mysqli_query($conn, $query1);
+                    $result2 = mysqli_query($conn, $query2);
+                    $result3 = mysqli_query($conn, $query3);
+                } else if (sizeof($rooms) == 2){
+                    $query1 = "SELECT * FROM $rooms[0]";
+                    $query2 = "SELECT * FROM $rooms[1]";
+
+                    echo "query1 : $query1";
+                    echo "query2 : $query2";
+
+                    $result1 = mysqli_query($conn, $query1);
+                    $result2 = mysqli_query($conn, $query2);
+                } else if (sizeof($rooms) == 1) {
+                    $query1 = "SELECT * FROM $rooms[0]";
+
+                    echo "query1 : $query1";
+
+                    $result1 = mysqli_query($conn, $query1);
+                } else {
+                    $query1 = "SELECT * FROM ruang_digital";
+                }
+                
+                
+            }
             ?>
 
             <div class="list-table">
