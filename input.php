@@ -153,15 +153,15 @@
                 <form name="webpage">
                     <select name="statistikPojokBaca" id="statistikPojokBaca">
                         <option value="#" disabled selected>Pilihan Lokasi Pojok Baca</option>
-                        <option value="#">BPRSR</option>
-                        <option value="#">BPRSW</option>
-                        <option value="#">Samsat Bantul</option>
-                        <option value="#">Samsat KP</option>
-                        <option value="#">KPP sleman</option>
-                        <option value="#">PN Yogya</option>
-                        <option value="#">DP3AP2</option>
-                        <option value="#">DPMPTSP</option>
-                        <option value="#">POLAIRUD</option>
+                        <option value="../statistik_perpustakaan/POBAC/formBPRSR.php">BPRSR</option>
+                        <option value="../statistik_perpustakaan/POBAC/formBPRSW.php">BPRSW</option>
+                        <option value="../statistik_perpustakaan/POBAC/formSamBantul.php">Samsat Bantul</option>
+                        <option value="../statistik_perpustakaan/POBAC/formSamKP.php">Samsat KP</option>
+                        <option value="../statistik_perpustakaan/POBAC/formKPPSleman.php">KPP sleman</option>
+                        <option value="../statistik_perpustakaan/POBAC/formPNYogya.php">PN Yogya</option>
+                        <option value="../statistik_perpustakaan/POBAC/formDP3AP2.php">DP3AP2</option>
+                        <option value="../statistik_perpustakaan/POBAC/formDPMPTSP.php">DPMPTSP</option>
+                        <option value="../statistik_perpustakaan/POBAC/formPOLAIRUD.php">POLAIRUD</option>
                     </select>
                 </form>
             </div>
@@ -175,34 +175,34 @@
                 <form name="webpage">
                     <select name="statistikLayananKel" id="statistikLayananKel">
                         <option value="#" disabled selected>Pilihan Lokasi Layanan Keliling</option>
-                        <option value="#">TK PKK Widodomartani</option>
-                        <option value="#">SD Jali Prambanan</option>
-                        <option value="#">SD Sinar Melati</option>
-                        <option value="#">SD Pendowoharjo</option>
-                        <option value="#">SD Rejodani</option>
-                        <option value="#">SD Tamanan 3 Kalasan</option>
-                        <option value="#">SD Berbah</option>
-                        <option value="#">SD Murten</option>
-                        <option value="#">SD Muh.Condong catur</option>
-                        <option value="#">TK Kalibulus</option>
-                        <option value="#">TK PKK Pajimatan</option>
-                        <option value="#">SD Muhammadiyah Babakan</option>
-                        <option value="#">TK ABA Sutopadan</option>
-                        <option value="#">SLB 1 Bantul</option>
-                        <option value="#">MA Mafasa</option>
-                        <option value="#">SD Ngentak Banguntapan</option>
-                        <option value="#">SD Jurugentong</option>
-                        <option value="#">SD Bunder</option>
-                        <option value="#">TK ABA Plembutan Asri</option>
-                        <option value="#">TK ABA Karangmojo I</option>
-                        <option value="#">SD Gedang Klutuk</option>
-                        <option value="#">SD Plembutan Asri</option>
-                        <option value="#">SLB I Yogyakarta</option>
-                        <option value="#">SMK Koperasi</option>
-                        <option value="#">SD Negeri Sidakan</option>
-                        <option value="#">SD Sorogenen 2 Kalasan</option>
-                        <option value="#">KB Kasih Ibu</option>
-                        <option value="#">MA Bin Baz</option>
+                        <option value="../statistik_perpustakaan/KELILING/formTKPKKWido.php">TK PKK Widodomartani</option>
+                        <option value="../statistik_perpustakaan/KELILING/formSDJali.php">SD Jali Prambanan</option>
+                        <option value="../statistik_perpustakaan/KELILING/formSDSinarmelati.php">SD Sinar Melati</option>
+                        <option value="../statistik_perpustakaan/KELILING/formSDPendowoharjo.php">SD Pendowoharjo</option>
+                        <option value="../statistik_perpustakaan/KELILING/formSDRejodani.php">SD Rejodani</option>
+                        <option value="../statistik_perpustakaan/KELILING/formSDTamanan3.php">SD Tamanan 3 Kalasan</option>
+                        <option value="../statistik_perpustakaan/KELILING/formSDBerbah2.php">SD Berbah 2</option>
+                        <option value="../statistik_perpustakaan/KELILING/formSDMurten.php">SD Murten</option>
+                        <option value="../statistik_perpustakaan/KELILING/formSDMuhconcat.php">SD Muh.Condong catur</option>
+                        <option value="../statistik_perpustakaan/KELILING/formTKKalibulus.php">TK Kalibulus</option>
+                        <option value="../statistik_perpustakaan/KELILING/formTKPKKPajimatan.php">TK PKK Pajimatan</option>
+                        <option value="../statistik_perpustakaan/KELILING/formSDMuhbabakan.php">SD Muhammadiyah Babakan</option>
+                        <option value="../statistik_perpustakaan/KELILING/formTKABASutopadan.php">TK ABA Sutopadan</option>
+                        <option value="../statistik_perpustakaan/KELILING/formSLB1Bantul.php">SLB 1 Bantul</option>
+                        <option value="../statistik_perpustakaan/KELILING/formMAMafasa.php">MA Mafasa</option>
+                        <option value="../statistik_perpustakaan/KELILING/formSDNgentak.php">SD Ngentak Banguntapan</option>
+                        <option value="../statistik_perpustakaan/KELILING/formSDJurugentong.php">SD Jurugentong</option>
+                        <option value="../statistik_perpustakaan/KELILING/formSDBunder2.php">SD Bunder 2</option>
+                        <option value="../statistik_perpustakaan/KELILING/formTKABAPlembutan.php">TK ABA Plembutan Asri</option>
+                        <option value="../statistik_perpustakaan/KELILING/formTKABAKarangmojo.php">TK ABA Karangmojo I</option>
+                        <option value="../statistik_perpustakaan/KELILING/formSDGedangklutuk.php">SD Gedang Klutuk</option>
+                        <option value="../statistik_perpustakaan/KELILING/formSDPlembutan.php">SD Plembutan Asri</option>
+                        <option value="../statistik_perpustakaan/KELILING/formSLB1Yogya.php">SLB I Yogyakarta</option>
+                        <option value="../statistik_perpustakaan/KELILING/formSMKKoperasi.php">SMK Koperasi</option>
+                        <option value="../statistik_perpustakaan/KELILING/formSDNSidakan.php">SD Negeri Sidakan</option>
+                        <option value="../statistik_perpustakaan/KELILING/formSDSorogenen2.php">SD Sorogenen 2 Kalasan</option>
+                        <option value="../statistik_perpustakaan/KELILING/formKBKasihibu.php">KB Kasih Ibu</option>
+                        <option value="../statistik_perpustakaan/KELILING/formMABinbaz.php">MA Bin Baz</option>
                     </select>
                 </form>
             </div>
@@ -216,23 +216,23 @@
                 <form name="webpage">
                     <select name="statistikLayananPaket" id="statistikLayananPaket">
                         <option value="#" disabled selected>Pilihan Lokasi Layanan Paket Buku</option>
-                        <option value="#">BRSBKL</option>
-                        <option value="#">Rutan Wates</option>
-                        <option value="#">Rutan Bantul</option>
-                        <option value="#">Rutan kota</option>
-                        <option value="#">Lapas Wirogunan</option>
-                        <option value="#">Lapas Cebongan</option>
-                        <option value="#">Lapas Wonosari</option>
-                        <option value="#">Lapas Narkotika</option>
-                        <option value="#">PONPES Pesawat</option>
-                        <option value="#">PA Nurul Haq</option>
-                        <option value="#">SPS Manggis</option>
-                        <option value="#">BPRSW Godean</option>
-                        <option value="#">Huntap Karang Kendal</option>
-                        <option value="#">BRSPA Bimomartani</option>
-                        <option value="#">BRSPA Budhi Bakti</option>
-                        <option value="#">PONPES Ibnul Qoyyim</option>
-                        <option value="#">BRTPD Pundong Bantul</option>
+                        <option value="../statistik_perpustakaan/PAKET/formbrsbkl.php">BRSBKL</option>
+                        <option value="../statistik_perpustakaan/PAKET/formRutanwates.php">Rutan Wates</option>
+                        <option value="../statistik_perpustakaan/PAKET/formRutanbantul.php">Rutan Bantul</option>
+                        <option value="../statistik_perpustakaan/PAKET/formRutankota.php">Rutan kota</option>
+                        <option value="../statistik_perpustakaan/PAKET/formLapaswiro.php">Lapas Wirogunan</option>
+                        <option value="../statistik_perpustakaan/PAKET/formLapascebong.php">Lapas Cebongan</option>
+                        <option value="../statistik_perpustakaan/PAKET/formLapaswono.php">Lapas Wonosari</option>
+                        <option value="../statistik_perpustakaan/PAKET/formLapasnarko.php">Lapas Narkotika</option>
+                        <option value="../statistik_perpustakaan/PAKET/formPONPESPes.php">PONPES Pesawat</option>
+                        <option value="../statistik_perpustakaan/PAKET/formPANurul.php">PA Nurul Haq</option>
+                        <option value="../statistik_perpustakaan/PAKET/formSPSManggis.php">SPS Manggis</option>
+                        <option value="../statistik_perpustakaan/PAKET/formBPRSWGodean.php">BPRSW Godean</option>
+                        <option value="../statistik_perpustakaan/PAKET/formHuntapkarang.php">Huntap Karang Kendal</option>
+                        <option value="../statistik_perpustakaan/PAKET/formbrspabimo.php">BRSPA Bimomartani</option>
+                        <option value="../statistik_perpustakaan/PAKET/formBRSPABudhi.php">BRSPA Budhi Bakti</option>
+                        <option value="../statistik_perpustakaan/PAKET/formPONPESIbnul.php">PONPES Ibnul Qoyyim</option>
+                        <option value="../statistik_perpustakaan/PAKET/formBRTPDPundong.php">BRTPD Pundong Bantul</option>
                     </select>
                 </form>
             </div>
@@ -246,7 +246,7 @@
                 <form name="webpage">
                     <select name="statistikDO" id="statistikDO">
                         <option value="#" disabled selected>Pilihan Delivery Order</option>
-                        <option value=#">DO</option>
+                        <option value="../statistik_perpustakaan/DO/formDO.php">DO</option>
                     </select>
                 </form>
             </div>
@@ -358,7 +358,7 @@
                 }
         }
     </script>
-    
+
 </body>
 
 </html>
