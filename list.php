@@ -66,7 +66,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="/statistik_perpustakaan/list.php">
+                            <a class="nav-link active" href="/statistik_perpustakaan/list-date.php">
                                 <h4>List Data</h4>
                             </a>
                         </li>
@@ -160,61 +160,71 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="runag_skripsibudaya" id="flexCheckChecked">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="runag_skripsibudaya"
+                            id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Skripsi Budaya
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_umum" id="flexCheckChecked">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_umum"
+                            id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Umum
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_braile" id="flexCheckChecked">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_braile"
+                            id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Braille
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_majalah" id="flexCheckChecked">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_majalah"
+                            id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Majalah
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bukuanak" id="flexCheckChecked">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bukuanak"
+                            id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Buku Anak
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bermain" id="flexCheckChecked">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bermain"
+                            id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Bermain
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_musik" id="flexCheckChecked">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_musik"
+                            id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Musik
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_mendongeng" id="flexCheckChecked">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_mendongeng"
+                            id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Mendongeng
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bioskop" id="flexCheckChecked">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bioskop"
+                            id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Bioskop
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_tandon" id="flexCheckChecked">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_tandon"
+                            id="flexCheckChecked">
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Tandon
                         </label>
@@ -224,39 +234,44 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <!-- checkbox end -->
 
             <?php
-            // $tgl_mulai = $_POST['tgl_mulai'];
-            // $tgl_akhir = $_POST['tgl_akhir'];
-            // echo $tgl_mulai;
-            // echo ", $tgl_akhir";
+            $tgl_mulai = $_GET['tgl_mulai'];
+            $tgl_akhir = $_GET['tgl_akhir'];
 
+            // Mengubah format tanggal mulai dari yyyy-mm-dd ke dd-mm-yyyy
+            $tgl_mulai = date('d-m-Y', strtotime($tgl_mulai));
+
+            // Mengubah format tanggal akhir dari yyyy-mm-dd ke dd-mm-yyyy
+            $tgl_akhir = date('d-m-Y', strtotime($tgl_akhir));
+
+            echo "Data dari tanggal $tgl_mulai - $tgl_akhir";
 
             if (isset($_POST['show'])) {
-                if(sizeof($rooms) == 3) {
+                if (sizeof($rooms) == 3) {
                     $query1 = "SELECT * FROM $rooms[0]";
                     $query2 = "SELECT * FROM $rooms[1]";
                     $query3 = "SELECT * FROM $rooms[2]";
-                    
-                    echo "query1 : $query1";
-                    echo "query2 : $query2";
-                    echo "query3 : $query3";
 
+                    // echo "query1 : $query1";
+                    // echo "query2 : $query2";
+                    // echo "query3 : $query3";
+            
                     $result1 = mysqli_query($conn, $query1);
                     $result2 = mysqli_query($conn, $query2);
                     $result3 = mysqli_query($conn, $query3);
-                } else if (sizeof($rooms) == 2){
+                } else if (sizeof($rooms) == 2) {
                     $query1 = "SELECT * FROM $rooms[0]";
                     $query2 = "SELECT * FROM $rooms[1]";
 
-                    echo "query1 : $query1";
-                    echo "query2 : $query2";
-
+                    // echo "query1 : $query1";
+                    // echo "query2 : $query2";
+            
                     $result1 = mysqli_query($conn, $query1);
                     $result2 = mysqli_query($conn, $query2);
                 } else if (sizeof($rooms) == 1) {
                     $query1 = "SELECT * FROM $rooms[0]";
 
-                    echo "query1 : $query1";
-
+                    // echo "query1 : $query1";
+            
                     $result1 = mysqli_query($conn, $query1);
                 } else {
                     $query1 = "SELECT * FROM ruang_digital";
@@ -277,7 +292,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                             <th scope="col" colspan="2">Umum</th>
                             <th scope="col" rowspan="2">Jumlah</th>
                             <th scope="col" rowspan="2">Keterangan</th>
-                            <th scope="col" rowspan="2">Actions</th> 
+                            <th scope="col" rowspan="2">Actions</th>
                         </tr>
                         <tr>
                             <th>L</th>
@@ -290,14 +305,15 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                     </thead>
                     <tbody>
                         <?php
-                            $count = 1;
-                            $totalPelajarL = 0;
-                            $totalPelajarP = 0;
-                            $totalMhsL = 0;
-                            $totalMhsP = 0;
-                            $totalUmumL = 0;
-                            $totalUmumP = 0;
+                        $count = 1;
+                        $totalPelajarL = 0;
+                        $totalPelajarP = 0;
+                        $totalMhsL = 0;
+                        $totalMhsP = 0;
+                        $totalUmumL = 0;
+                        $totalUmumP = 0;
 
+                        if (isset($result1)) {
                             while ($row = mysqli_fetch_assoc($result1)) {
                                 echo "<tr>";
                                 echo "<td>" . $count . "</td>"; // Menampilkan angka urutan
@@ -390,240 +406,241 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                                 // <button type='submit' class='btn btn-edit' data-toggle='modal'>Edit</button>
                                 // </form>
                                 // </td>";
-
+                        
                                 // // Delete button
                                 // echo "<td>";
                                 // echo "<form method='post' action='delete.php'>";
                                 // echo "<input type='hidden' name='tanggal' value='" . $throw . "'>";
-                                // // echo "<input type='hidden' name='ruang' value='" . $selectedRuang . "'>";
+                                // echo "<input type='hidden' name='ruang' value='" . $selectedRuang . "'>";
                                 // echo "<button type='submit' class='btn btn-delete' data-toggle='modal'>Delete</button>";
                                 // echo "</form>";
                                 // echo "</td>";
-
+                        
                                 // echo "</tr>";
-
+                        
                                 $count++;
                             }
+                        }
 
-                            if(isset($result2)) {
-                                while ($row = mysqli_fetch_assoc($result2)) {
-                                    echo "<tr>";
-                                    echo "<td>" . $count . "</td>"; // Menampilkan angka urutan
-                                    echo "<td>" . $row['tanggal'] . "</td>";
-                                    echo "<td>" . $row['pelajarL'] . "</td>";
-                                    echo "<td>" . $row['pelajarP'] . "</td>";
-                                    echo "<td>" . $row['mhsL'] . "</td>";
-                                    echo "<td>" . $row['mhsP'] . "</td>";
-                                    echo "<td>" . $row['umumL'] . "</td>";
-                                    echo "<td>" . $row['umumP'] . "</td>";
-    
-                                    $throw = $row['tanggal'];
-                                    $throwPP = $row['pelajarP'];
-                                    $throwPL = $row['pelajarL'];
-                                    $throwML = $row['mhsL'];
-                                    $throwMP = $row['mhsP'];
-                                    $throwUP = $row['umumP'];
-                                    $throwUL = $row['umumL'];
-    
-                                    $totalPelajarL += $row['pelajarL'];
-                                    $totalPelajarP += $row['pelajarP'];
-                                    $totalMhsL += $row['mhsL'];
-                                    $totalMhsP += $row['mhsP'];
-                                    $totalUmumL += $row['umumL'];
-                                    $totalUmumP += $row['umumP'];
-    
-                                    $total = $row['umumP'] + $row['umumL'] + $row['mhsP'] + $row['mhsL'] + $row['pelajarP'] + $row['pelajarL'];
-                                    echo "<td>" . $total . "</td>";
-                                    echo "<td>";
-                                    // switch ($selectedRuang) {
-                                    //     case "ruang1":
-                                    //         echo "<form method='post' action='../statistikbalai/L2/formUpDigital.php'>";
-                                    //         break;
-                                    //     case "ruang2":
-                                    //         echo "<form method='post' action='../statistikbalai/L2/formUpLangka.php'>";
-                                    //         break;
-                                    //     case "ruang3":
-                                    //         echo "<form method='post' action='../statistikbalai/L2/formUpAV.php'>";
-                                    //         break;
-                                    //     case "ruang4":
-                                    //         echo "<form method='post' action='../statistikbalai/L2/formUpReferensi.php'>";
-                                    //         break;
-                                    //     case "ruang5":
-                                    //         echo "<form method='post' action='../statistikbalai/L2/formUpSkripsiBudaya.php'>";
-                                    //         break;
-                                    //     case "ruang6":
-                                    //         echo "<form method='post' action='../statistikbalai/L1/formUpUmum.php'>";
-                                    //         break;
-                                    //     case "ruang7":
-                                    //         echo "<form method='post' action='../statistikbalai/L1/formUpBraile.php'>";
-                                    //         break;
-                                    //     case "ruang8":
-                                    //         echo "<form method='post' action='../statistikbalai/L1/formUpMajalah.php'>";
-                                    //         break;
-                                    //     case "ruang9":
-                                    //         echo "<form method='post' action='../statistikbalai/LD/formUpBukuAnak.php'>";
-                                    //         break;
-                                    //     case "ruang10":
-                                    //         echo "<form method='post' action='../statistikbalai/LD/formUpBermain.php'>";
-                                    //         break;
-                                    //     case "ruang11":
-                                    //         echo "<form method='post' action='../statistikbalai/LD/formUpMusik.php'>";
-                                    //         break;
-                                    //     case "ruang12":
-                                    //         echo "<form method='post' action='../statistikbalai/LD/formUpMendongeng.php'>";
-                                    //         break;
-                                    //     case "ruang13":
-                                    //         echo "<form method='post' action='../statistikbalai/LD/formUpBioskop.php'>";
-                                    //         break;
-                                    //     case "ruang14":
-                                    //         echo "<form method='post' action='../statistikbalai/LD/formUpTandon.php'>";
-                                    //         break;
-                                    //     case "ruang15":
-                                    //         echo "<form method='post' action='../statistikbalai/JLC/formUpMJLC.php'>";
-                                    //         break;
-                                    //     case "ruang16":
-                                    //         echo "<form method='post' action='../statistikbalai/RBM/formUpRBM.php'>";
-                                    //         break;
-                                    //     default:
-                                    //         echo "<form method='post' action='dashboard.php'>";
-                                    // }
-                                    // echo "
-                                    // <input type='hidden' name='tanggal' value='" . $throw . "'>
-                                    // <input type='hidden' name='pl' value='" . $throwPL . "'>
-                                    // <input type='hidden' name='pp' value='" . $throwPP . "'>
-                                    // <input type='hidden' name='ml' value='" . $throwML . "'>
-                                    // <input type='hidden' name='mp' value='" . $throwMP . "'>
-                                    // <input type='hidden' name='ul' value='" . $throwUL . "'>
-                                    // <input type='hidden' name='up' value='" . $throwUP . "'>
-                                    // <button type='submit' class='btn btn-edit' data-toggle='modal'>Edit</button>
-                                    // </form>
-                                    // </td>";
-    
-                                    // // Delete button
-                                    // echo "<td>";
-                                    // echo "<form method='post' action='delete.php'>";
-                                    // echo "<input type='hidden' name='tanggal' value='" . $throw . "'>";
-                                    // echo "<input type='hidden' name='ruang' value='" . $selectedRuang . "'>";
-                                    // echo "<button type='submit' class='btn btn-delete' data-toggle='modal'>Delete</button>";
-                                    // echo "</form>";
-                                    // echo "</td>";
-    
-                                    // echo "</tr>";
-    
-                                    $count++;
-                                }
-                            }
+                        if (isset($result2)) {
+                            while ($row = mysqli_fetch_assoc($result2)) {
+                                echo "<tr>";
+                                echo "<td>" . $count . "</td>"; // Menampilkan angka urutan
+                                echo "<td>" . $row['tanggal'] . "</td>";
+                                echo "<td>" . $row['pelajarL'] . "</td>";
+                                echo "<td>" . $row['pelajarP'] . "</td>";
+                                echo "<td>" . $row['mhsL'] . "</td>";
+                                echo "<td>" . $row['mhsP'] . "</td>";
+                                echo "<td>" . $row['umumL'] . "</td>";
+                                echo "<td>" . $row['umumP'] . "</td>";
 
-                            if(isset($result3)) {
-                                while ($row = mysqli_fetch_assoc($result3)) {
-                                    echo "<tr>";
-                                    echo "<td>" . $count . "</td>"; // Menampilkan angka urutan
-                                    echo "<td>" . $row['tanggal'] . "</td>";
-                                    echo "<td>" . $row['pelajarL'] . "</td>";
-                                    echo "<td>" . $row['pelajarP'] . "</td>";
-                                    echo "<td>" . $row['mhsL'] . "</td>";
-                                    echo "<td>" . $row['mhsP'] . "</td>";
-                                    echo "<td>" . $row['umumL'] . "</td>";
-                                    echo "<td>" . $row['umumP'] . "</td>";
-    
-                                    $throw = $row['tanggal'];
-                                    $throwPP = $row['pelajarP'];
-                                    $throwPL = $row['pelajarL'];
-                                    $throwML = $row['mhsL'];
-                                    $throwMP = $row['mhsP'];
-                                    $throwUP = $row['umumP'];
-                                    $throwUL = $row['umumL'];
-    
-                                    $totalPelajarL += $row['pelajarL'];
-                                    $totalPelajarP += $row['pelajarP'];
-                                    $totalMhsL += $row['mhsL'];
-                                    $totalMhsP += $row['mhsP'];
-                                    $totalUmumL += $row['umumL'];
-                                    $totalUmumP += $row['umumP'];
-    
-                                    $total = $row['umumP'] + $row['umumL'] + $row['mhsP'] + $row['mhsL'] + $row['pelajarP'] + $row['pelajarL'];
-                                    echo "<td>" . $total . "</td>";
-                                    echo "<td>";
-                                    // switch ($selectedRuang) {
-                                    //     case "ruang1":
-                                    //         echo "<form method='post' action='../statistikbalai/L2/formUpDigital.php'>";
-                                    //         break;
-                                    //     case "ruang2":
-                                    //         echo "<form method='post' action='../statistikbalai/L2/formUpLangka.php'>";
-                                    //         break;
-                                    //     case "ruang3":
-                                    //         echo "<form method='post' action='../statistikbalai/L2/formUpAV.php'>";
-                                    //         break;
-                                    //     case "ruang4":
-                                    //         echo "<form method='post' action='../statistikbalai/L2/formUpReferensi.php'>";
-                                    //         break;
-                                    //     case "ruang5":
-                                    //         echo "<form method='post' action='../statistikbalai/L2/formUpSkripsiBudaya.php'>";
-                                    //         break;
-                                    //     case "ruang6":
-                                    //         echo "<form method='post' action='../statistikbalai/L1/formUpUmum.php'>";
-                                    //         break;
-                                    //     case "ruang7":
-                                    //         echo "<form method='post' action='../statistikbalai/L1/formUpBraile.php'>";
-                                    //         break;
-                                    //     case "ruang8":
-                                    //         echo "<form method='post' action='../statistikbalai/L1/formUpMajalah.php'>";
-                                    //         break;
-                                    //     case "ruang9":
-                                    //         echo "<form method='post' action='../statistikbalai/LD/formUpBukuAnak.php'>";
-                                    //         break;
-                                    //     case "ruang10":
-                                    //         echo "<form method='post' action='../statistikbalai/LD/formUpBermain.php'>";
-                                    //         break;
-                                    //     case "ruang11":
-                                    //         echo "<form method='post' action='../statistikbalai/LD/formUpMusik.php'>";
-                                    //         break;
-                                    //     case "ruang12":
-                                    //         echo "<form method='post' action='../statistikbalai/LD/formUpMendongeng.php'>";
-                                    //         break;
-                                    //     case "ruang13":
-                                    //         echo "<form method='post' action='../statistikbalai/LD/formUpBioskop.php'>";
-                                    //         break;
-                                    //     case "ruang14":
-                                    //         echo "<form method='post' action='../statistikbalai/LD/formUpTandon.php'>";
-                                    //         break;
-                                    //     case "ruang15":
-                                    //         echo "<form method='post' action='../statistikbalai/JLC/formUpMJLC.php'>";
-                                    //         break;
-                                    //     case "ruang16":
-                                    //         echo "<form method='post' action='../statistikbalai/RBM/formUpRBM.php'>";
-                                    //         break;
-                                    //     default:
-                                    //         echo "<form method='post' action='dashboard.php'>";
-                                    // }
-                                    // echo "
-                                    // <input type='hidden' name='tanggal' value='" . $throw . "'>
-                                    // <input type='hidden' name='pl' value='" . $throwPL . "'>
-                                    // <input type='hidden' name='pp' value='" . $throwPP . "'>
-                                    // <input type='hidden' name='ml' value='" . $throwML . "'>
-                                    // <input type='hidden' name='mp' value='" . $throwMP . "'>
-                                    // <input type='hidden' name='ul' value='" . $throwUL . "'>
-                                    // <input type='hidden' name='up' value='" . $throwUP . "'>
-                                    // <button type='submit' class='btn btn-edit' data-toggle='modal'>Edit</button>
-                                    // </form>
-                                    // </td>";
-    
-                                    // // Delete button
-                                    // echo "<td>";
-                                    // echo "<form method='post' action='delete.php'>";
-                                    // echo "<input type='hidden' name='tanggal' value='" . $throw . "'>";
-                                    // echo "<input type='hidden' name='ruang' value='" . $selectedRuang . "'>";
-                                    // echo "<button type='submit' class='btn btn-delete' data-toggle='modal'>Delete</button>";
-                                    // echo "</form>";
-                                    // echo "</td>";
-    
-                                    // echo "</tr>";
-    
-                                    $count++;
-                                }
-                            }
-                        ?>
+                                $throw = $row['tanggal'];
+                                $throwPP = $row['pelajarP'];
+                                $throwPL = $row['pelajarL'];
+                                $throwML = $row['mhsL'];
+                                $throwMP = $row['mhsP'];
+                                $throwUP = $row['umumP'];
+                                $throwUL = $row['umumL'];
+
+                                $totalPelajarL += $row['pelajarL'];
+                                $totalPelajarP += $row['pelajarP'];
+                                $totalMhsL += $row['mhsL'];
+                                $totalMhsP += $row['mhsP'];
+                                $totalUmumL += $row['umumL'];
+                                $totalUmumP += $row['umumP'];
+
+                                $total = $row['umumP'] + $row['umumL'] + $row['mhsP'] + $row['mhsL'] + $row['pelajarP'] + $row['pelajarL'];
+                                echo "<td>" . $total . "</td>";
+                                echo "<td>";
+                                // switch ($selectedRuang) {
+                                //     case "ruang1":
+                                //         echo "<form method='post' action='../statistikbalai/L2/formUpDigital.php'>";
+                                //         break;
+                                //     case "ruang2":
+                                //         echo "<form method='post' action='../statistikbalai/L2/formUpLangka.php'>";
+                                //         break;
+                                //     case "ruang3":
+                                //         echo "<form method='post' action='../statistikbalai/L2/formUpAV.php'>";
+                                //         break;
+                                //     case "ruang4":
+                                //         echo "<form method='post' action='../statistikbalai/L2/formUpReferensi.php'>";
+                                //         break;
+                                //     case "ruang5":
+                                //         echo "<form method='post' action='../statistikbalai/L2/formUpSkripsiBudaya.php'>";
+                                //         break;
+                                //     case "ruang6":
+                                //         echo "<form method='post' action='../statistikbalai/L1/formUpUmum.php'>";
+                                //         break;
+                                //     case "ruang7":
+                                //         echo "<form method='post' action='../statistikbalai/L1/formUpBraile.php'>";
+                                //         break;
+                                //     case "ruang8":
+                                //         echo "<form method='post' action='../statistikbalai/L1/formUpMajalah.php'>";
+                                //         break;
+                                //     case "ruang9":
+                                //         echo "<form method='post' action='../statistikbalai/LD/formUpBukuAnak.php'>";
+                                //         break;
+                                //     case "ruang10":
+                                //         echo "<form method='post' action='../statistikbalai/LD/formUpBermain.php'>";
+                                //         break;
+                                //     case "ruang11":
+                                //         echo "<form method='post' action='../statistikbalai/LD/formUpMusik.php'>";
+                                //         break;
+                                //     case "ruang12":
+                                //         echo "<form method='post' action='../statistikbalai/LD/formUpMendongeng.php'>";
+                                //         break;
+                                //     case "ruang13":
+                                //         echo "<form method='post' action='../statistikbalai/LD/formUpBioskop.php'>";
+                                //         break;
+                                //     case "ruang14":
+                                //         echo "<form method='post' action='../statistikbalai/LD/formUpTandon.php'>";
+                                //         break;
+                                //     case "ruang15":
+                                //         echo "<form method='post' action='../statistikbalai/JLC/formUpMJLC.php'>";
+                                //         break;
+                                //     case "ruang16":
+                                //         echo "<form method='post' action='../statistikbalai/RBM/formUpRBM.php'>";
+                                //         break;
+                                //     default:
+                                //         echo "<form method='post' action='dashboard.php'>";
+                                // }
+                                // echo "
+                                // <input type='hidden' name='tanggal' value='" . $throw . "'>
+                                // <input type='hidden' name='pl' value='" . $throwPL . "'>
+                                // <input type='hidden' name='pp' value='" . $throwPP . "'>
+                                // <input type='hidden' name='ml' value='" . $throwML . "'>
+                                // <input type='hidden' name='mp' value='" . $throwMP . "'>
+                                // <input type='hidden' name='ul' value='" . $throwUL . "'>
+                                // <input type='hidden' name='up' value='" . $throwUP . "'>
+                                // <button type='submit' class='btn btn-edit' data-toggle='modal'>Edit</button>
+                                // </form>
+                                // </td>";
                         
+                                // // Delete button
+                                // echo "<td>";
+                                // echo "<form method='post' action='delete.php'>";
+                                // echo "<input type='hidden' name='tanggal' value='" . $throw . "'>";
+                                // echo "<input type='hidden' name='ruang' value='" . $selectedRuang . "'>";
+                                // echo "<button type='submit' class='btn btn-delete' data-toggle='modal'>Delete</button>";
+                                // echo "</form>";
+                                // echo "</td>";
+                        
+                                // echo "</tr>";
+                        
+                                $count++;
+                            }
+                        }
+
+                        if (isset($result3)) {
+                            while ($row = mysqli_fetch_assoc($result3)) {
+                                echo "<tr>";
+                                echo "<td>" . $count . "</td>"; // Menampilkan angka urutan
+                                echo "<td>" . $row['tanggal'] . "</td>";
+                                echo "<td>" . $row['pelajarL'] . "</td>";
+                                echo "<td>" . $row['pelajarP'] . "</td>";
+                                echo "<td>" . $row['mhsL'] . "</td>";
+                                echo "<td>" . $row['mhsP'] . "</td>";
+                                echo "<td>" . $row['umumL'] . "</td>";
+                                echo "<td>" . $row['umumP'] . "</td>";
+
+                                $throw = $row['tanggal'];
+                                $throwPP = $row['pelajarP'];
+                                $throwPL = $row['pelajarL'];
+                                $throwML = $row['mhsL'];
+                                $throwMP = $row['mhsP'];
+                                $throwUP = $row['umumP'];
+                                $throwUL = $row['umumL'];
+
+                                $totalPelajarL += $row['pelajarL'];
+                                $totalPelajarP += $row['pelajarP'];
+                                $totalMhsL += $row['mhsL'];
+                                $totalMhsP += $row['mhsP'];
+                                $totalUmumL += $row['umumL'];
+                                $totalUmumP += $row['umumP'];
+
+                                $total = $row['umumP'] + $row['umumL'] + $row['mhsP'] + $row['mhsL'] + $row['pelajarP'] + $row['pelajarL'];
+                                echo "<td>" . $total . "</td>";
+                                echo "<td>";
+                                // switch ($selectedRuang) {
+                                //     case "ruang1":
+                                //         echo "<form method='post' action='../statistikbalai/L2/formUpDigital.php'>";
+                                //         break;
+                                //     case "ruang2":
+                                //         echo "<form method='post' action='../statistikbalai/L2/formUpLangka.php'>";
+                                //         break;
+                                //     case "ruang3":
+                                //         echo "<form method='post' action='../statistikbalai/L2/formUpAV.php'>";
+                                //         break;
+                                //     case "ruang4":
+                                //         echo "<form method='post' action='../statistikbalai/L2/formUpReferensi.php'>";
+                                //         break;
+                                //     case "ruang5":
+                                //         echo "<form method='post' action='../statistikbalai/L2/formUpSkripsiBudaya.php'>";
+                                //         break;
+                                //     case "ruang6":
+                                //         echo "<form method='post' action='../statistikbalai/L1/formUpUmum.php'>";
+                                //         break;
+                                //     case "ruang7":
+                                //         echo "<form method='post' action='../statistikbalai/L1/formUpBraile.php'>";
+                                //         break;
+                                //     case "ruang8":
+                                //         echo "<form method='post' action='../statistikbalai/L1/formUpMajalah.php'>";
+                                //         break;
+                                //     case "ruang9":
+                                //         echo "<form method='post' action='../statistikbalai/LD/formUpBukuAnak.php'>";
+                                //         break;
+                                //     case "ruang10":
+                                //         echo "<form method='post' action='../statistikbalai/LD/formUpBermain.php'>";
+                                //         break;
+                                //     case "ruang11":
+                                //         echo "<form method='post' action='../statistikbalai/LD/formUpMusik.php'>";
+                                //         break;
+                                //     case "ruang12":
+                                //         echo "<form method='post' action='../statistikbalai/LD/formUpMendongeng.php'>";
+                                //         break;
+                                //     case "ruang13":
+                                //         echo "<form method='post' action='../statistikbalai/LD/formUpBioskop.php'>";
+                                //         break;
+                                //     case "ruang14":
+                                //         echo "<form method='post' action='../statistikbalai/LD/formUpTandon.php'>";
+                                //         break;
+                                //     case "ruang15":
+                                //         echo "<form method='post' action='../statistikbalai/JLC/formUpMJLC.php'>";
+                                //         break;
+                                //     case "ruang16":
+                                //         echo "<form method='post' action='../statistikbalai/RBM/formUpRBM.php'>";
+                                //         break;
+                                //     default:
+                                //         echo "<form method='post' action='dashboard.php'>";
+                                // }
+                                // echo "
+                                // <input type='hidden' name='tanggal' value='" . $throw . "'>
+                                // <input type='hidden' name='pl' value='" . $throwPL . "'>
+                                // <input type='hidden' name='pp' value='" . $throwPP . "'>
+                                // <input type='hidden' name='ml' value='" . $throwML . "'>
+                                // <input type='hidden' name='mp' value='" . $throwMP . "'>
+                                // <input type='hidden' name='ul' value='" . $throwUL . "'>
+                                // <input type='hidden' name='up' value='" . $throwUP . "'>
+                                // <button type='submit' class='btn btn-edit' data-toggle='modal'>Edit</button>
+                                // </form>
+                                // </td>";
+                        
+                                // // Delete button
+                                // echo "<td>";
+                                // echo "<form method='post' action='delete.php'>";
+                                // echo "<input type='hidden' name='tanggal' value='" . $throw . "'>";
+                                // echo "<input type='hidden' name='ruang' value='" . $selectedRuang . "'>";
+                                // echo "<button type='submit' class='btn btn-delete' data-toggle='modal'>Delete</button>";
+                                // echo "</form>";
+                                // echo "</td>";
+                        
+                                // echo "</tr>";
+                        
+                                $count++;
+                            }
+                        }
+                        ?>
+
 
                         <tr>
                             <th scope="row">JUMLAH</th>
@@ -662,7 +679,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <script>
         function htmlTableToExcel(type, fn, dl) {
             var elt = document.getElementById('tblToExcl');
-            var wb = XLSX.utils.table_to_book(elt, { sheet: `data_pegunjung_${tglmulai}-${tglakhir}` });
+            var wb = XLSX.utils.table_to_book(elt, { sheet: `data_pegunjung` });
             return dl ?
                 XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }) :
                 XLSX.writeFile(wb, fn || ('data-pengunjung.' + (type || 'xlsx')));

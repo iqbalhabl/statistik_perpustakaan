@@ -74,7 +74,7 @@
 
     <!-- date selector -->
     <div class="pill-container">
-        <form action="list.php" method="post">
+        <form action="list.php" method="get">
             <label for="tanggal">Pilih tanggal :</label>
             <input type="date" name="tgl_mulai">
             <label> - </label>
