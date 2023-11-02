@@ -1,12 +1,13 @@
 /* list page */
 
 .list {
-    margin-top: 89px;
+    margin-top: 5px;
+    margin-bottom: 20px;
     padding-top: 20px;
 }
 
 .data-pengunjung {
-    margin-left: 300px;
+    margin-left: 50px;
     margin-right: 50px;
     background-color: #fff;
     padding: 20px;
@@ -104,6 +105,7 @@ td[colspan="2"]:last-child {
 .btn-download {
     display: inline-block;
     padding: 10px 20px;
+    margin-top: 20px;
     font-size: 16px;
     background-color: #007bff;
     border: none;
@@ -114,4 +116,37 @@ td[colspan="2"]:last-child {
 
 .btn-download:hover {
     background-color: #0056b3;
+}
+
+.tgl {
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    position: absolute;
+    color: red;
+    top: 100px; 
+    right: 0;
+}
+
+.warning-text {
+    margin-top: 20px;
+}
+
+.btn-show {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.custom-width {
+    width: 100%; 
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
