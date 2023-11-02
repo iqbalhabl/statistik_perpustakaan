@@ -56,22 +56,22 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/statistik_perpustakaan/home.php">
+                            <a class="nav-link" aria-current="page" href/statistik_perpustakaan/home.php">
                                 <h4>Home</h4>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/statistik_perpustakaan/input.php">
+                            <a class="nav-link" href/statistik_perpustakaan/input.php">
                                 <h4>Input Data</h4>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="/statistik_perpustakaan/list-date.php">
+                            <a class="nav-link active" href/statistik_perpustakaan/list-date.php">
                                 <h4>List Data</h4>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/statistik_perpustakaan/logout.php">
+                            <a class="nav-link" href/statistik_perpustakaan/logout.php">
                                 <h4>Logout</h4>
                             </a>
                         </li>
@@ -99,7 +99,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                             'ruang_langka' => 'Ruang Langka',
                             'ruang_audiovisual' => 'Ruang Audio Visual',
                             'ruang_referensi' => 'Ruang Referensi',
-                            'ruang_skripsibudaya' => 'Ruang Skripsibudaya',
+                            'ruang_skripsibudaya' => 'Ruang Skripsi Budaya',
                             'ruang_umum' => 'Ruang Umum',
                             'ruang_braile' => 'Ruang Braile',
                             'ruang_majalah' => 'Ruang Majalah',
@@ -127,123 +127,729 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 </h1>
             </div>
 
+            <?php
+            // Inisialisasi variabel rooms yang akan digunakan untuk menyimpan status checkbox yang dipilih
+            $selectedRooms = [];
+
+            // Cek apakah formulir telah dikirim (tombol "Tampilkan tabel" diklik)
+            if (isset($_POST['show'])) {
+                // Periksa apakah checkbox tertentu dipilih dan simpan dalam variabel $selectedRooms
+                if (isset($_POST['rooms'])) {
+                    $selectedRooms = $_POST['rooms'];
+                }
+            }
+
+            // Fungsi untuk memeriksa apakah checkbox tertentu harus ditandai
+            function isRoomSelected($roomValue, $selectedRooms)
+            {
+                return in_array($roomValue, $selectedRooms) ? 'checked' : '';
+            }
+            ?>
+
             <!-- checkbox start -->
             <div class="filter_data">
                 <form action="" method="post">
-                    <label for="pilihRuang">Pilih ruang :</label>
-                    <div class="form-check">
+                    <!-- checklist start -->
+
+                    <div class="container custom-width float-start">
+                        <div class="row justify-content-start">
+                            <div class="col">
+                                <label for="pilihRuang">Pilih ruang :</label>
+                            </div>
+                            <div class="w-100 d-none d-md-block"></div>
+                            <div class="col">
+                                <div class="form-check">
                         <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_digital"
-                            id="flexCheckDefault">
+                            id="flexCheckDefault" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_digital', $selectedRooms) ?>>
                         <label class="form-check-label" for="flexCheckDefault">
                             Ruang Digital
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_langka"
-                            id="flexCheckChecked">
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_langka', $selectedRooms) ?>>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Langka
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_audiovisual"
-                            id="flexCheckChecked">
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_audiovisual', $selectedRooms) ?>>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Audio Visual
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_referensi"
-                            id="flexCheckChecked">
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_referensi', $selectedRooms) ?>>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Referensi
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" name="rooms[]" type="checkbox" value="runag_skripsibudaya"
-                            id="flexCheckChecked">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_skripsibudaya"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_skripsibudaya', $selectedRooms) ?>>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Skripsi Budaya
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_umum"
-                            id="flexCheckChecked">
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_umum', $selectedRooms) ?>>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Umum
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_braile"
-                            id="flexCheckChecked">
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_braile', $selectedRooms) ?>>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Braille
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_majalah"
-                            id="flexCheckChecked">
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_majalah', $selectedRooms) ?>>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Majalah
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bukuanak"
-                            id="flexCheckChecked">
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_bukuanak', $selectedRooms) ?>>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Buku Anak
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bermain"
-                            id="flexCheckChecked">
+                            id="flexCheckChecked" <?= isRoomSelected('ruang_bermain', $selectedRooms) ?>>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Bermain
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_musik"
-                            id="flexCheckChecked">
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_musik', $selectedRooms) ?>>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Musik
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_mendongeng"
-                            id="flexCheckChecked">
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_mendongeng', $selectedRooms) ?>>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Mendongeng
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bioskop"
-                            id="flexCheckChecked">
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_bioskop', $selectedRooms) ?>>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Bioskop
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_tandon"
-                            id="flexCheckChecked">
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_tandon', $selectedRooms) ?>>
                         <label class="form-check-label" for="flexCheckChecked">
                             Ruang Tandon
                         </label>
                     </div>
-                    <button class='btn btn-primary' type="submit" name="show" onclick=''>Tampilkan tabel</button>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_digital"
+                            id="flexCheckDefault" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_digital', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Ruang Digital
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_langka"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_langka', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Langka
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_audiovisual"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_audiovisual', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Audio Visual
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_referensi"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_referensi', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Referensi
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_skripsibudaya"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_skripsibudaya', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Skripsi Budaya
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_umum"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_umum', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Umum
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_braile"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_braile', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Braille
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_majalah"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_majalah', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Majalah
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bukuanak"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_bukuanak', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Buku Anak
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bermain"
+                            id="flexCheckChecked" <?= isRoomSelected('ruang_bermain', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Bermain
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_musik"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_musik', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Musik
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_mendongeng"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_mendongeng', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Mendongeng
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bioskop"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_bioskop', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Bioskop
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_tandon"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_tandon', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Tandon
+                        </label>
+                    </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_digital"
+                            id="flexCheckDefault" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_digital', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Ruang Digital
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_langka"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_langka', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Langka
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_audiovisual"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_audiovisual', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Audio Visual
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_referensi"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_referensi', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Referensi
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_skripsibudaya"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_skripsibudaya', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Skripsi Budaya
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_umum"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_umum', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Umum
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_braile"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_braile', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Braille
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_majalah"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_majalah', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Majalah
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bukuanak"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_bukuanak', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Buku Anak
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bermain"
+                            id="flexCheckChecked" <?= isRoomSelected('ruang_bermain', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Bermain
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_musik"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_musik', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Musik
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_mendongeng"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_mendongeng', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Mendongeng
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bioskop"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_bioskop', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Bioskop
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_tandon"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_tandon', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Tandon
+                        </label>
+                    </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_digital"
+                            id="flexCheckDefault" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_digital', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Ruang Digital
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_langka"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_langka', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Langka
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_audiovisual"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_audiovisual', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Audio Visual
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_referensi"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_referensi', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Referensi
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_skripsibudaya"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_skripsibudaya', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Skripsi Budaya
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_umum"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_umum', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Umum
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_braile"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_braile', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Braille
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_majalah"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_majalah', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Majalah
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bukuanak"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_bukuanak', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Buku Anak
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bermain"
+                            id="flexCheckChecked" <?= isRoomSelected('ruang_bermain', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Bermain
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_musik"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_musik', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Musik
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_mendongeng"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_mendongeng', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Mendongeng
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bioskop"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_bioskop', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Bioskop
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_tandon"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_tandon', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Tandon
+                        </label>
+                    </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_digital"
+                            id="flexCheckDefault" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_digital', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Ruang Digital
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_langka"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_langka', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Langka
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_audiovisual"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_audiovisual', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Audio Visual
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_referensi"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_referensi', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Referensi
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_skripsibudaya"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_skripsibudaya', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Skripsi Budaya
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_umum"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_umum', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Umum
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_braile"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_braile', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Braille
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_majalah"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_majalah', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Majalah
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bukuanak"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_bukuanak', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Buku Anak
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bermain"
+                            id="flexCheckChecked" <?= isRoomSelected('ruang_bermain', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Bermain
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_musik"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_musik', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Musik
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_mendongeng"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_mendongeng', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Mendongeng
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bioskop"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_bioskop', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Bioskop
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_tandon"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_tandon', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Tandon
+                        </label>
+                    </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_digital"
+                            id="flexCheckDefault" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_digital', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Ruang Digital
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_langka"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_langka', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Langka
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_audiovisual"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_audiovisual', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Audio Visual
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_referensi"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_referensi', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Referensi
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_skripsibudaya"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_skripsibudaya', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Skripsi Budaya
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_umum"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_umum', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Umum
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_braile"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_braile', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Braille
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_majalah"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_majalah', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Majalah
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bukuanak"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_bukuanak', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Buku Anak
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bermain"
+                            id="flexCheckChecked" <?= isRoomSelected('ruang_bermain', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Bermain
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_musik"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_musik', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Musik
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_mendongeng"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_mendongeng', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Mendongeng
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_bioskop"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                            <?= isRoomSelected('ruang_bioskop', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Bioskop
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_tandon"
+                            id="flexCheckChecked" onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_tandon', $selectedRooms) ?>>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            Ruang Tandon
+                        </label>
+                    </div>
+                            </div>
+                            <div class="w-100 d-none d-md-block"></div>
+                            <div class="col">
+                                <button class='btn btn-show' type="submit" name="show"
+                                    onclick='limitCheckboxSelections(2)'>Tampilkan tabel</button>
+                                <p class="warning-text" id="checkboxWarning" style="color: red;"></p>
+                            </div>
+                        </div>
+                    </div>
             </div>
+
+            <!-- checklist ended -->
             <!-- checkbox end -->
+
+            <script>
+                // Fungsi untuk membatasi jumlah checkbox yang dapat dicentang
+                function limitCheckboxSelections(maxLimit) {
+                    var checkboxes = document.querySelectorAll('input[name="rooms[]"]:checked');
+                    var warningMessage = document.getElementById('checkboxWarning');
+
+                    if (checkboxes.length > maxLimit) {
+                        // Nonaktifkan checkbox yang tidak dapat dicentang
+                        document.querySelectorAll('input[name="rooms[]"]:not(:checked)').forEach(function (checkbox) {
+                            checkbox.disabled = true;
+                        });
+
+                        // Tampilkan pesan peringatan
+                        warningMessage.innerText = "Anda hanya dapat memilih maksimal 3 ruang!";
+                    } else {
+                        // Aktifkan kembali checkbox yang sebelumnya nonaktif
+                        document.querySelectorAll('input[name="rooms[]"]:not(:checked)').forEach(function (checkbox) {
+                            checkbox.disabled = false;
+                        });
+
+                        // Hapus pesan peringatan
+                        warningMessage.innerText = "";
+                    }
+                }
+            </script>
 
             <?php
             $tgl_mulai = $_GET['tgl_mulai'];
             $tgl_akhir = $_GET['tgl_akhir'];
 
-            // Mengubah format tanggal mulai dari yyyy-mm-dd ke dd-mm-yyyy
             $tgl_mulai = date('d-m-Y', strtotime($tgl_mulai));
-
-            // Mengubah format tanggal akhir dari yyyy-mm-dd ke dd-mm-yyyy
             $tgl_akhir = date('d-m-Y', strtotime($tgl_akhir));
-
-            echo "Data dari tanggal $tgl_mulai - $tgl_akhir";
 
             if (isset($_POST['show'])) {
                 if (sizeof($rooms) == 3) {
@@ -280,6 +886,12 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 }
             }
             ?>
+
+            <div class="tgl">
+                <b>
+                    <?= "Data dari tanggal $tgl_mulai - $tgl_akhir"; ?>
+                </b>
+            </div>
 
             <div class="list-table">
                 <table id="tblToExcl">
@@ -343,81 +955,84 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                                 $total = $row['umumP'] + $row['umumL'] + $row['mhsP'] + $row['mhsL'] + $row['pelajarP'] + $row['pelajarL'];
                                 echo "<td>" . $total . "</td>";
                                 echo "<td>";
-                                // switch ($selectedRuang) {
-                                //     case "ruang1":
-                                //         echo "<form method='post' action='../statistikbalai/L2/formUpDigital.php'>";
-                                //         break;
-                                //     case "ruang2":
-                                //         echo "<form method='post' action='../statistikbalai/L2/formUpLangka.php'>";
-                                //         break;
-                                //     case "ruang3":
-                                //         echo "<form method='post' action='../statistikbalai/L2/formUpAV.php'>";
-                                //         break;
-                                //     case "ruang4":
-                                //         echo "<form method='post' action='../statistikbalai/L2/formUpReferensi.php'>";
-                                //         break;
-                                //     case "ruang5":
-                                //         echo "<form method='post' action='../statistikbalai/L2/formUpSkripsiBudaya.php'>";
-                                //         break;
-                                //     case "ruang6":
-                                //         echo "<form method='post' action='../statistikbalai/L1/formUpUmum.php'>";
-                                //         break;
-                                //     case "ruang7":
-                                //         echo "<form method='post' action='../statistikbalai/L1/formUpBraile.php'>";
-                                //         break;
-                                //     case "ruang8":
-                                //         echo "<form method='post' action='../statistikbalai/L1/formUpMajalah.php'>";
-                                //         break;
-                                //     case "ruang9":
-                                //         echo "<form method='post' action='../statistikbalai/LD/formUpBukuAnak.php'>";
-                                //         break;
-                                //     case "ruang10":
-                                //         echo "<form method='post' action='../statistikbalai/LD/formUpBermain.php'>";
-                                //         break;
-                                //     case "ruang11":
-                                //         echo "<form method='post' action='../statistikbalai/LD/formUpMusik.php'>";
-                                //         break;
-                                //     case "ruang12":
-                                //         echo "<form method='post' action='../statistikbalai/LD/formUpMendongeng.php'>";
-                                //         break;
-                                //     case "ruang13":
-                                //         echo "<form method='post' action='../statistikbalai/LD/formUpBioskop.php'>";
-                                //         break;
-                                //     case "ruang14":
-                                //         echo "<form method='post' action='../statistikbalai/LD/formUpTandon.php'>";
-                                //         break;
-                                //     case "ruang15":
-                                //         echo "<form method='post' action='../statistikbalai/JLC/formUpMJLC.php'>";
-                                //         break;
-                                //     case "ruang16":
-                                //         echo "<form method='post' action='../statistikbalai/RBM/formUpRBM.php'>";
-                                //         break;
-                                //     default:
-                                //         echo "<form method='post' action='dashboard.php'>";
-                                // }
-                                // echo "
-                                // <input type='hidden' name='tanggal' value='" . $throw . "'>
-                                // <input type='hidden' name='pl' value='" . $throwPL . "'>
-                                // <input type='hidden' name='pp' value='" . $throwPP . "'>
-                                // <input type='hidden' name='ml' value='" . $throwML . "'>
-                                // <input type='hidden' name='mp' value='" . $throwMP . "'>
-                                // <input type='hidden' name='ul' value='" . $throwUL . "'>
-                                // <input type='hidden' name='up' value='" . $throwUP . "'>
-                                // <button type='submit' class='btn btn-edit' data-toggle='modal'>Edit</button>
-                                // </form>
-                                // </td>";
-                        
-                                // // Delete button
-                                // echo "<td>";
-                                // echo "<form method='post' action='delete.php'>";
-                                // echo "<input type='hidden' name='tanggal' value='" . $throw . "'>";
-                                // echo "<input type='hidden' name='ruang' value='" . $selectedRuang . "'>";
-                                // echo "<button type='submit' class='btn btn-delete' data-toggle='modal'>Delete</button>";
-                                // echo "</form>";
-                                // echo "</td>";
-                        
-                                // echo "</tr>";
-                        
+
+                                switch ($rooms[0]) {
+                                    case "ruang_digital":
+                                        echo "<form method='post' action='/statistik_perpustakaan/L2/formUpDigital.php'>";
+                                        break;
+                                    case "ruang_langka":
+                                        echo "<form method='post' action='/statistik_perpustakaan/L2/formUpLangka.php'>";
+                                        break;
+                                    case "ruang_audiovisual":
+                                        echo "<form method='post' action='/statistik_perpustakaan/L2/formUpAV.php'>";
+                                        break;
+                                    case "ruang_referensi":
+                                        echo "<form method='post' action='/statistik_perpustakaan/L2/formUpReferensi.php'>";
+                                        break;
+                                    case "ruang5":
+                                        echo "<form method='post' action='/statistik_perpustakaan/L2/formUpSkripsiBudaya.php'>";
+                                        break;
+                                    case "ruang6":
+                                        echo "<form method='post' action='/statistik_perpustakaan/L1/formUpUmum.php'>";
+                                        break;
+                                    case "ruang7":
+                                        echo "<form method='post' action='/statistik_perpustakaan/L1/formUpBraile.php'>";
+                                        break;
+                                    case "ruang8":
+                                        echo "<form method='post' action='/statistik_perpustakaan/L1/formUpMajalah.php'>";
+                                        break;
+                                    case "ruang9":
+                                        echo "<form method='post' action='/statistik_perpustakaan/LD/formUpBukuAnak.php'>";
+                                        break;
+                                    case "ruang_bermain":
+                                        echo "<form method='post' action='/statistik_perpustakaan/LD/formUpBermain.php'>";
+                                        break;
+                                    case "ruang_musik":
+                                        echo "<form method='post' action='/statistik_perpustakaan/LD/formUpMusik.php'>";
+                                        break;
+                                    case "ruang_mendongeng":
+                                        echo "<form method='post' action='/statistik_perpustakaan/LD/formUpMendongeng.php'>";
+                                        break;
+                                    case "ruang_bioskop":
+                                        echo "<form method='post' action='/statistik_perpustakaan/LD/formUpBioskop.php'>";
+                                        break;
+                                    case "ruang_tandon":
+                                        echo "<form method='post' action='/statistik_perpustakaan/LD/formUpTandon.php'>";
+                                        break;
+                                    case "jlc":
+                                        echo "<form method='post' action='/statistik_perpustakaan/JLC/formUpMJLC.php'>";
+                                        break;
+                                    case "rbm":
+                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        break;
+                                    default:
+                                        echo "<form method='post' action='dashboard.php'>";
+                                }
+
+                                // Edit Button
+                                echo "
+                                <input type='hidden' name='tanggal' value='" . $throw . "'>
+                                <input type='hidden' name='pl' value='" . $throwPL . "'>
+                                <input type='hidden' name='pp' value='" . $throwPP . "'>
+                                <input type='hidden' name='ml' value='" . $throwML . "'>
+                                <input type='hidden' name='mp' value='" . $throwMP . "'>
+                                <input type='hidden' name='ul' value='" . $throwUL . "'>
+                                <input type='hidden' name='up' value='" . $throwUP . "'>
+                                <button type='submit' class='btn btn-edit' data-toggle='modal'>Edit</button>
+                                </form>
+                                </td>";
+
+                                // Delete Button
+                                echo "<td>";
+                                echo "<form method='post' action='delete.php'>";
+                                echo "<input type='hidden' name='tanggal' value='" . $throw . "'>";
+                                echo "<input type='hidden' name='ruang' value='" . $rooms[0] . "'>";
+                                echo "<button type='submit' class='btn btn-delete' data-toggle='modal'>Delete</button>";
+                                echo "</form>";
+                                echo "</td>";
+
+                                echo "</tr>";
+
                                 $count++;
                             }
                         }
@@ -452,81 +1067,82 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                                 $total = $row['umumP'] + $row['umumL'] + $row['mhsP'] + $row['mhsL'] + $row['pelajarP'] + $row['pelajarL'];
                                 echo "<td>" . $total . "</td>";
                                 echo "<td>";
-                                // switch ($selectedRuang) {
-                                //     case "ruang1":
-                                //         echo "<form method='post' action='../statistikbalai/L2/formUpDigital.php'>";
-                                //         break;
-                                //     case "ruang2":
-                                //         echo "<form method='post' action='../statistikbalai/L2/formUpLangka.php'>";
-                                //         break;
-                                //     case "ruang3":
-                                //         echo "<form method='post' action='../statistikbalai/L2/formUpAV.php'>";
-                                //         break;
-                                //     case "ruang4":
-                                //         echo "<form method='post' action='../statistikbalai/L2/formUpReferensi.php'>";
-                                //         break;
-                                //     case "ruang5":
-                                //         echo "<form method='post' action='../statistikbalai/L2/formUpSkripsiBudaya.php'>";
-                                //         break;
-                                //     case "ruang6":
-                                //         echo "<form method='post' action='../statistikbalai/L1/formUpUmum.php'>";
-                                //         break;
-                                //     case "ruang7":
-                                //         echo "<form method='post' action='../statistikbalai/L1/formUpBraile.php'>";
-                                //         break;
-                                //     case "ruang8":
-                                //         echo "<form method='post' action='../statistikbalai/L1/formUpMajalah.php'>";
-                                //         break;
-                                //     case "ruang9":
-                                //         echo "<form method='post' action='../statistikbalai/LD/formUpBukuAnak.php'>";
-                                //         break;
-                                //     case "ruang10":
-                                //         echo "<form method='post' action='../statistikbalai/LD/formUpBermain.php'>";
-                                //         break;
-                                //     case "ruang11":
-                                //         echo "<form method='post' action='../statistikbalai/LD/formUpMusik.php'>";
-                                //         break;
-                                //     case "ruang12":
-                                //         echo "<form method='post' action='../statistikbalai/LD/formUpMendongeng.php'>";
-                                //         break;
-                                //     case "ruang13":
-                                //         echo "<form method='post' action='../statistikbalai/LD/formUpBioskop.php'>";
-                                //         break;
-                                //     case "ruang14":
-                                //         echo "<form method='post' action='../statistikbalai/LD/formUpTandon.php'>";
-                                //         break;
-                                //     case "ruang15":
-                                //         echo "<form method='post' action='../statistikbalai/JLC/formUpMJLC.php'>";
-                                //         break;
-                                //     case "ruang16":
-                                //         echo "<form method='post' action='../statistikbalai/RBM/formUpRBM.php'>";
-                                //         break;
-                                //     default:
-                                //         echo "<form method='post' action='dashboard.php'>";
-                                // }
-                                // echo "
-                                // <input type='hidden' name='tanggal' value='" . $throw . "'>
-                                // <input type='hidden' name='pl' value='" . $throwPL . "'>
-                                // <input type='hidden' name='pp' value='" . $throwPP . "'>
-                                // <input type='hidden' name='ml' value='" . $throwML . "'>
-                                // <input type='hidden' name='mp' value='" . $throwMP . "'>
-                                // <input type='hidden' name='ul' value='" . $throwUL . "'>
-                                // <input type='hidden' name='up' value='" . $throwUP . "'>
-                                // <button type='submit' class='btn btn-edit' data-toggle='modal'>Edit</button>
-                                // </form>
-                                // </td>";
-                        
-                                // // Delete button
-                                // echo "<td>";
-                                // echo "<form method='post' action='delete.php'>";
-                                // echo "<input type='hidden' name='tanggal' value='" . $throw . "'>";
-                                // echo "<input type='hidden' name='ruang' value='" . $selectedRuang . "'>";
-                                // echo "<button type='submit' class='btn btn-delete' data-toggle='modal'>Delete</button>";
-                                // echo "</form>";
-                                // echo "</td>";
-                        
-                                // echo "</tr>";
-                        
+                                switch ($rooms[1]) {
+                                    case "ruang_digital":
+                                        echo "<form method='post' action='/statistik_perpustakaan/L2/formUpDigital.php'>";
+                                        break;
+                                    case "ruang_langka":
+                                        echo "<form method='post' action='/statistik_perpustakaan/L2/formUpLangka.php'>";
+                                        break;
+                                    case "ruang_audiovisual":
+                                        echo "<form method='post' action='/statistik_perpustakaan/L2/formUpAV.php'>";
+                                        break;
+                                    case "ruang_referensi":
+                                        echo "<form method='post' action='/statistik_perpustakaan/L2/formUpReferensi.php'>";
+                                        break;
+                                    case "ruang5":
+                                        echo "<form method='post' action='/statistik_perpustakaan/L2/formUpSkripsiBudaya.php'>";
+                                        break;
+                                    case "ruang6":
+                                        echo "<form method='post' action='/statistik_perpustakaan/L1/formUpUmum.php'>";
+                                        break;
+                                    case "ruang7":
+                                        echo "<form method='post' action='/statistik_perpustakaan/L1/formUpBraile.php'>";
+                                        break;
+                                    case "ruang8":
+                                        echo "<form method='post' action='/statistik_perpustakaan/L1/formUpMajalah.php'>";
+                                        break;
+                                    case "ruang9":
+                                        echo "<form method='post' action='/statistik_perpustakaan/LD/formUpBukuAnak.php'>";
+                                        break;
+                                    case "ruang_bermain":
+                                        echo "<form method='post' action='/statistik_perpustakaan/LD/formUpBermain.php'>";
+                                        break;
+                                    case "ruang_musik":
+                                        echo "<form method='post' action='/statistik_perpustakaan/LD/formUpMusik.php'>";
+                                        break;
+                                    case "ruang_mendongeng":
+                                        echo "<form method='post' action='/statistik_perpustakaan/LD/formUpMendongeng.php'>";
+                                        break;
+                                    case "ruang_bioskop":
+                                        echo "<form method='post' action='/statistik_perpustakaan/LD/formUpBioskop.php'>";
+                                        break;
+                                    case "ruang_tandon":
+                                        echo "<form method='post' action='/statistik_perpustakaan/LD/formUpTandon.php'>";
+                                        break;
+                                    case "jlc":
+                                        echo "<form method='post' action='/statistik_perpustakaan/JLC/formUpMJLC.php'>";
+                                        break;
+                                    case "rbm":
+                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        break;
+                                    default:
+                                        echo "<form method='post' action='dashboard.php'>";
+                                }
+
+                                echo "
+                                <input type='hidden' name='tanggal' value='" . $throw . "'>
+                                <input type='hidden' name='pl' value='" . $throwPL . "'>
+                                <input type='hidden' name='pp' value='" . $throwPP . "'>
+                                <input type='hidden' name='ml' value='" . $throwML . "'>
+                                <input type='hidden' name='mp' value='" . $throwMP . "'>
+                                <input type='hidden' name='ul' value='" . $throwUL . "'>
+                                <input type='hidden' name='up' value='" . $throwUP . "'>
+                                <button type='submit' class='btn btn-edit' data-toggle='modal'>Edit</button>
+                                </form>
+                                </td>";
+
+                                // Delete button
+                                echo "<td>";
+                                echo "<form method='post' action='delete.php'>";
+                                echo "<input type='hidden' name='tanggal' value='" . $throw . "'>";
+                                echo "<input type='hidden' name='ruang' value='" . $rooms[1] . "'>";
+                                echo "<button type='submit' class='btn btn-delete' data-toggle='modal'>Delete</button>";
+                                echo "</form>";
+                                echo "</td>";
+
+                                echo "</tr>";
+
                                 $count++;
                             }
                         }
@@ -561,81 +1177,83 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                                 $total = $row['umumP'] + $row['umumL'] + $row['mhsP'] + $row['mhsL'] + $row['pelajarP'] + $row['pelajarL'];
                                 echo "<td>" . $total . "</td>";
                                 echo "<td>";
-                                // switch ($selectedRuang) {
-                                //     case "ruang1":
-                                //         echo "<form method='post' action='../statistikbalai/L2/formUpDigital.php'>";
-                                //         break;
-                                //     case "ruang2":
-                                //         echo "<form method='post' action='../statistikbalai/L2/formUpLangka.php'>";
-                                //         break;
-                                //     case "ruang3":
-                                //         echo "<form method='post' action='../statistikbalai/L2/formUpAV.php'>";
-                                //         break;
-                                //     case "ruang4":
-                                //         echo "<form method='post' action='../statistikbalai/L2/formUpReferensi.php'>";
-                                //         break;
-                                //     case "ruang5":
-                                //         echo "<form method='post' action='../statistikbalai/L2/formUpSkripsiBudaya.php'>";
-                                //         break;
-                                //     case "ruang6":
-                                //         echo "<form method='post' action='../statistikbalai/L1/formUpUmum.php'>";
-                                //         break;
-                                //     case "ruang7":
-                                //         echo "<form method='post' action='../statistikbalai/L1/formUpBraile.php'>";
-                                //         break;
-                                //     case "ruang8":
-                                //         echo "<form method='post' action='../statistikbalai/L1/formUpMajalah.php'>";
-                                //         break;
-                                //     case "ruang9":
-                                //         echo "<form method='post' action='../statistikbalai/LD/formUpBukuAnak.php'>";
-                                //         break;
-                                //     case "ruang10":
-                                //         echo "<form method='post' action='../statistikbalai/LD/formUpBermain.php'>";
-                                //         break;
-                                //     case "ruang11":
-                                //         echo "<form method='post' action='../statistikbalai/LD/formUpMusik.php'>";
-                                //         break;
-                                //     case "ruang12":
-                                //         echo "<form method='post' action='../statistikbalai/LD/formUpMendongeng.php'>";
-                                //         break;
-                                //     case "ruang13":
-                                //         echo "<form method='post' action='../statistikbalai/LD/formUpBioskop.php'>";
-                                //         break;
-                                //     case "ruang14":
-                                //         echo "<form method='post' action='../statistikbalai/LD/formUpTandon.php'>";
-                                //         break;
-                                //     case "ruang15":
-                                //         echo "<form method='post' action='../statistikbalai/JLC/formUpMJLC.php'>";
-                                //         break;
-                                //     case "ruang16":
-                                //         echo "<form method='post' action='../statistikbalai/RBM/formUpRBM.php'>";
-                                //         break;
-                                //     default:
-                                //         echo "<form method='post' action='dashboard.php'>";
-                                // }
-                                // echo "
-                                // <input type='hidden' name='tanggal' value='" . $throw . "'>
-                                // <input type='hidden' name='pl' value='" . $throwPL . "'>
-                                // <input type='hidden' name='pp' value='" . $throwPP . "'>
-                                // <input type='hidden' name='ml' value='" . $throwML . "'>
-                                // <input type='hidden' name='mp' value='" . $throwMP . "'>
-                                // <input type='hidden' name='ul' value='" . $throwUL . "'>
-                                // <input type='hidden' name='up' value='" . $throwUP . "'>
-                                // <button type='submit' class='btn btn-edit' data-toggle='modal'>Edit</button>
-                                // </form>
-                                // </td>";
-                        
-                                // // Delete button
-                                // echo "<td>";
-                                // echo "<form method='post' action='delete.php'>";
-                                // echo "<input type='hidden' name='tanggal' value='" . $throw . "'>";
-                                // echo "<input type='hidden' name='ruang' value='" . $selectedRuang . "'>";
-                                // echo "<button type='submit' class='btn btn-delete' data-toggle='modal'>Delete</button>";
-                                // echo "</form>";
-                                // echo "</td>";
-                        
-                                // echo "</tr>";
-                        
+
+                                switch ($rooms[2]) {
+                                    case "ruang_digital":
+                                        echo "<form method='post' action='/statistik_perpustakaan/L2/formUpDigital.php'>";
+                                        break;
+                                    case "ruang_langka":
+                                        echo "<form method='post' action='/statistik_perpustakaan/L2/formUpLangka.php'>";
+                                        break;
+                                    case "ruang_audiovisual":
+                                        echo "<form method='post' action='/statistik_perpustakaan/L2/formUpAV.php'>";
+                                        break;
+                                    case "ruang_referensi":
+                                        echo "<form method='post' action='/statistik_perpustakaan/L2/formUpReferensi.php'>";
+                                        break;
+                                    case "ruang5":
+                                        echo "<form method='post' action='/statistik_perpustakaan/L2/formUpSkripsiBudaya.php'>";
+                                        break;
+                                    case "ruang6":
+                                        echo "<form method='post' action='/statistik_perpustakaan/L1/formUpUmum.php'>";
+                                        break;
+                                    case "ruang7":
+                                        echo "<form method='post' action='/statistik_perpustakaan/L1/formUpBraile.php'>";
+                                        break;
+                                    case "ruang8":
+                                        echo "<form method='post' action='/statistik_perpustakaan/L1/formUpMajalah.php'>";
+                                        break;
+                                    case "ruang9":
+                                        echo "<form method='post' action='/statistik_perpustakaan/LD/formUpBukuAnak.php'>";
+                                        break;
+                                    case "ruang_bermain":
+                                        echo "<form method='post' action='/statistik_perpustakaan/LD/formUpBermain.php'>";
+                                        break;
+                                    case "ruang_musik":
+                                        echo "<form method='post' action='/statistik_perpustakaan/LD/formUpMusik.php'>";
+                                        break;
+                                    case "ruang_mendongeng":
+                                        echo "<form method='post' action='/statistik_perpustakaan/LD/formUpMendongeng.php'>";
+                                        break;
+                                    case "ruang_bioskop":
+                                        echo "<form method='post' action='/statistik_perpustakaan/LD/formUpBioskop.php'>";
+                                        break;
+                                    case "ruang_tandon":
+                                        echo "<form method='post' action='/statistik_perpustakaan/LD/formUpTandon.php'>";
+                                        break;
+                                    case "jlc":
+                                        echo "<form method='post' action='/statistik_perpustakaan/JLC/formUpMJLC.php'>";
+                                        break;
+                                    case "rbm":
+                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        break;
+                                    default:
+                                        echo "<form method='post' action='dashboard.php'>";
+                                }
+
+                                echo "
+                                    <input type='hidden' name='tanggal' value='" . $throw . "'>
+                                    <input type='hidden' name='pl' value='" . $throwPL . "'>
+                                    <input type='hidden' name='pp' value='" . $throwPP . "'>
+                                    <input type='hidden' name='ml' value='" . $throwML . "'>
+                                    <input type='hidden' name='mp' value='" . $throwMP . "'>
+                                    <input type='hidden' name='ul' value='" . $throwUL . "'>
+                                    <input type='hidden' name='up' value='" . $throwUP . "'>
+                                    <button type='submit' class='btn btn-edit' data-toggle='modal'>Edit</button>
+                                </form>
+                                </td>";
+
+                                // Delete button
+                                echo "<td>";
+                                echo "<form method='post' action='delete.php'>";
+                                echo "<input type='hidden' name='tanggal' value='" . $throw . "'>";
+                                echo "<input type='hidden' name='ruang' value='" . $rooms[2] . "'>";
+                                echo "<button type='submit' class='btn btn-delete' data-toggle='modal'>Delete</button>";
+                                echo "</form>";
+                                echo "</td>";
+
+                                echo "</tr>";
+
                                 $count++;
                             }
                         }
@@ -670,22 +1288,28 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
                     </tbody>
                 </table>
-                <button class="btn btn-download" onclick=" htmlTableToExcel('xlsx')">Download XLS</button>
+                <button class="btn btn-download" onclick="htmlTableToExcel('xlsx', null, false);
+">Download XLS</button>
             </div>
 
         </div>
     </div>
 
+    <!-- xlsx download script -->
+
     <script>
         function htmlTableToExcel(type, fn, dl) {
             var elt = document.getElementById('tblToExcl');
-            var wb = XLSX.utils.table_to_book(elt, { sheet: `data_pegunjung` });
-            return dl ?
-                XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }) :
-                XLSX.writeFile(wb, fn || ('data-pengunjung.' + (type || 'xlsx')));
+            var sheetName = `data_pengunjung`;
+            var wb = XLSX.utils.table_to_book(elt, { sheet: sheetName });
+            var fileName = `data_pengunjung.${type || 'xlsx'}`;
+            return dl ? XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }) : XLSX.writeFile(wb, fn || fileName);
         }
-
     </script>
+
+
+    <!-- xlsx download script -->
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
         crossorigin="anonymous"></script>
