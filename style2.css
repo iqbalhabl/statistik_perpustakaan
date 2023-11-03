@@ -15,24 +15,31 @@
 }
 
 .card-body {
-    background-color: #f0f0f0;
+    background-color: #212529;
     padding: 15px;
     text-align: center;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .card-title {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+    color: white;
+    font-weight: bold;
+    font-family: Georgia;
+}
+
+.userpass{
+    color: #ebd835;
 }
 
 .card-text {
-    background-color: #f0f0f0;
-    padding: 20px;
+    background-color: #212529;
+    padding: 35px;
     text-align: center;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .form-label {
@@ -40,10 +47,12 @@
 }
 
 .form-control {
-    width: 100%;
+    margin-top: 5px;
+    background-color: white;
+    justify-content: center;
+    width: 90%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
@@ -51,26 +60,27 @@
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: #ebd835;
     border: none;
     border-radius: 5px;
-    color: white;
+    color: #212529;
     cursor: pointer;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #cfaf1e;
 }
 
 .body-login {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    height: 97.5vh;
+    
 
     background-image: url("../statistik_perpustakaan/bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    background-color: #212529;
 }

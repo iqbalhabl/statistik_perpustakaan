@@ -84,6 +84,8 @@ select#statistikPojokBaca,
 select#statistikLayananKel,
 select#statistikLayananPaket,
 select#statistikDO
+select#statistikSIF
+select#statistikVirtual
  {
     padding: 5px;
     background-color: #fff;
