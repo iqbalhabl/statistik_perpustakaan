@@ -36,16 +36,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="global-container">
             <div class="card login-form">
                 <div class="card-body">
-                    <h1 class="card-title">L O G I N</h1>
+                    <h1 class="card-title">LOGIN</h1>
                 </div>
                 <div class="card-text">
                     <form action="" method="post">
                         <div class="mb-3">
-                            <label for="usernameInput" class="form-label">Username</label>
+                            <label for="usernameInput" class="userpass">Username</label>
                             <input type="text" name="username" class="form-control" id="usernameInput">
                         </div>
                         <div class="mb-3">
-                            <label for="passwordInput" class="form-label">Password</label>
+                            <label for="passwordInput" class="userpass">Password</label>
                             <input type="password" name="password" class="form-control" id="passwordInput">
                         </div>
                         <button type="submit" value="Login" class="btn btn-primary">Login</button>

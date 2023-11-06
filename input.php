@@ -157,7 +157,7 @@
                         <option value="../statistik_perpustakaan/POBAC/formBPRSW.php">BPRSW</option>
                         <option value="../statistik_perpustakaan/POBAC/formSamBantul.php">Samsat Bantul</option>
                         <option value="../statistik_perpustakaan/POBAC/formSamKP.php">Samsat KP</option>
-                        <option value="../statistik_perpustakaan/POBAC/formKPPSleman.php">KPP sleman</option>
+                        <option value="../statistik_perpustakaan/POBAC/formKPPSleman.php">KPP Sleman</option>
                         <option value="../statistik_perpustakaan/POBAC/formPNYogya.php">PN Yogya</option>
                         <option value="../statistik_perpustakaan/POBAC/formDP3AP2.php">DP3AP2</option>
                         <option value="../statistik_perpustakaan/POBAC/formDPMPTSP.php">DPMPTSP</option>
@@ -247,6 +247,51 @@
                     <select name="statistikDO" id="statistikDO">
                         <option value="#" disabled selected>Pilihan Delivery Order</option>
                         <option value="../statistik_perpustakaan/DO/formDO.php">DO</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+
+        <div class="btn-ruang">
+            <div>
+                <h2>Layanan SIF</h2>
+            </div>
+            <div class="gab-btn">
+                <form name="webpage">
+                    <select name="statistikSIF" id="statistikSIF">
+                        <option value="#" disabled selected>Pilihan Lokasi Layanan SIF</option>
+                        <option value="../statistik_perpustakaan/SIF/formSMPN1Paliyan.php">SMPN 1 Paliyan</option>
+                        <option value="../statistik_perpustakaan/SIF/formSMPN3Sentolo.php">SMPN 3 Sentolo</option>
+                        <option value="../statistik_perpustakaan/SIF/formSDMSLeman.php">SD Model Sleman</option>
+                        <option value="../statistik_perpustakaan/SIF/formSMKPariwisata.php">SMK Pariwisata</option>
+                        <option value="../statistik_perpustakaan/SIF/formSMPN3Gamping.php">SMPN 3 Gamping</option>
+                        <option value="../statistik_perpustakaan/SIF/formSMPN2Pundong.php">SMPN 2 Pundong</option>
+                        <option value="../statistik_perpustakaan/SIF/formSDTimuran.php">SD Timuran</option>
+                        <option value="../statistik_perpustakaan/SIF/formSMAN1Lendah.php">SMAN 1 Lendah</option>
+                        <option value="../statistik_perpustakaan/SIF/formSDMujahidin.php">SD Mujahidin</option>
+                        <option value="../statistik_perpustakaan/SIF/formSMPN6Yogyakarta.php">SMPN 6 Yogyakarta</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+
+        <div class="btn-ruang">
+            <div>
+                <h2>Kunjungan Virtual</h2>
+            </div>
+            <div class="gab-btn">
+                <form name="webpage">
+                    <select name="statistikVirtual" id="statistikVirtual">
+                        <option value="#" disabled selected>Pilihan Media Virtual</option>
+                        <option value="../statistik_perpustakaan/VIRTUAL/formIG.php">Instagram</option>
+                        <option value="../statistik_perpustakaan/VIRTUAL/formTwitter.php">Twitter</option>
+                        <option value="../statistik_perpustakaan/VIRTUAL/formFB.php">Facebook</option>
+                        <option value="../statistik_perpustakaan/VIRTUAL/formTiktok.php">Tiktok</option>
+                        <option value="../statistik_perpustakaan/VIRTUAL/formYoutube.php">Youtube</option>
+                        <option value="../statistik_perpustakaan/VIRTUAL/formWebinar.php">Webinar</option>
+                        <option value="../statistik_perpustakaan/VIRTUAL/formWebBalai.php">Website Balai Yanpus</option>
+                        <option value="../statistik_perpustakaan/VIRTUAL/formWebCOE.php">Website COE</option>
+                        <option value="../statistik_perpustakaan/VIRTUAL/formIJogja.php">IJogja</option>
                     </select>
                 </form>
             </div>
@@ -349,6 +394,30 @@
     </script>
     <script type ="text/javascript">
         var urlMenu = document.getElementById('statistikDO');
+        urlMenu.onchange = function()
+        {
+            var userOption = this.options[this.selectedIndex];
+            if (userOption.value != "nothing")
+                {
+                window.open(userOption.value, "HTML CSS javascript PHP", "");
+                }
+        }
+    </script>
+
+    <script type ="text/javascript">
+        var urlMenu = document.getElementById('statistikSIF');
+        urlMenu.onchange = function()
+        {
+            var userOption = this.options[this.selectedIndex];
+            if (userOption.value != "nothing")
+                {
+                window.open(userOption.value, "HTML CSS javascript PHP", "");
+                }
+        }
+    </script>
+
+    <script type ="text/javascript">
+        var urlMenu = document.getElementById('statistikVirtual');
         urlMenu.onchange = function()
         {
             var userOption = this.options[this.selectedIndex];
