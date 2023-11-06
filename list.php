@@ -111,80 +111,80 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                             'ruang_tandon' => 'Ruang Tandon',
                             'jlc' => 'JLC',
                             'rbm' => 'RBM',
-                            'bprsr' => 'BPRSR',
-                            'bprsw' => 'BPRSW',
-                            'samsat_bantul' => 'Samsat Bantul',
-                            'samsat_kp' => 'Samsat KP',
-                            'kpp_sleman' => 'KPP Sleman',
-                            'pn_yogya' => 'PN Yogya',
-                            'dp3ap2' => 'DP3AP2',
-                            'dpmptsp' => 'DPMPTSP',
-                            'polairud' => 'POLAIRUD',
-                            'tk_pkkwido' => 'TK PKK Widodomartani',
-                            'sd_jali' => 'SD Jali Prambanan',
-                            'sd_sinar' => 'SD Sinar Melati',
-                            'sd_pendowo' => 'SD Pendowoharjo',
-                            'sd_rejodani' => 'SD Rejodani',
-                            'sd_tamanan' => 'SD Tamanan',
-                            'sd_berbah' => 'SD Berbah',
-                            'sd_murten' => 'SD Murten',
-                            'sd_muhconcat' => 'SD Muhammadiyah Condong',
-                            'tk_kalibulus' => 'TK Kalibulus',
-                            'tk_pkkpajimatan' => 'TK PKK Pajimatan',
-                            'sd_muhbabakan' => 'SD Muhammadiyah Babakan',
-                            'tk_abasutopadan' => 'TK ABA Sutopadan',
-                            'slb_bantul' => 'SLB Bantul',
-                            'ma_mafasa' => 'MA Mafasa',
-                            'sd_ngentak' => 'SD Ngentak',
-                            'sd_jurugentong' => 'SD Jurugentong',
-                            'sd_bunder' => 'SD Bunder',
-                            'tk_abaplembutan' => 'TK ABA Plembutan',
-                            'tk_abakarang' => 'TK ABA Karangmojo',
-                            'sd_gedang' => 'SD Gedang Klutuk',
-                            'sd_plembutan' => 'SD Plembutan Asri',
-                            'slb_yogya' => 'SLB Yogyakarta',
-                            'smk_koperasi' => 'SMK Koperasi',
-                            'sd_sidakan' => 'SD Sidakan',
-                            'sd_sorogenen' => 'SD Sorogenen',
-                            'kb_kasihibu' => 'KB Kasih Ibu',
-                            'ma_binbaz' => 'MA Bin Baz',
-                            'brsbkl' => 'BRSBKL',
-                            'rutan_wates' => 'Rutan Wates',
-                            'rutan_bantul' => 'Rutan Bantul',
-                            'rutan_kota' => 'Rutan kota',
-                            'lapas_wiro' => 'Lapas Wirogunan',
-                            'lapas_cebong' => 'Lapas Cebongan',
-                            'lapas_wono' => 'Lapas Wonosari',
-                            'lapas_narko' => 'Lapas Narkotika',
-                            'ponpes_pes' => 'PONPES Pesawat',
-                            'pa_nurul' => 'PA Nurul Haq',
-                            'sps_manggis' => 'SPS Manggis',
-                            'bprsw_godean' => 'BPRSW Godean',
-                            'huntap_karang' => 'Huntap Karang Kendal',
-                            'brspa_bimo' => 'BRSPA Bimomartani',
-                            'brspa_budhi' => 'BRSPA Budhi Bakti',
-                            'ponpes_ibnul' => 'PONPES Ibnul Qoyyim',
-                            'brtpd_pundong' => 'BRTPD Pundong Bantul',
-                            'do' => 'Delivery Order',
-                            'smpn_paliyan' => 'SMPN Paliyan',
-                            'smpn_sentolo' => 'SMPN Sentolo',
-                            'sdm_sleman' => 'SD Model Sleman',
-                            'smk_pariwisata' => 'SMK Pariwisata',
-                            'smpn_gamping' => 'SMPN Gamping',
-                            'smpn_pundong' => 'SMPN Pundong',
-                            'sd_timuran' => 'SD Timuran',
-                            'sman_lendah' => 'SMAN Lendah',
-                            'sd_mujahidin' => 'SD Mujahidin',
-                            'smpn_yogya' => 'SMPN Yogyakarta',
-                            'ig' => 'Instagram',
-                            'twitter' => 'Twitter',
-                            'fb' => 'Facebook',
-                            'tt' => 'Tiktok',
-                            'yt' => 'Youtube',
-                            'webinar' => 'Webinar',
-                            'web_balai' => 'Website Balai Yanpus',
-                            'web_coe' => 'Website COE',
-                            'ijogja' => 'IJogja'
+                            'layanan_bprsr' => 'BPRSR',
+                            'layanan_bprsw' => 'BPRSW',
+                            'layanan_sambantul' => 'Samsat Bantul',
+                            'layanan_samkp' => 'Samsat KP',
+                            'layanan_kppsleman' => 'KPP Sleman',
+                            'layanan_pnyogya' => 'PN Yogya',
+                            'layanan_dp3ap2' => 'DP3AP2',
+                            'layanan_dpmptsp' => 'DPMPTSP',
+                            'layanan_polairud' => 'POLAIRUD',
+                            'layanan_tkpkkwido' => 'TK PKK Widodomartani',
+                            'layanan_sdjali' => 'SD Jali Prambanan',
+                            'layanan_sdsinarmelati' => 'SD Sinar Melati',
+                            'layanan_sdpendowoharjo' => 'SD Pendowoharjo',
+                            'layanan_sdrejodani' => 'SD Rejodani',
+                            'layanan_sdtamanan3' => 'SD Tamanan',
+                            'layanan_sdberbah2' => 'SD Berbah',
+                            'layanan_sdmurten' => 'SD Murten',
+                            'layanan_sdmuhconcat' => 'SD Muhammadiyah Condong',
+                            'layanan_tkkalibulus' => 'TK Kalibulus',
+                            'layanan_tkpkkpajimatan' => 'TK PKK Pajimatan',
+                            'layanan_sdmuhbabakan' => 'SD Muhammadiyah Babakan',
+                            'layanan_tkabasutopadan' => 'TK ABA Sutopadan',
+                            'layanan_slb1bantul' => 'SLB Bantul',
+                            'layanan_mamafasa' => 'MA Mafasa',
+                            'layanan_sdngentak' => 'SD Ngentak',
+                            'layanan_sdjurugentong' => 'SD Jurugentong',
+                            'layanan_sdbunder2' => 'SD Bunder',
+                            'layanan_tkabaplembutan' => 'TK ABA Plembutan',
+                            'layanan_tkabakarangmojo' => 'TK ABA Karangmojo',
+                            'layanan_sdgedangklutuk' => 'SD Gedang Klutuk',
+                            'layanan_sdplembutan' => 'SD Plembutan Asri',
+                            'layanan_slb1yogya' => 'SLB Yogyakarta',
+                            'layanan_smkkoperasi' => 'SMK Koperasi',
+                            'layanan_sdnsidakan' => 'SD Sidakan',
+                            'layanan_sdsorogenen2' => 'SD Sorogenen',
+                            'layanan_kbkasihibu' => 'KB Kasih Ibu',
+                            'layanan_mabinbaz' => 'MA Bin Baz',
+                            'layanan_brsbkl' => 'BRSBKL',
+                            'layanan_rutanwates' => 'Rutan Wates',
+                            'layanan_rutanbantul' => 'Rutan Bantul',
+                            'layanan_rutankota' => 'Rutan kota',
+                            'layanan_lapaswiro' => 'Lapas Wirogunan',
+                            'layanan_lapascebong' => 'Lapas Cebongan',
+                            'layanan_lapaswono' => 'Lapas Wonosari',
+                            'layanan_lapasnarko' => 'Lapas Narkotika',
+                            'layanan_ponpespes' => 'PONPES Pesawat',
+                            'layanan_panurul' => 'PA Nurul Haq',
+                            'layanan_spsmanggis' => 'SPS Manggis',
+                            'layanan_bprswgodean' => 'BPRSW Godean',
+                            'layanan_huntapkarang' => 'Huntap Karang Kendal',
+                            'layanan_brspabimo' => 'BRSPA Bimomartani',
+                            'layanan_brspabudhi' => 'BRSPA Budhi Bakti',
+                            'layanan_ponpesibnul' => 'PONPES Ibnul Qoyyim',
+                            'layanan_brtpdpundong' => 'BRTPD Pundong Bantul',
+                            'layanan_do' => 'Delivery Order',
+                            'layanan_smpn1paliyan' => 'SMPN Paliyan',
+                            'layanan_smpn3sentolo' => 'SMPN Sentolo',
+                            'layanan_sdmsleman' => 'SD Model Sleman',
+                            'layanan_smkpariwisata' => 'SMK Pariwisata',
+                            'layanan_smpn3gamping' => 'SMPN Gamping',
+                            'layanan_smpn2pundong' => 'SMPN Pundong',
+                            'layanan_sdtimuran' => 'SD Timuran',
+                            'layanan_sman1lendah' => 'SMAN Lendah',
+                            'layanan_sdmujahidin' => 'SD Mujahidin',
+                            'layanan_smpn6yogyakarta' => 'SMPN Yogyakarta',
+                            'layanan_ig' => 'Instagram',
+                            'layanan_twitter' => 'Twitter',
+                            'layanan_fb' => 'Facebook',
+                            'layanan_tiktok' => 'Tiktok',
+                            'layanan_youtube' => 'Youtube',
+                            'layanan_webinar' => 'Webinar',
+                            'layanan_webbalai' => 'Website Balai Yanpus',
+                            'layanan_webcoe' => 'Website COE',
+                            'layanan_ijogja' => 'IJogja'
                         ];
 
 
@@ -320,9 +320,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox"
-                                        value="ruang_mendongeng" id="flexCheckChecked"
-                                        onclick="limitCheckboxSelections(2)" <?= isRoomSelected('ruang_mendongeng', $selectedRooms) ?>>
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_mendongeng" 
+                                    id="flexCheckChecked" onclick="limitCheckboxSelections(2)" 
+                                        <?= isRoomSelected('ruang_mendongeng', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Ruang Mendongeng
                                     </label>
@@ -344,7 +344,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="ruang_digital"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="jlc"
                                         id="flexCheckDefault" onclick="limitCheckboxSelections(2)"
                                         <?= isRoomSelected('jlc', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckDefault">
@@ -362,113 +362,113 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="bprsr"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_bprsr"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('bprsr', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_bprsr', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         BPRSR
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="bprsw"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_bprsw"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('bprsw', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_bprsw', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         BPRSW
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="samsat_bantul"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_sambantul"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('samsat_bantul', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_sambantul', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Samsat Bantul
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="samsat_kp"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_samkp"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('samsat_kp', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_samkp', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Samsat KP
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="kpp_sleman"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_kppsleman"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('kpp_sleman', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_kppsleman', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         KPP Sleman
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="pn_yogya"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_pnyogya"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('pn_yogya', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_pnyogya', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         PN Yogya
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="dp3ap2"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_dp3ap2"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('dp3ap2', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_dp3ap2', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         DP3AP2
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="dpmptsp"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_dpmptsp"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('dpmptsp', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_dpmptsp', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         DPMPTSP
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="polairud"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_polairud"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('polairud', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_polairud', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         POLAIRUD
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="tk_pkkwido"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_tkpkkwido"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('tk_pkkwido', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_tkpkkwido', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         TK PKK Widodomartani
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="sd_jali"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_sdjali"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('sd_jali', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_sdjali', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SD Jali Prambanan
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="sd_sinar"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_sdsinarmelati"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('sd_sinar', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_sdsinarmelati', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SD Sinar Melati
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="sd_pendowo"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_sdpendowoharjo"
                                         id="flexCheckDefault" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('sd_pendowo', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_sdpendowoharjo', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckDefault">
                                         SD Pendowoharjo
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="sd_rejodani"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_sdrejodani"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('sd_rejodani', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_sdrejodani', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SD Rejodani
                                     </label>
@@ -476,121 +476,121 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                             </div>
                             <div class="col-auto">
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="sd_tamanan"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_sdtamanan3"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('sd_tamanan', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_sdtamanan3', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SD Tamanan 3 Kalasan
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="sd_berbah"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_sdberbah2"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('sd_berbah', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_sdberbah2', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SD Berbah 2
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="sd_murten"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_sdmurten"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('sd_murten', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_sdmurten', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SD Murten
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="sd_muhconcat"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_sdmuhconcat"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('sd_muhconcat', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_sdmuhconcat', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SD Muhammadiyah Condong catur
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="tk_kalibulus"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_tkkalibulus"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('tk_kalibulus', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_tkkalibulus', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         TK Kalibulus
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox"
-                                        value="tk_pkkpajimatan" id="flexCheckChecked"
-                                        onclick="limitCheckboxSelections(2)" <?= isRoomSelected('tk_pkkpajimatan', $selectedRooms) ?>>
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_tkpkkpajimatan" 
+                                        id="flexCheckChecked" onclick="limitCheckboxSelections(2)" 
+                                        <?= isRoomSelected('layanan_tkpkkpajimatan', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         TK PKK Pajimatan
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="sd_muhbabakan"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_sdmuhbabakan"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('sd_muhbabakan', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_sdmuhbabakan', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SD Muhammadiyah Babakan
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox"
-                                        value="tk_abasutopadan" id="flexCheckChecked"
-                                        onclick="limitCheckboxSelections(2)" <?= isRoomSelected('tk_abasutopadan', $selectedRooms) ?>>
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_tkabasutopadan" 
+                                    id="flexCheckChecked" onclick="limitCheckboxSelections(2)" 
+                                        <?= isRoomSelected('layanan_tkabasutopadan', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         TK ABA Sutopadan
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="slb_bantul"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_slb1bantul"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('slb_bantul', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_slb1bantul', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SLB 1 Bantul
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="ma_mafasa"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_mamafasa"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('ma_mafasa', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_mamafasa', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         MA Mafasa
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="sd_ngentak"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_sdngentak"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('sd_ngentak', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_sdngentak', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SD Ngentak Banguntapan
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox"
-                                        value="sd_jurugentong" id="flexCheckChecked"
-                                        onclick="limitCheckboxSelections(2)" <?= isRoomSelected('sd_jurugentong', $selectedRooms) ?>>
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_sdjurugentong" 
+                                    id="flexCheckChecked" onclick="limitCheckboxSelections(2)" 
+                                        <?= isRoomSelected('layanan_sdjurugentong', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SD Jurugentong
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="sd_bunder"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_sdbunder2"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('sd_bunder', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_sdbunder2', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SD Bunder 2
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox"
-                                        value="tk_abaplembutan" id="flexCheckDefault"
-                                        onclick="limitCheckboxSelections(2)" <?= isRoomSelected('tk_abaplembutan', $selectedRooms) ?>>
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_tkabaplembutan" 
+                                        id="flexCheckDefault" onclick="limitCheckboxSelections(2)" 
+                                        <?= isRoomSelected('layanan_tkabaplembutan', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckDefault">
                                         TK ABA Plembutan Asri
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="tk_abakarang"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_tkabakarangmojo"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('tk_abakarang', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_tkabakarangmojo', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         TK ABA Karangmojo 1
                                     </label>
@@ -600,121 +600,121 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                             </div>
                             <div class="col-auto">
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="sd_gedang"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_sdgedangklutuk"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('sd_gedang', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_sdgedangklutuk', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SD Gedang Klutuk
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="sd_plembutan"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_sdplembutan"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('sd_plembutan', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_sdplembutan', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SD Plembutan Asri
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="slb_yogya"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_slb1yogya"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('slb_yogya', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_slb1yogya', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SLB 1 Yogyakarta
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="smk_koperasi"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_smkkoperasi"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('smk_koperasi', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_smkkoperasi', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SMK Koperasi
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="sd_sidakan"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_sdnsidakan"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('sd_sidakan', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_sdnsidakan', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SD Negeri Sidakan
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="sd_sorogenen"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_sdsorogenen2"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('sd_sorogenen', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_sdsorogenen2', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SD Sorogenen 2 Kalasan
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="kb_kasihibu"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_kbkasihibu"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('kb_kasihibu', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_kbkasihibu', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         KB Kasih Ibu
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="ma_binbaz"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_mabinbaz"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('ma_binbaz', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_mabinbaz', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         MA Bin Baz
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="brsbkl"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_brsbkl"
                                         id="flexCheckDefault" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('brsbkl', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_brsbkl', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckDefault">
                                         BRSBKL
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="rutan_wates"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_rutanwates"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('rutan_wates', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_rutanwates', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Rutan Wates
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="rutan_bantul"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_rutanbantul"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('rutan_bantul', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_rutanbantul', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Rutan Bantul
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="rutan_kota"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_rutankota"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('rutan_kota', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_rutankota', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Rutan kota
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="lapas_wiro"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_lapaswiro"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('lapas_wiro', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_lapaswiro', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Lapas Wirogunan
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="lapas_cebong"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_lapascebong"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('lapas_cebong', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_lapascebong', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Lapas Cebongan
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="lapas_wono"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_lapaswono"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('lapas_wono', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_lapaswono', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Lapas Wonosari
                                     </label>
@@ -724,120 +724,121 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                             </div>
                             <div class="col-auto">
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="lapas_narko"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_lapasnarko"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('lapas_narko', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_lapasnarko', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Lapas Narkotika
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="ponpes_pes"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_ponpespes"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('ponpes_pes', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_ponpespes', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         PONPES Pesawat
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="pa_nurul"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_panurul"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('pa_nurul', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_panurul', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         PA Nurul Haq
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="sps_manggis"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_spsmanggis"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('sps_manggis', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_spsmanggis', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SPS Manggis
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="bprsw_godean"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_bprswgodean"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('bprsw_godean', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_bprswgodean', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         BPRSW Godean
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="huntap_karang"
-                                        id="flexCheckChecked" <?= isRoomSelected('huntap_karang', $selectedRooms) ?>>
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_huntapkarang"
+                                        id="flexCheckChecked" onclick="limitCheckboxSelections(2)
+                                        <?= isRoomSelected('layanan_huntapkarang', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Huntap Karang Kendal
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="brspa_bimo"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_brspabimo"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('brspa_bimo', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_brspabimo', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         BRSPA Bimomartani
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="brspa_budhi"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_brspabudhi"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('brspa_budhi', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_brspabudhi', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         BRSPA Budhi Bakti
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="ponpes_ibnul"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_ponpesibnul"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('ponpes_ibnul', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_ponpesibnul', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         PONPES Ibnul Qoyyim
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="brtpd_pundong"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_brtpdpundong"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('brtpd_pundong', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_brtpdpundong', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         BRTPD Pundong Bantul
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="do"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_do"
                                         id="flexCheckDefault" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('do', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_do', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Delivery Order
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="smpn_paliyan"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_smpn1paliyan"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('smpn_paliyan', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_smpn1paliyan', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SMPN 1 Paliyan
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="smpn_sentolo"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_smpn3sentolo"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('smpn_sentolo', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_smpn3sentolo', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SMPN 3 Sentolo
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="sdm_sleman"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_sdmsleman"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('sdm_sleman', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_sdmsleman', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SD Model Sleman
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox"
-                                        value="smk_pariwisata" id="flexCheckChecked"
-                                        onclick="limitCheckboxSelections(2)" <?= isRoomSelected('smk_pariwisata', $selectedRooms) ?>>
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_smkpariwisata" 
+                                        id="flexCheckChecked" onclick="limitCheckboxSelections(2)" 
+                                        <?= isRoomSelected('layanan_smkpariwisata', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SMK Pariwisata
                                     </label>
@@ -848,113 +849,113 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                             </div>
                             <div class="col-auto">
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="smpn_gamping"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_smpn3gamping"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('smpn_gamping', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_smpn3gamping', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SMPN 3 Gamping
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="smpn_pundong"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_smpn2pundong"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('smpn_pundong', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_smpn2pundong', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SMPN 2 Pundong
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="sd_timuran"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_sdtimuran"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('sd_timuran', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_sdtimuran', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SD Timuran
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="sman_lendah"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_sman1lendah"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('sman_lendah', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_sman1lendah', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SMAN 1 Lendah
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="sd_mujahidin"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_sdmujahidin"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('sd_mujahidin', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_sdmujahidin', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SD Mujahidin
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="smpn_yogya"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_smpn6yogyakarta"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('smpn_yogya', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_smpn6yogyakarta', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         SMPN 6 Yogyakarta
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="ig"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_ig"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('ig', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_ig', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Instagram
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="twitter"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_twitter"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('twitter', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_twitter', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Twitter
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="fb"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_fb"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('fb', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_fb', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Facebook
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="tt"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_tiktok"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('tt', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_tiktok', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Tiktok
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="yt"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_youtube"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('yt', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_youtube', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Youtube
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="webinar"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_webinar"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('webinar', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_webinar', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Webinar
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="web_balai"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_webbalai"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('web_balai', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_webbalai', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Website Balai Yanpus
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="web_coe"
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_webcoe"
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
-                                        <?= isRoomSelected('web_coe', $selectedRooms) ?>>
+                                        <?= isRoomSelected('layanan_webcoe', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Ruang Tandon
                                     </label>
