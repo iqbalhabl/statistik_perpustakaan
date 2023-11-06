@@ -1,13 +1,19 @@
 <?php
-session_start(); // Start session
+    session_start(); // Start session
 
-require 'koneksi.php';
+    require 'koneksi.php';
 
-// Check if user is logged in
-if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    header("Location: index.php");
-    exit;
-}
+    // Check if user is logged in
+    if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+        header("Location: index.php");
+        exit;
+    }
+
+    if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
+        // Variabel tgl_mulai atau tgl_akhir belum ada, arahkan ke list-date.php
+        header("Location: list-date.php");
+        exit();
+    }
 ?>
 
 
@@ -956,7 +962,15 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
                                         <?= isRoomSelected('web_coe', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
-                                        Ruang Tandon
+                                        Web COE
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="ijogja"
+                                        id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                                        <?= isRoomSelected('ijogja', $selectedRooms) ?>>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        I Jogja
                                     </label>
                                 </div>
                             </div>
