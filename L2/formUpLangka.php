@@ -27,11 +27,6 @@ $up = $_POST['up'];
 </head>
 
 <body>
-<?php include '../header.php'; ?>
-    <div class="sidebar-container">
-        <?php include '../sidebar.php'; ?>
-    </div>
-
     <div class="form">
         <h1>Input Data Ruang Langka</h1>
         <form class="row g-3" action="u_Langka.php" method="POST">

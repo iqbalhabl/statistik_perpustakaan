@@ -37,5 +37,5 @@ if ($count > 0) {
 
 $conn->close();
 
-header("Location: ../list.php");
+header("Location: ../list-date.php");
 exit();

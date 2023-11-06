@@ -3,11 +3,10 @@ session_start(); // Mulai sesi
 
 require_once '../koneksi.php';
 
-
-if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    header("Location: ../index.php"); // Redirect to the login page if not logged in
-    exit();
-}
+// if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+//     header("Location: ../index.php"); // Redirect to the login page if not logged in
+//     exit();
+// }
 
 $successMessage = "";
 $tanggal = $pelajarL = $pelajarP = $mhsL = $mhsP = $umumL = $umumP = ""; // Initialize form fields
@@ -82,41 +81,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <div class="col-7">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/statistik_perpustakaan/home.php">
-                            <h4>Home</h4>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/statistik_perpustakaan/input.php">
-                            <h4>Input Data</h4>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/statistik_perpustakaan/list.php">
-                            <h4>List Data</h4>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/statistik_perpustakaan/logout.php">
-                            <h4>Logout</h4>
-                        </a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
-                </form>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/statistik_perpustakaan/home.php">
+                                <h4>Home</h4>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/statistik_perpustakaan/input.php">
+                                <h4>Input Data</h4>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/statistik_perpustakaan/list.php">
+                                <h4>List Data</h4>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/statistik_perpustakaan/logout.php">
+                                <h4>Logout</h4>
+                            </a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                </div>
             </div>
-        </div>
     </nav>
     <!-- nav section end -->
 
     <div class="form">
         <h1>Input Data Ruang Koleksi Langka</h1>
         <?php if ($successMessage !== ""): ?>
-            <p><?php echo $successMessage; ?></p>
+            <p>
+                <?php echo $successMessage; ?>
+            </p>
         <?php else: ?>
             <form class="row g-3" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
                 <div>
