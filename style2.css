@@ -76,5 +76,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 98vh;
+    height: 97.5vh;
+    
+
+    background-image: url("../statistik_perpustakaan/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #212529;
 }
