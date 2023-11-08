@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $umumP = $_POST["umumP"];
 
     // Query untuk memasukkan data ke database
-    $sql = "INSERT INTO ruang_braile (tanggal, pelajarL, pelajarP, mhsL, mhsP, umumL, umumP) VALUES ('$tanggal', '$pelajarL', '$pelajarP', '$mhsL', '$mhsP', '$umumL', '$umumP' )";
+    $sql = "INSERT INTO layanan_do (tanggal, pelajarL, pelajarP, mhsL, mhsP, umumL, umumP) VALUES ('$tanggal', '$pelajarL', '$pelajarP', '$mhsL', '$mhsP', '$umumL', '$umumP' )";
 
     if ($conn->query($sql) === TRUE) {
         $successMessage = "Data berhasil dimasukkan ke database.";
@@ -114,7 +114,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- nav section end -->
 
     <div class="form">
-        <h1>Input Data Layanan Delivery Order</h1>
+        <h1>Input Data Ruang Delivery Order</h1>
         <?php if ($successMessage !== ""): ?>
             <p><?php echo $successMessage; ?></p>
         <?php else: ?>
