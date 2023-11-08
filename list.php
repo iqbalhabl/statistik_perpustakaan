@@ -1162,10 +1162,13 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                                         echo "<form method='post' action='/statistik_perpustakaan/LD/formUpTandon.php'>";
                                         break;
                                     case "jlc":
-                                        echo "<form method='post' action='/statistik_perpustakaan/JLC/formUpMJLC.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/JLC/formUpJLC.php'>";
                                         break;
                                     case "rbm":
                                         echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        break;
+                                    case "layanan_do":
+                                        echo "<form method='post' action='/statistik_perpustakaan/DO/formUpDO.php'>";
                                         break;
                                     default:
                                         echo "<form method='post' action='dashboard.php'>";
@@ -1280,7 +1283,7 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                                         echo "<form method='post' action='/statistik_perpustakaan/LD/formUpTandon.php'>";
                                         break;
                                     case "jlc":
-                                        echo "<form method='post' action='/statistik_perpustakaan/JLC/formUpMJLC.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/JLC/formUpJLC.php'>";
                                         break;
                                     case "rbm":
                                         echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
@@ -1399,7 +1402,7 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                                         echo "<form method='post' action='/statistik_perpustakaan/LD/formUpTandon.php'>";
                                         break;
                                     case "jlc":
-                                        echo "<form method='post' action='/statistik_perpustakaan/JLC/formUpMJLC.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/JLC/formUpJLC.php'>";
                                         break;
                                     case "rbm":
                                         echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
