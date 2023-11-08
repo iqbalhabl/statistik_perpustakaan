@@ -1051,7 +1051,7 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
 
             <div class="tgl">
                 <b>
-                    <?= "Data dari tanggal $tgl_mulai - $tgl_akhir"; ?>
+                    <?= "Data dari tanggal $tgl_mulai s/d $tgl_akhir"; ?>
                 </b>
             </div>
 

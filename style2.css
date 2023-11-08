@@ -31,7 +31,7 @@
 }
 
 .userpass{
-    color: #ebd835;
+    color: white;
 }
 
 .card-text {
@@ -69,19 +69,12 @@
 }
 
 .btn-primary:hover {
-    background-color: #cfaf1e;
+    background-color: #ddbb26;
 }
 
 .body-login {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 97.5vh;
-    
-
-    background-image: url("../statistik_perpustakaan/bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-color: #212529;
+    height: 98vh;
 }
