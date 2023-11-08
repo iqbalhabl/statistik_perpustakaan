@@ -8,6 +8,12 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     header("Location: index.php");
     exit;
 }
+
+if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
+    // Variabel tgl_mulai atau tgl_akhir belum ada, arahkan ke list-date.php
+    header("Location: list-date.php");
+    exit();
+}
 ?>
 
 
@@ -765,7 +771,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" name="rooms[]" type="checkbox" value="layanan_huntapkarang"
-                                        id="flexCheckChecked" onclick="limitCheckboxSelections(2)
+                                        id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
                                         <?= isRoomSelected('layanan_huntapkarang', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
                                         Huntap Karang Kendal
@@ -957,7 +963,15 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                                         id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
                                         <?= isRoomSelected('layanan_webcoe', $selectedRooms) ?>>
                                     <label class="form-check-label" for="flexCheckChecked">
-                                        Ruang Tandon
+                                        Web COE
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" name="rooms[]" type="checkbox" value="ijogja"
+                                        id="flexCheckChecked" onclick="limitCheckboxSelections(2)"
+                                        <?= isRoomSelected('ijogja', $selectedRooms) ?>>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        I Jogja
                                     </label>
                                 </div>
                             </div>
@@ -1002,42 +1016,33 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             </script>
 
             <?php
-            $tgl_mulai = $_GET['tgl_mulai'];
-            $tgl_akhir = $_GET['tgl_akhir'];
+            $tgl_mulai_awal = $_GET['tgl_mulai'];
+            $tgl_akhir_awal = $_GET['tgl_akhir'];
 
-            $tgl_mulai = date('d-m-Y', strtotime($tgl_mulai));
-            $tgl_akhir = date('d-m-Y', strtotime($tgl_akhir));
+            $tgl_mulai = date('d-m-Y', strtotime($tgl_mulai_awal));
+            $tgl_akhir = date('d-m-Y', strtotime($tgl_akhir_awal));
 
             if (isset($_POST['show'])) {
                 if (sizeof($rooms) == 3) {
-                    $query1 = "SELECT * FROM $rooms[0]";
-                    $query2 = "SELECT * FROM $rooms[1]";
-                    $query3 = "SELECT * FROM $rooms[2]";
-
-                    // echo "query1 : $query1";
-                    // echo "query2 : $query2";
-                    // echo "query3 : $query3";
+                    $query1 = "SELECT * FROM $rooms[0] WHERE tanggal BETWEEN '$tgl_mulai_awal' AND '$tgl_akhir_awal'";
+                    $query2 = "SELECT * FROM $rooms[1] WHERE tanggal BETWEEN '$tgl_mulai_awal' AND '$tgl_akhir_awal'";
+                    $query3 = "SELECT * FROM $rooms[2] WHERE tanggal BETWEEN '$tgl_mulai_awal' AND '$tgl_akhir_awal'";
             
                     $result1 = mysqli_query($conn, $query1);
                     $result2 = mysqli_query($conn, $query2);
                     $result3 = mysqli_query($conn, $query3);
                 } else if (sizeof($rooms) == 2) {
-                    $query1 = "SELECT * FROM $rooms[0]";
-                    $query2 = "SELECT * FROM $rooms[1]";
-
-                    // echo "query1 : $query1";
-                    // echo "query2 : $query2";
+                    $query1 = "SELECT * FROM $rooms[0] WHERE tanggal BETWEEN '$tgl_mulai_awal' AND '$tgl_akhir_awal'";
+                    $query2 = "SELECT * FROM $rooms[1] WHERE tanggal BETWEEN '$tgl_mulai_awal' AND '$tgl_akhir_awal'";
             
                     $result1 = mysqli_query($conn, $query1);
                     $result2 = mysqli_query($conn, $query2);
                 } else if (sizeof($rooms) == 1) {
-                    $query1 = "SELECT * FROM $rooms[0]";
-
-                    // echo "query1 : $query1";
+                    $query1 = "SELECT * FROM $rooms[0] WHERE tanggal BETWEEN '$tgl_mulai_awal' AND '$tgl_akhir_awal'";
             
                     $result1 = mysqli_query($conn, $query1);
                 } else {
-                    $query1 = "SELECT * FROM ruang_digital";
+                    $query1 = "SELECT * FROM ruang_dig WHERE tanggal BETWEEN '$tgl_mulai_awal' AND '$tgl_akhir_awal'ital";
 
                     $result1 = mysqli_query($conn, $query1);
                 }
@@ -1054,14 +1059,15 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 <table id="tblToExcl">
                     <thead class="table-dark">
                         <tr>
-                            <th scope="col" rowspan="2">#</th>
+                            <th scope="col" rowspan="2">No.</th>
                             <th scope="col" rowspan="2">Tanggal</th>
                             <th scope="col" colspan="2">Pelajar</th>
                             <th scope="col" colspan="2">Mahasiswa</th>
                             <th scope="col" colspan="2">Umum</th>
                             <th scope="col" rowspan="2">Jumlah</th>
                             <th scope="col" rowspan="2">Keterangan</th>
-                            <th scope="col" rowspan="2">Actions</th>
+                            <th scope="col" rowspan="2">Edit</th>
+                            <th scope="col" rowspan="2">Delete</th>
                         </tr>
                         <tr>
                             <th>L</th>
@@ -1094,7 +1100,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                                 echo "<td>" . $row['umumL'] . "</td>";
                                 echo "<td>" . $row['umumP'] . "</td>";
 
-                                $throw = $row['tanggal'];
+                                $throw = date('d-m-Y', strtotime($row['tanggal']));
                                 $throwPP = $row['pelajarP'];
                                 $throwPL = $row['pelajarL'];
                                 $throwML = $row['mhsL'];
@@ -1167,7 +1173,12 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                                 }
 
                                 // Edit Button
+                                $selectedNewTables = $newTables[$rooms[0]];
+                                echo $selectedNewTables;
+                                echo "<td>";
+
                                 echo "
+                                
                                                     <input type='hidden' name='tanggal' value='" . $throw . "'>
                                                     <input type='hidden' name='pl' value='" . $throwPL . "'>
                                                     <input type='hidden' name='pp' value='" . $throwPP . "'>
@@ -1278,7 +1289,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                                         echo "<form method='post' action='dashboard.php'>";
                                 }
 
+                                
+                                $selectedNewTables = $newTables[$rooms[1]];
+                                echo $selectedNewTables;
+                                echo "<td>";
+
                                 echo "
+                                
                                                     <input type='hidden' name='tanggal' value='" . $throw . "'>
                                                     <input type='hidden' name='pl' value='" . $throwPL . "'>
                                                     <input type='hidden' name='pp' value='" . $throwPP . "'>
@@ -1388,6 +1405,10 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                                     default:
                                         echo "<form method='post' action='dashboard.php'>";
                                 }
+
+                                $selectedNewTables = $newTables[$rooms[2]];
+                                echo $selectedNewTables;
+                                echo "<td>";
 
                                 echo "
                                                 <input type='hidden' name='tanggal' value='" . $throw . "'>
