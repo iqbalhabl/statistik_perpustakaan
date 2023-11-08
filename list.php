@@ -978,7 +978,7 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                             <div class="w-100 d-none d-md-block"></div>
                             <div class="col">
                                 <button class='btn btn-show' type="submit" name="show"
-                                    onclick='limitCheckboxSelections(2)'>Tampilkan tabel</button>
+                                    >Tampilkan tabel</button>
                                 <p class="warning-text" id="checkboxWarning" style="color: red;"></p>
                             </div>
                         </div>    
@@ -988,7 +988,6 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
 
             <!-- checklist ended -->
             <!-- checkbox end -->
-
             <script>
                 // Fungsi untuk membatasi jumlah checkbox yang dapat dicentang
                 function limitCheckboxSelections(maxLimit) {
@@ -1027,22 +1026,22 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                     $query1 = "SELECT * FROM $rooms[0] WHERE tanggal BETWEEN '$tgl_mulai_awal' AND '$tgl_akhir_awal'";
                     $query2 = "SELECT * FROM $rooms[1] WHERE tanggal BETWEEN '$tgl_mulai_awal' AND '$tgl_akhir_awal'";
                     $query3 = "SELECT * FROM $rooms[2] WHERE tanggal BETWEEN '$tgl_mulai_awal' AND '$tgl_akhir_awal'";
-            
+
                     $result1 = mysqli_query($conn, $query1);
                     $result2 = mysqli_query($conn, $query2);
                     $result3 = mysqli_query($conn, $query3);
                 } else if (sizeof($rooms) == 2) {
                     $query1 = "SELECT * FROM $rooms[0] WHERE tanggal BETWEEN '$tgl_mulai_awal' AND '$tgl_akhir_awal'";
                     $query2 = "SELECT * FROM $rooms[1] WHERE tanggal BETWEEN '$tgl_mulai_awal' AND '$tgl_akhir_awal'";
-            
+
                     $result1 = mysqli_query($conn, $query1);
                     $result2 = mysqli_query($conn, $query2);
                 } else if (sizeof($rooms) == 1) {
                     $query1 = "SELECT * FROM $rooms[0] WHERE tanggal BETWEEN '$tgl_mulai_awal' AND '$tgl_akhir_awal'";
-            
+
                     $result1 = mysqli_query($conn, $query1);
                 } else {
-                    $query1 = "SELECT * FROM ruang_dig WHERE tanggal BETWEEN '$tgl_mulai_awal' AND '$tgl_akhir_awal'ital";
+                    $query1 = "SELECT * FROM ruang_digital WHERE tanggal BETWEEN '$tgl_mulai_awal' AND '$tgl_akhir_awal'";
 
                     $result1 = mysqli_query($conn, $query1);
                 }
@@ -1173,9 +1172,10 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                                 }
 
                                 // Edit Button
-                                $selectedNewTables = $newTables[$rooms[0]];
-                                echo $selectedNewTables;
-                                echo "<td>";
+                                if (isset($rooms[0])) {
+                                    $selectedNewTables = $newTables[$rooms[0]];
+                                    echo "<td>" . $selectedNewTables . "</td>";
+                                }
 
                                 echo "
                                 
@@ -1289,10 +1289,12 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                                         echo "<form method='post' action='dashboard.php'>";
                                 }
 
-                                
-                                $selectedNewTables = $newTables[$rooms[1]];
-                                echo $selectedNewTables;
-                                echo "<td>";
+                                if (isset($rooms[1])) {
+                                    echo "<td>";
+                                    $selectedNewTables = $newTables[$rooms[1]];
+                                    echo $selectedNewTables;
+                                    echo "</td>";
+                                }
 
                                 echo "
                                 
@@ -1406,9 +1408,12 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                                         echo "<form method='post' action='dashboard.php'>";
                                 }
 
-                                $selectedNewTables = $newTables[$rooms[2]];
-                                echo $selectedNewTables;
-                                echo "<td>";
+                                if (isset($rooms[2])) {
+                                    echo "<td>";
+                                    $selectedNewTables = $newTables[$rooms[2]];
+                                    echo $selectedNewTables;
+                                    echo "</td>";
+                                }
 
                                 echo "
                                                 <input type='hidden' name='tanggal' value='" . $throw . "'>
