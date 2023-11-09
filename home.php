@@ -26,7 +26,7 @@
           </div>
           <div class="row">
             <a class="navbar-brand" href="/">
-              <h5>Grhatama Pustaka Yogyakarta</h5>
+              <h5>Balai Layanan Perpustakaan DPAD DIY</h5>
             </a>
           </div>
         </div>
@@ -53,7 +53,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/statistik_perpustakaan/list-date.php">
-                <h4>List Data</h4>
+                <h4>Laporan Pengunjung</h4>
               </a>
             </li>
             <li class="nav-item">
@@ -87,7 +87,7 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active"">
-                <img src=" assets/balai1.jpeg" class="d-block w-100" alt="..." style="height: 700px; object-fit:fill;">
+            <img src=" assets/balai1.jpg" class="d-block w-100" alt="..." style="height: 700px; object-fit:fill;">
           </div>
           <div class="carousel-item">
             <img src="assets/balai2.jpg" class="d-block w-100" alt="..." style="height: 700px; object-fit:fill;">
@@ -110,7 +110,7 @@
       <!-- carousel images end -->
       <div class="row text-center align-items-center mt-4">
         <div class="col-12">
-          <h1>Welcome to Grhatama Pustaka!</h1>
+          <h1>Welcome to Balai Yanpus</h1>
         </div>
       </div>
 
