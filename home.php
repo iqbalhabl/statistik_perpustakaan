@@ -26,7 +26,7 @@
           </div>
           <div class="row">
             <a class="navbar-brand" href="/">
-              <h5>Grhatama Pustaka Yogyakarta</h5>
+              <h5>Balai Layanan Perpustakaan DPAD DIY</h5>
             </a>
           </div>
         </div>
@@ -53,7 +53,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/statistik_perpustakaan/list-date.php">
-                <h4>List Data</h4>
+                <h4>Laporan Pengunjung</h4>
               </a>
             </li>
             <li class="nav-item">
