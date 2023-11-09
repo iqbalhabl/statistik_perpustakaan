@@ -1,6 +1,12 @@
-.body {
-    background-color: #26425a;
+/*
+body{
+    background-image: url("../statistik_perpustakaan/pattern.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center; 
 }
+*/
 
 .btn {
     font-size: 19px;
@@ -127,6 +133,7 @@ select#statistikVirtual
 }
 
 .pill-container button:hover {
-    background: #cfaf1e;
+    background-color: #bbac27;
+    color: black;
     font-size: 15px;
 }

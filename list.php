@@ -1050,7 +1050,7 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
 
             <div class="tgl">
                 <b>
-                    <?= "Data dari tanggal $tgl_mulai - $tgl_akhir"; ?>
+                    <?= "Data dari tanggal $tgl_mulai s/d $tgl_akhir"; ?>
                 </b>
             </div>
 
@@ -1204,187 +1204,187 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                                         echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDSinarmelati.php'>";
                                         break;
                                     case "layanan_sdpendowoharjo":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDPendowoharjo.php'>";
                                         break;
                                     case "layanan_sdrejodani":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDRejodani.php'>";
                                         break;
                                     case "layanan_sdtamanan3":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDTamanan3.php'>";
                                         break;
                                     case "layanan_sdberbah2":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDBerbah2.php'>";
                                         break;
                                     case "layanan_sdmurten":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDMurten.php'>";
                                         break;
                                     case "layanan_sdmuhconcat":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDMuhconcat.php'>";
                                         break;
                                     case "layanan_tkkalibulus":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpTKKalibulus.php'>";
                                         break;
                                     case "layanan_tkpkkpajimatan":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpTKPKKPajimatan.php'>";
                                         break;
                                     case "layanan_sdmuhbabakan":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDMuhbabakan.php'>";
                                         break;
                                     case "layanan_tkabasutopadan":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpTKABASutopadan.php'>";
                                         break;
                                     case "layanan_slb1bantul":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSLB1Bantul.php'>";
                                         break;
                                     case "layanan_mamafasa":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpMAMafasa.php'>";
                                         break;
                                     case "layanan_sdngentak":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDNgentak.php'>";
                                         break;
                                     case "layanan_sdjurugentong":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDJurugentong.php'>";
                                         break;
                                     case "layanan_sdbunder2":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDBunder2.php'>";
                                         break;
                                     case "layanan_tkabaplembutan":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpTKABAPlembutan.php'>";
                                         break;
                                     case "layanan_tkabakarangmojo":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpTKABAKarangmojo.php'>";
                                         break;
                                     case "layanan_sdgedangklutuk":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDGedangklutuk.php'>";
                                         break;
                                     case "layanan_sdplembutan":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDPlembutan.php'>";
                                         break;
                                     case "layanan_slb1yogya":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSLB1Yogya.php'>";
                                         break;
                                     case "layanan_smkkoperasi":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSMKkoperasi.php'>";
                                         break;
                                     case "layanan_sdnsidakan":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDNSidakan.php'>";
                                         break;
                                     case "layanan_sdsorogenen2":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDSorogenen2.php'>";
                                         break;
                                     case "layanan_kbkasihibu":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpKBKasihibu.php'>";
                                         break;
                                     case "layanan_mabinbaz":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpMABinbaz.php'>";
                                         break;
                                     case "layanan_brsbkl":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpBRSBKL.php'>";
                                         break;
                                     case "layanan_rutanwates":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpRutanwates.php'>";
                                         break;
                                     case "layanan_rutanbantul":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpRutanbantul.php'>";
                                         break;
                                     case "layanan_rutankota":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpRutankota.php'>";
                                         break;
                                     case "layanan_lapaswiro":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpLapaswiro.php'>";
                                         break;
                                     case "layanan_lapascebong":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpLapascebong.php'>";
                                         break;
                                     case "layanan_lapaswono":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpLapaswono.php'>";
                                         break;
                                     case "layanan_lapasnarko":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpLapasnarko.php'>";
                                         break;
                                     case "layanan_ponpespes":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpPONPESPes.php'>";
                                         break;
                                     case "layanan_panurul":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpPANurul.php'>";
                                         break;
                                     case "layanan_spsmanggis":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpSPSManggis.php'>";
                                         break;
                                     case "layanan_bprswgodean":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpBPRSWGodean.php'>";
                                         break;
                                     case "layanan_huntapkarang":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpHuntapkarang.php'>";
                                         break;
                                     case "layanan_brspabimo":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpBRSPABimo.php'>";
                                         break;
                                     case "layanan_brspabudhi":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpBRSPABudhi.php'>";
                                         break;
                                     case "layanan_ponpesibnul":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpPONPESIbnul.php'>";
                                         break;
                                     case "layanan_brtpdpundong":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpBRTPDPundong.php'>";
                                         break;
                                     case "layanan_smpn1paliyan":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSMPN1Paliyan.php'>";
                                         break;
                                     case "layanan_smpn3sentolo":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSMPN3Sentolo.php'>";
                                         break;
                                     case "layanan_sdmsleman":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSDMSleman.php'>";
                                         break;
                                     case "layanan_smkpariwisata":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSMKPariwisata.php'>";
                                         break;
                                     case "layanan_smpn3gamping":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSMPN3Gamping.php'>";
                                         break;
                                     case "layanan_smpn2pundong":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSMPN2Pundong.php'>";
                                         break;
                                     case "layanan_sdtimuran":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSDTimuran.php'>";
                                         break;
                                     case "layanan_sman1lendah":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSMAN1Lendah.php'>";
                                         break;
                                     case "layanan_sdmujahidin":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSDMujahidin.php'>";
                                         break;
                                     case "layanan_smpn6yogyakarta":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSMPN6Yogyakarta.php'>";
                                         break;
                                     case "layanan_ig":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpIG.php'>";
                                         break;
                                     case "layanan_twitter":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpTwitter.php'>";
                                         break;
                                     case "layanan_fb":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpFB.php'>";
                                         break;
                                     case "layanan_tiktok":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpTiktok.php'>";
                                         break;
                                     case "layanan_youtube":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpYoutube.php'>";
                                         break;
                                     case "layanan_webinar":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpWebinar.php'>";
                                         break;
                                     case "layanan_webbalai":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpWebBalai.php'>";
                                         break;
                                     case "layanan_webcoe":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpWebCOE.php'>";
                                         break;
                                     case "layanan_ijogja":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpIJogja.php'>";
                                         break;
                                     case "layanan_do":
                                         echo "<form method='post' action='/statistik_perpustakaan/DO/formUpDO.php'>";
@@ -1457,7 +1457,7 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                                 echo "<td>";
 
                                 switch ($rooms[1]) {
-                                    case "ruang_digital":
+                                                                        case "ruang_digital":
                                         echo "<form method='post' action='/statistik_perpustakaan/L2/formUpDigital.php'>";
                                         break;
                                     case "ruang_langka":
@@ -1506,7 +1506,223 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                                         echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
                                         break;
                                     case "layanan_bprsr":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/POBAC/formUpBPRSR.php'>";
+                                        break;
+                                    case "layanan_bprsw":
+                                        echo "<form method='post' action='/statistik_perpustakaan/POBAC/formUpBPRSW.php'>";
+                                        break;
+                                    case "layanan_sambantul":
+                                        echo "<form method='post' action='/statistik_perpustakaan/POBAC/formUpSamBantul.php'>";
+                                        break;
+                                    case "layanan_samkp":
+                                        echo "<form method='post' action='/statistik_perpustakaan/POBAC/formUpSamKP.php'>";
+                                        break;
+                                    case "layanan_kppsleman":
+                                        echo "<form method='post' action='/statistik_perpustakaan/POBAC/formUpKPPSleman.php'>";
+                                        break;
+                                    case "layanan_pnyogya":
+                                        echo "<form method='post' action='/statistik_perpustakaan/POBAC/formUpPNYogya.php'>";
+                                        break;
+                                    case "layanan_dp3ap2":
+                                        echo "<form method='post' action='/statistik_perpustakaan/POBAC/formUpDP3AP2.php'>";
+                                        break;
+                                    case "layanan_dpmptsp":
+                                        echo "<form method='post' action='/statistik_perpustakaan/POBAC/formUpDPMPTSP.php'>";
+                                        break;
+                                    case "layanan_polairud":
+                                        echo "<form method='post' action='/statistik_perpustakaan/POBAC/formUpPOLAIRUD.php'>";
+                                        break;
+                                    case "layanan_tkpkkwido":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpTKPKKWido.php'>";
+                                        break;
+                                    case "layanan_sdjali":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDJali.php'>";
+                                        break;
+                                    case "layanan_sdsinarmelati":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDSinarmelati.php'>";
+                                        break;
+                                    case "layanan_sdpendowoharjo":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDPendowoharjo.php'>";
+                                        break;
+                                    case "layanan_sdrejodani":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDRejodani.php'>";
+                                        break;
+                                    case "layanan_sdtamanan3":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDTamanan3.php'>";
+                                        break;
+                                    case "layanan_sdberbah2":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDBerbah2.php'>";
+                                        break;
+                                    case "layanan_sdmurten":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDMurten.php'>";
+                                        break;
+                                    case "layanan_sdmuhconcat":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDMuhconcat.php'>";
+                                        break;
+                                    case "layanan_tkkalibulus":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpTKKalibulus.php'>";
+                                        break;
+                                    case "layanan_tkpkkpajimatan":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpTKPKKPajimatan.php'>";
+                                        break;
+                                    case "layanan_sdmuhbabakan":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDMuhbabakan.php'>";
+                                        break;
+                                    case "layanan_tkabasutopadan":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpTKABASutopadan.php'>";
+                                        break;
+                                    case "layanan_slb1bantul":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSLB1Bantul.php'>";
+                                        break;
+                                    case "layanan_mamafasa":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpMAMafasa.php'>";
+                                        break;
+                                    case "layanan_sdngentak":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDNgentak.php'>";
+                                        break;
+                                    case "layanan_sdjurugentong":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDJurugentong.php'>";
+                                        break;
+                                    case "layanan_sdbunder2":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDBunder2.php'>";
+                                        break;
+                                    case "layanan_tkabaplembutan":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpTKABAPlembutan.php'>";
+                                        break;
+                                    case "layanan_tkabakarangmojo":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpTKABAKarangmojo.php'>";
+                                        break;
+                                    case "layanan_sdgedangklutuk":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDGedangklutuk.php'>";
+                                        break;
+                                    case "layanan_sdplembutan":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDPlembutan.php'>";
+                                        break;
+                                    case "layanan_slb1yogya":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSLB1Yogya.php'>";
+                                        break;
+                                    case "layanan_smkkoperasi":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSMKkoperasi.php'>";
+                                        break;
+                                    case "layanan_sdnsidakan":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDNSidakan.php'>";
+                                        break;
+                                    case "layanan_sdsorogenen2":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDSorogenen2.php'>";
+                                        break;
+                                    case "layanan_kbkasihibu":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpKBKasihibu.php'>";
+                                        break;
+                                    case "layanan_mabinbaz":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpMABinbaz.php'>";
+                                        break;
+                                    case "layanan_brsbkl":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpBRSBKL.php'>";
+                                        break;
+                                    case "layanan_rutanwates":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpRutanwates.php'>";
+                                        break;
+                                    case "layanan_rutanbantul":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpRutanbantul.php'>";
+                                        break;
+                                    case "layanan_rutankota":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpRutankota.php'>";
+                                        break;
+                                    case "layanan_lapaswiro":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpLapaswiro.php'>";
+                                        break;
+                                    case "layanan_lapascebong":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpLapascebong.php'>";
+                                        break;
+                                    case "layanan_lapaswono":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpLapaswono.php'>";
+                                        break;
+                                    case "layanan_lapasnarko":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpLapasnarko.php'>";
+                                        break;
+                                    case "layanan_ponpespes":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpPONPESPes.php'>";
+                                        break;
+                                    case "layanan_panurul":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpPANurul.php'>";
+                                        break;
+                                    case "layanan_spsmanggis":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpSPSManggis.php'>";
+                                        break;
+                                    case "layanan_bprswgodean":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpBPRSWGodean.php'>";
+                                        break;
+                                    case "layanan_huntapkarang":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpHuntapkarang.php'>";
+                                        break;
+                                    case "layanan_brspabimo":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpBRSPABimo.php'>";
+                                        break;
+                                    case "layanan_brspabudhi":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpBRSPABudhi.php'>";
+                                        break;
+                                    case "layanan_ponpesibnul":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpPONPESIbnul.php'>";
+                                        break;
+                                    case "layanan_brtpdpundong":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpBRTPDPundong.php'>";
+                                        break;
+                                    case "layanan_smpn1paliyan":
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSMPN1Paliyan.php'>";
+                                        break;
+                                    case "layanan_smpn3sentolo":
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSMPN3Sentolo.php'>";
+                                        break;
+                                    case "layanan_sdmsleman":
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSDMSleman.php'>";
+                                        break;
+                                    case "layanan_smkpariwisata":
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSMKPariwisata.php'>";
+                                        break;
+                                    case "layanan_smpn3gamping":
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSMPN3Gamping.php'>";
+                                        break;
+                                    case "layanan_smpn2pundong":
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSMPN2Pundong.php'>";
+                                        break;
+                                    case "layanan_sdtimuran":
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSDTimuran.php'>";
+                                        break;
+                                    case "layanan_sman1lendah":
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSMAN1Lendah.php'>";
+                                        break;
+                                    case "layanan_sdmujahidin":
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSDMujahidin.php'>";
+                                        break;
+                                    case "layanan_smpn6yogyakarta":
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSMPN6Yogyakarta.php'>";
+                                        break;
+                                    case "layanan_ig":
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpIG.php'>";
+                                        break;
+                                    case "layanan_twitter":
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpTwitter.php'>";
+                                        break;
+                                    case "layanan_fb":
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpFB.php'>";
+                                        break;
+                                    case "layanan_tiktok":
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpTiktok.php'>";
+                                        break;
+                                    case "layanan_youtube":
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpYoutube.php'>";
+                                        break;
+                                    case "layanan_webinar":
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpWebinar.php'>";
+                                        break;
+                                    case "layanan_webbalai":
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpWebBalai.php'>";
+                                        break;
+                                    case "layanan_webcoe":
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpWebCOE.php'>";
+                                        break;
+                                    case "layanan_ijogja":
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpIJogja.php'>";
                                         break;
                                     case "layanan_do":
                                         echo "<form method='post' action='/statistik_perpustakaan/DO/formUpDO.php'>";
@@ -1580,7 +1796,7 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                                 echo "<td>";
 
                                 switch ($rooms[2]) {
-                                    case "ruang_digital":
+                                                                        case "ruang_digital":
                                         echo "<form method='post' action='/statistik_perpustakaan/L2/formUpDigital.php'>";
                                         break;
                                     case "ruang_langka":
@@ -1629,7 +1845,223 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                                         echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
                                         break;
                                     case "layanan_bprsr":
-                                        echo "<form method='post' action='/statistik_perpustakaan/RBM/formUpRBM.php'>";
+                                        echo "<form method='post' action='/statistik_perpustakaan/POBAC/formUpBPRSR.php'>";
+                                        break;
+                                    case "layanan_bprsw":
+                                        echo "<form method='post' action='/statistik_perpustakaan/POBAC/formUpBPRSW.php'>";
+                                        break;
+                                    case "layanan_sambantul":
+                                        echo "<form method='post' action='/statistik_perpustakaan/POBAC/formUpSamBantul.php'>";
+                                        break;
+                                    case "layanan_samkp":
+                                        echo "<form method='post' action='/statistik_perpustakaan/POBAC/formUpSamKP.php'>";
+                                        break;
+                                    case "layanan_kppsleman":
+                                        echo "<form method='post' action='/statistik_perpustakaan/POBAC/formUpKPPSleman.php'>";
+                                        break;
+                                    case "layanan_pnyogya":
+                                        echo "<form method='post' action='/statistik_perpustakaan/POBAC/formUpPNYogya.php'>";
+                                        break;
+                                    case "layanan_dp3ap2":
+                                        echo "<form method='post' action='/statistik_perpustakaan/POBAC/formUpDP3AP2.php'>";
+                                        break;
+                                    case "layanan_dpmptsp":
+                                        echo "<form method='post' action='/statistik_perpustakaan/POBAC/formUpDPMPTSP.php'>";
+                                        break;
+                                    case "layanan_polairud":
+                                        echo "<form method='post' action='/statistik_perpustakaan/POBAC/formUpPOLAIRUD.php'>";
+                                        break;
+                                    case "layanan_tkpkkwido":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpTKPKKWido.php'>";
+                                        break;
+                                    case "layanan_sdjali":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDJali.php'>";
+                                        break;
+                                    case "layanan_sdsinarmelati":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDSinarmelati.php'>";
+                                        break;
+                                    case "layanan_sdpendowoharjo":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDPendowoharjo.php'>";
+                                        break;
+                                    case "layanan_sdrejodani":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDRejodani.php'>";
+                                        break;
+                                    case "layanan_sdtamanan3":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDTamanan3.php'>";
+                                        break;
+                                    case "layanan_sdberbah2":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDBerbah2.php'>";
+                                        break;
+                                    case "layanan_sdmurten":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDMurten.php'>";
+                                        break;
+                                    case "layanan_sdmuhconcat":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDMuhconcat.php'>";
+                                        break;
+                                    case "layanan_tkkalibulus":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpTKKalibulus.php'>";
+                                        break;
+                                    case "layanan_tkpkkpajimatan":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpTKPKKPajimatan.php'>";
+                                        break;
+                                    case "layanan_sdmuhbabakan":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDMuhbabakan.php'>";
+                                        break;
+                                    case "layanan_tkabasutopadan":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpTKABASutopadan.php'>";
+                                        break;
+                                    case "layanan_slb1bantul":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSLB1Bantul.php'>";
+                                        break;
+                                    case "layanan_mamafasa":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpMAMafasa.php'>";
+                                        break;
+                                    case "layanan_sdngentak":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDNgentak.php'>";
+                                        break;
+                                    case "layanan_sdjurugentong":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDJurugentong.php'>";
+                                        break;
+                                    case "layanan_sdbunder2":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDBunder2.php'>";
+                                        break;
+                                    case "layanan_tkabaplembutan":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpTKABAPlembutan.php'>";
+                                        break;
+                                    case "layanan_tkabakarangmojo":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpTKABAKarangmojo.php'>";
+                                        break;
+                                    case "layanan_sdgedangklutuk":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDGedangklutuk.php'>";
+                                        break;
+                                    case "layanan_sdplembutan":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDPlembutan.php'>";
+                                        break;
+                                    case "layanan_slb1yogya":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSLB1Yogya.php'>";
+                                        break;
+                                    case "layanan_smkkoperasi":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSMKkoperasi.php'>";
+                                        break;
+                                    case "layanan_sdnsidakan":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDNSidakan.php'>";
+                                        break;
+                                    case "layanan_sdsorogenen2":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpSDSorogenen2.php'>";
+                                        break;
+                                    case "layanan_kbkasihibu":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpKBKasihibu.php'>";
+                                        break;
+                                    case "layanan_mabinbaz":
+                                        echo "<form method='post' action='/statistik_perpustakaan/KELILING/formUpMABinbaz.php'>";
+                                        break;
+                                    case "layanan_brsbkl":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpBRSBKL.php'>";
+                                        break;
+                                    case "layanan_rutanwates":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpRutanwates.php'>";
+                                        break;
+                                    case "layanan_rutanbantul":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpRutanbantul.php'>";
+                                        break;
+                                    case "layanan_rutankota":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpRutankota.php'>";
+                                        break;
+                                    case "layanan_lapaswiro":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpLapaswiro.php'>";
+                                        break;
+                                    case "layanan_lapascebong":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpLapascebong.php'>";
+                                        break;
+                                    case "layanan_lapaswono":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpLapaswono.php'>";
+                                        break;
+                                    case "layanan_lapasnarko":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpLapasnarko.php'>";
+                                        break;
+                                    case "layanan_ponpespes":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpPONPESPes.php'>";
+                                        break;
+                                    case "layanan_panurul":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpPANurul.php'>";
+                                        break;
+                                    case "layanan_spsmanggis":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpSPSManggis.php'>";
+                                        break;
+                                    case "layanan_bprswgodean":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpBPRSWGodean.php'>";
+                                        break;
+                                    case "layanan_huntapkarang":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpHuntapkarang.php'>";
+                                        break;
+                                    case "layanan_brspabimo":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpBRSPABimo.php'>";
+                                        break;
+                                    case "layanan_brspabudhi":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpBRSPABudhi.php'>";
+                                        break;
+                                    case "layanan_ponpesibnul":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpPONPESIbnul.php'>";
+                                        break;
+                                    case "layanan_brtpdpundong":
+                                        echo "<form method='post' action='/statistik_perpustakaan/PAKET/formUpBRTPDPundong.php'>";
+                                        break;
+                                    case "layanan_smpn1paliyan":
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSMPN1Paliyan.php'>";
+                                        break;
+                                    case "layanan_smpn3sentolo":
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSMPN3Sentolo.php'>";
+                                        break;
+                                    case "layanan_sdmsleman":
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSDMSleman.php'>";
+                                        break;
+                                    case "layanan_smkpariwisata":
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSMKPariwisata.php'>";
+                                        break;
+                                    case "layanan_smpn3gamping":
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSMPN3Gamping.php'>";
+                                        break;
+                                    case "layanan_smpn2pundong":
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSMPN2Pundong.php'>";
+                                        break;
+                                    case "layanan_sdtimuran":
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSDTimuran.php'>";
+                                        break;
+                                    case "layanan_sman1lendah":
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSMAN1Lendah.php'>";
+                                        break;
+                                    case "layanan_sdmujahidin":
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSDMujahidin.php'>";
+                                        break;
+                                    case "layanan_smpn6yogyakarta":
+                                        echo "<form method='post' action='/statistik_perpustakaan/SIF/formUpSMPN6Yogyakarta.php'>";
+                                        break;
+                                    case "layanan_ig":
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpIG.php'>";
+                                        break;
+                                    case "layanan_twitter":
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpTwitter.php'>";
+                                        break;
+                                    case "layanan_fb":
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpFB.php'>";
+                                        break;
+                                    case "layanan_tiktok":
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpTiktok.php'>";
+                                        break;
+                                    case "layanan_youtube":
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpYoutube.php'>";
+                                        break;
+                                    case "layanan_webinar":
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpWebinar.php'>";
+                                        break;
+                                    case "layanan_webbalai":
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpWebBalai.php'>";
+                                        break;
+                                    case "layanan_webcoe":
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpWebCOE.php'>";
+                                        break;
+                                    case "layanan_ijogja":
+                                        echo "<form method='post' action='/statistik_perpustakaan/VIRTUAL/formUpIJogja.php'>";
                                         break;
                                     case "layanan_do":
                                         echo "<form method='post' action='/statistik_perpustakaan/DO/formUpDO.php'>";

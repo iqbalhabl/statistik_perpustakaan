@@ -1,9 +1,19 @@
 /* list page */
+/*
+body{
+    background-image: url("../statistik_perpustakaan/pattern.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center; 
+}
+
+*/
 
 .list {
     margin-top: 5px;
     margin-bottom: 20px;
-    padding-top: 20px;
+    padding-top: 55px;
 }
 
 .data-pengunjung {
@@ -11,7 +21,7 @@
     margin-right: 50px;
     background-color: #fff;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 label {
@@ -96,15 +106,25 @@ td[colspan="2"]:last-child {
     /* cursor: pointer; */
 }
 
+.btn-edit:hover{
+    background-color: #2072cb;
+    color: white;
+}
+
 .btn-delete {
     display: inline-block;
     padding: 5px 15px;
     font-size: 16px;
-    background-color: #ff0000;
+    background-color: #cc0101;
     border: none;
     border-radius: 5px;
     color: white;
     /* cursor: pointer; */
+}
+
+.btn-delete:hover{
+    color: white;
+    background-color: red;
 }
 
 .btn-download {
@@ -112,7 +132,7 @@ td[colspan="2"]:last-child {
     padding: 10px 20px;
     margin-top: 20px;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: #52bb28;
     border: none;
     border-radius: 5px;
     color: white;
@@ -120,17 +140,23 @@ td[colspan="2"]:last-child {
 }
 
 .btn-download:hover {
-    background-color: #0056b3;
+    background-color: #5be326;
+    color: white;
 }
 
 .tgl {
-    margin-top: 20px;
+    margin-top: 28px;
     margin-right: 20px;
     margin-bottom: 20px;
     position: absolute;
-    color: red;
+    color: white;
     top: 100px; 
     right: 0;
+    padding: 6px;
+    padding-left: 13px;
+    padding-right: 13px;
+    background-color: #e80000;
+    border-radius: 20px;
 }
 
 .warning-text {
@@ -142,11 +168,16 @@ td[colspan="2"]:last-child {
     padding: 10px 20px;
     margin-top: 20px;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: #ebd835;
     border: none;
     border-radius: 5px;
-    color: white;
+    color: black;
     cursor: pointer;
+}
+
+.btn-show:hover {
+    background-color: #ffe600;
+    color: black;
 }
 
 .custom-width {
