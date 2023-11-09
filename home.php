@@ -27,7 +27,6 @@
           <div class="row">
             <a class="navbar-brand" href="/">
               <h5>Balai Layanan Perpustakaan DPAD DIY</h5>
-              <h5>Balai Layanan Perpustakaan DPAD DIY</h5>
             </a>
           </div>
         </div>
