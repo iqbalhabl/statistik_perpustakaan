@@ -73,7 +73,7 @@
     <div class="mt-4 flex-container container-fluid bg-dark text-light" class="dropdownAllruangan">
         <div class="ruangan">
             <div>
-                <h2>Grhatama Pustaka</h2>
+                <h2 style="color: yellow;">Grhatama Pustaka</h2>
             </div>
             <h4>Lantai Dasar</h4>
             <div class="mr-4">
@@ -119,7 +119,7 @@
 
         <div class="btn-ruang">
             <div>
-                <h2>Jogja Library Center</h2>
+                <h2 style="color: yellow;">Jogja Library Center</h2>
             </div>
             <div class="gab-btn">
                 <form name="webpage">
@@ -133,7 +133,7 @@
 
         <div class="btn-ruang">
             <div>
-                <h2>Rumah Belajar Modern</h2>
+                <h2 style="color: yellow;">Rumah Belajar Modern</h2>
             </div>
             <div class="gab-btn">
                 <form name="webpage">
@@ -147,7 +147,7 @@
 
         <div class="btn-ruang">
             <div>
-                <h2>Pojok Baca</h2>
+                <h2 style="color: yellow;">Pojok Baca</h2>
             </div>
             <div class="gab-btn">
                 <form name="webpage">
@@ -169,7 +169,7 @@
 
         <div class="btn-ruang">
             <div>
-                <h2>Layanan Keliling</h2>
+                <h2 style="color: yellow;">Layanan Keliling</h2>
             </div>
             <div class="gab-btn">
                 <form name="webpage">
@@ -210,7 +210,7 @@
 
         <div class="btn-ruang">
             <div>
-                <h2>Layanan Paket Buku</h2>
+                <h2 style="color: yellow;">Layanan Paket Buku</h2>
             </div>
             <div class="gab-btn">
                 <form name="webpage">
@@ -240,7 +240,7 @@
 
         <div class="btn-ruang">
             <div>
-                <h2>Delivery Order</h2>
+                <h2 style="color: yellow;">Delivery Order</h2>
             </div>
             <div class="gab-btn">
                 <form name="webpage">
@@ -254,7 +254,7 @@
 
         <div class="btn-ruang">
             <div>
-                <h2>Layanan SIF</h2>
+                <h2 style="color: yellow;">Layanan SIF</h2>
             </div>
             <div class="gab-btn">
                 <form name="webpage">
@@ -277,7 +277,7 @@
 
         <div class="btn-ruang">
             <div>
-                <h2>Kunjungan Virtual</h2>
+                <h2 style="color: yellow;">Kunjungan Virtual</h2>
             </div>
             <div class="gab-btn">
                 <form name="webpage">

@@ -7,10 +7,10 @@
         exit();
     }
 
-    // $tanggal = $_POST['tanggal'];
+    $id = $_POST['id'];
     $tabel = $_POST['ruang'];
 
-    $sql = "DELETE FROM $tabel";
+    $sql = "DELETE FROM $tabel WHERE id = '$id'";
 
     if ($conn->query($sql) === TRUE) {
         echo "Record(s) deleted successfully from table: $tabel";

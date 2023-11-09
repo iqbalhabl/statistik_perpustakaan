@@ -110,7 +110,7 @@
       <!-- carousel images end -->
       <div class="row text-center align-items-center mt-4">
         <div class="col-12">
-          <h1>Welcome to Grhatama Pustaka!</h1>
+          <h1>Welcome to Balai Yanpus</h1>
         </div>
       </div>
 
