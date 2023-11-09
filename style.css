@@ -68,6 +68,14 @@ label {
     border-radius: 5px;
 }
 
+.btn-ruang{
+    color: #ebd835;
+}
+
+div.balaiyan{
+    color: #ebd835;
+}
+
 .btn-form {
     padding: 10px 20px;
     background-color: #212529;

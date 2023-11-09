@@ -68,46 +68,47 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                     <div class="row">
                         <a class="navbar-brand" href="/">
-                            <h5>Grhatama Pustaka Yogyakarta</h5>
+                        <h5>Balai Layanan Perpustakaan DPAD DIY</h5>
                         </a>
                     </div>
-                </div>
-                <div class="col">
+                    </div>
+                    <div class="col">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
+                    </div>
                 </div>
-            </div>
-            <div class="col-7">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
+                <div class="col-7">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="/statistik_perpustakaan/home.php">
                             <h4>Home</h4>
                         </a>
-                    </li>
-                    <li class="nav-item">
+                        </li>
+                        <li class="nav-item">
                         <a class="nav-link active" href="/statistik_perpustakaan/input.php">
                             <h4>Input Data</h4>
                         </a>
-                    </li>
-                    <li class="nav-item">
+                        </li>
+                        <li class="nav-item">
                         <a class="nav-link" href="/statistik_perpustakaan/list-date.php">
-                            <h4>List Data</h4>
+                            <h4>Laporan Pengunjung</h4>
                         </a>
-                    </li>
-                    <li class="nav-item">
+                        </li>
+                        <li class="nav-item">
                         <a class="nav-link" href="/statistik_perpustakaan/logout.php">
                             <h4>Logout</h4>
                         </a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
-                </form>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+                </div>
             </div>
         </div>
     </nav>

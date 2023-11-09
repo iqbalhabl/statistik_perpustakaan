@@ -26,7 +26,7 @@
           </div>
           <div class="row">
             <a class="navbar-brand" href="/">
-              <h5>Balai Layanan Perpustakaan DPAD DIY</h5>
+              <h5>Balai Layanan Perpustakaan DPAD DIY</h5>
             </a>
           </div>
         </div>
@@ -87,7 +87,7 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active"">
-                <img src=" assets/balai1.jpeg" class="d-block w-100" alt="..." style="height: 700px; object-fit:fill;">
+            <img src=" assets/balai1.jpg" class="d-block w-100" alt="..." style="height: 700px; object-fit:fill;">
           </div>
           <div class="carousel-item">
             <img src="assets/balai2.jpg" class="d-block w-100" alt="..." style="height: 700px; object-fit:fill;">
