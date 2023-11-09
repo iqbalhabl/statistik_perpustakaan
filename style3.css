@@ -145,17 +145,17 @@ td[colspan="2"]:last-child {
 }
 
 .tgl {
-    margin-top: 25px;
+    margin-top: 28px;
     margin-right: 20px;
     margin-bottom: 20px;
     position: absolute;
     color: white;
     top: 100px; 
     right: 0;
-    padding: 8px;
-    padding-left: 15px;
-    padding-right: 15px;
-    background-color: red;
+    padding: 6px;
+    padding-left: 13px;
+    padding-right: 13px;
+    background-color: #e80000;
     border-radius: 20px;
 }
 
