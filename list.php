@@ -1079,6 +1079,7 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                     </thead>
                     <tbody>
                         <?php
+                        $id = 0;
                         $count = 1;
                         $totalPelajarL = 0;
                         $totalPelajarP = 0;
@@ -1099,6 +1100,7 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                                 echo "<td>" . $row['umumL'] . "</td>";
                                 echo "<td>" . $row['umumP'] . "</td>";
 
+                                $id = $row['id'];
                                 $throw = date('d-m-Y', strtotime($row['tanggal']));
                                 $throwPP = $row['pelajarP'];
                                 $throwPL = $row['pelajarL'];
@@ -1412,8 +1414,8 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
 
                                 // Delete Button
                                 echo "<td>";
-                                echo "<form method='post' action='delete.php'>";
-                                echo "<input type='hidden' name='tanggal' value='" . $throw . "'>";
+                                    echo "<form method='post' action='delete.php'>";
+                                    echo "<input type='hidden' name='id' value='" . $id . "'>";
                                 echo "<input type='hidden' name='ruang' value='" . $rooms[0] . "'>";
                                 echo "<button type='submit' class='btn btn-delete' data-toggle='modal'>Delete</button>";
                                 echo "</form>";
@@ -1437,6 +1439,7 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                                 echo "<td>" . $row['umumL'] . "</td>";
                                 echo "<td>" . $row['umumP'] . "</td>";
 
+                                $id = $row['id'];
                                 $throw = $row['tanggal'];
                                 $throwPP = $row['pelajarP'];
                                 $throwPL = $row['pelajarL'];
@@ -1457,7 +1460,7 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                                 echo "<td>";
 
                                 switch ($rooms[1]) {
-                                                                        case "ruang_digital":
+                                    case "ruang_digital":
                                         echo "<form method='post' action='/statistik_perpustakaan/L2/formUpDigital.php'>";
                                         break;
                                     case "ruang_langka":
@@ -1776,6 +1779,7 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                                 echo "<td>" . $row['umumL'] . "</td>";
                                 echo "<td>" . $row['umumP'] . "</td>";
 
+                                $id = $row['id'];
                                 $throw = $row['tanggal'];
                                 $throwPP = $row['pelajarP'];
                                 $throwPL = $row['pelajarL'];
@@ -1796,7 +1800,7 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                                 echo "<td>";
 
                                 switch ($rooms[2]) {
-                                                                        case "ruang_digital":
+                                    case "ruang_digital":
                                         echo "<form method='post' action='/statistik_perpustakaan/L2/formUpDigital.php'>";
                                         break;
                                     case "ruang_langka":
@@ -2089,7 +2093,7 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                                 // Delete button
                                 echo "<td>";
                                 echo "<form method='post' action='delete.php'>";
-                                echo "<input type='hidden' name='tanggal' value='" . $throw . "'>";
+                                echo "<input type='hidden' name='id' value='" . $id . "'>";
                                 echo "<input type='hidden' name='ruang' value='" . $rooms[2] . "'>";
                                 echo "<button type='submit' class='btn btn-delete' data-toggle='modal'>Delete</button>";
                                 echo "</form>";
