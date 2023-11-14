@@ -108,14 +108,14 @@
         </button>
       </div>
       <!-- carousel images end -->
-      <div class="row text-center align-items-center mt-4">
-        <div class="col-12">
+      <div class="row text-center align-items-center">
+        <div class="col">
           <h1>Welcome to Balai Yanpus</h1>
         </div>
       </div>
 
       <!-- Card start -->
-      <div class="row mt-2 mb-4">
+      <!-- <div class="row mt-2 mb-4">
         <div class="col-sm-4 g-3">
           <div class="card">
             <div class="card-body text-dark">
@@ -143,7 +143,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- Card end -->
 
     </div>
