@@ -1,44 +1,51 @@
 <?php
-session_start(); // Mulai sesi
+session_start(); 
 
 require_once '../koneksi.php';
 
-
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    header("Location: ../index.php"); // Redirect to the login page if not logged in
+    header("Location: ../index.php"); 
     exit();
 }
 
 $successMessage = "";
-$tanggal = $pelajarL = $pelajarP = $mhsL = $mhsP = $umumL = $umumP = ""; // Initialize form fields
-
+$tanggal = $pelajarL = $pelajarP = $mhsL = $mhsP = $umumL = $umumP = ""; 
+$showWarning = false; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Ambil data dari form
+    // Get data from the form
     $tanggal = $_POST["tanggal"];
-    $pelajarL = $_POST["pelajarL"];
-    $pelajarP = $_POST["pelajarP"];
-    $mhsL = $_POST["mhsL"];
-    $mhsP = $_POST["mhsP"];
-    $umumL = $_POST["umumL"];
-    $umumP = $_POST["umumP"];
 
-    // Query untuk memasukkan data ke database
-    $sql = "INSERT INTO ruang_digital (tanggal, pelajarL, pelajarP, mhsL, mhsP, umumL, umumP) VALUES ('$tanggal', '$pelajarL', '$pelajarP', '$mhsL', '$mhsP', '$umumL', '$umumP' )";
+    $checkSql = "SELECT COUNT(*) as count FROM ruang_digital WHERE tanggal = '$tanggal'";
+    $result = $conn->query($checkSql);
+    $row = $result->fetch_assoc();
 
-    if ($conn->query($sql) === TRUE) {
-        $successMessage = "Data berhasil dimasukkan ke database.";
-        // Clear form fields after successful submission
-        $tanggal = $pelajarL = $pelajarP = $mhsL = $mhsP = $umumL = $umumP = "";
+    if ($row['count'] > 0) {
+        $showWarning = true;
     } else {
-        $successMessage = "Error: " . $sql . "<br>" . $conn->error;
-    }
+        $pelajarL = $_POST["pelajarL"];
+        $pelajarP = $_POST["pelajarP"];
+        $mhsL = $_POST["mhsL"];
+        $mhsP = $_POST["mhsP"];
+        $umumL = $_POST["umumL"];
+        $umumP = $_POST["umumP"];
 
-    $conn->close();
-    header("Location: ../L2/formDigital.php"); //ini posisi dimana
-    exit();
+        $sql = "INSERT INTO ruang_digital (tanggal, pelajarL, pelajarP, mhsL, mhsP, umumL, umumP) VALUES ('$tanggal', '$pelajarL', '$pelajarP', '$mhsL', '$mhsP', '$umumL', '$umumP' )";
+
+        if ($conn->query($sql) === TRUE) {
+            $successMessage = "Data berhasil dimasukkan ke database.";
+            $tanggal = $pelajarL = $pelajarP = $mhsL = $mhsP = $umumL = $umumP = "";
+        } else {
+            $successMessage = "Error: " . $sql . "<br>" . $conn->error;
+        }
+
+        $conn->close();
+        header("Location: ../L2/formDigital.php"); 
+        exit();
+    }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,40 +75,40 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                     <div class="row">
                         <a class="navbar-brand" href="/">
-                        <h5>Balai Layanan Perpustakaan DPAD DIY</h5>
+                            <h5>Balai Layanan Perpustakaan DPAD DIY</h5>
                         </a>
-                    </div>
-                    </div>
-                    <div class="col">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
                     </div>
                 </div>
-                <div class="col-7">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="col">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-7">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/statistik_perpustakaan/home.php">
-                            <h4>Home</h4>
-                        </a>
+                            <a class="nav-link" aria-current="page" href="/statistik_perpustakaan/home.php">
+                                <h4>Home</h4>
+                            </a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link active" href="/statistik_perpustakaan/input.php">
-                            <h4>Input Data</h4>
-                        </a>
+                            <a class="nav-link active" href="/statistik_perpustakaan/input.php">
+                                <h4>Input Data</h4>
+                            </a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="/statistik_perpustakaan/list-date.php">
-                            <h4>Laporan Pengunjung</h4>
-                        </a>
+                            <a class="nav-link" href="/statistik_perpustakaan/list-date.php">
+                                <h4>Laporan Pengunjung</h4>
+                            </a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="/statistik_perpustakaan/logout.php">
-                            <h4>Logout</h4>
-                        </a>
+                            <a class="nav-link" href="/statistik_perpustakaan/logout.php">
+                                <h4>Logout</h4>
+                            </a>
                         </li>
                     </ul>
                     <form class="d-flex">
@@ -117,7 +124,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="form">
         <h1>Input Data Ruang Digital</h1>
         <?php if ($successMessage !== ""): ?>
-            <p><?php echo $successMessage; ?></p>
+            <p>
+                <?php echo $successMessage; ?>
+            </p>
         <?php else: ?>
             <form class="row g-3" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
                 <div>
@@ -161,7 +170,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </form>
         <?php endif; ?>
     </div>
-    </div>
+    <?php if ($showWarning): ?>
+        <script>
+            alert('Data untuk hari yang anda pilih sudah ada. Pilih hari lain!');
+        </script>
+    <?php endif; ?>
 </body>
 
 </html>

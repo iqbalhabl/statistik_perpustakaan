@@ -13,14 +13,36 @@ $tabel = $_POST['ruang'];
 $sql = "DELETE FROM $tabel WHERE id = '$id'";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Record(s) deleted successfully from table: $tabel";
+    $successMessage = "Data telah berhasil terhapus dari tabel : $tabel";
+    echo "<div class='new-container'>";
+        echo $successMessage;
+        echo "<form method='post' action='list-date.php'>";
+        echo "<button type='submit' class='blue-button' data-toggle='modal'>Ok</button>";
+        echo "</form>";
+    echo "</div>";
     $conn->close();
-    header("Location: /statistik_perpustakaan/list-date.php");
     exit();
 } else {
-    echo $sql;
-    // echo "Error deleting record(s) from table: $tabel - " . $conn->error;
+    echo "Error deleting record(s) from table: $tabel - " . $conn->error;
 }
-
-
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style4.css">
+    <title>Delete</title>
+</head>
+
+<body>
+    <div class="new-container">
+        <p>
+            Hello World!
+        </p>
+    </div>
+</body>
+
+</html>

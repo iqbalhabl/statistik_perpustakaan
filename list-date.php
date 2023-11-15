@@ -76,9 +76,9 @@
     <div class="pill-container">
         <form action="list.php" method="get">
             <label for="tanggal">Pilih tanggal :</label>
-            <input type="date" name="tgl_mulai">
+            <input type="date" name="tgl_mulai" required>
             <label> - </label>
-            <input type="date" name="tgl_akhir">
+            <input type="date" name="tgl_akhir" required>
             <button type="submit" name="filter_tgl" class="btn btn-filter">Filter</button>
         </form>
     </div>

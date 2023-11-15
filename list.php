@@ -1416,9 +1416,9 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                                 echo "<td>";
                                     echo "<form method='post' action='delete.php'>";
                                     echo "<input type='hidden' name='id' value='" . $id . "'>";
-                                echo "<input type='hidden' name='ruang' value='" . $rooms[0] . "'>";
-                                echo "<button type='submit' class='btn btn-delete' data-toggle='modal'>Delete</button>";
-                                echo "</form>";
+                                    echo "<input type='hidden' name='ruang' value='" . $rooms[0] . "'>";
+                                    echo "<button type='submit' class='btn btn-delete' data-toggle='modal'>Delete</button>";
+                                    echo "</form>";
                                 echo "</td>";
 
                                 echo "</tr>";
