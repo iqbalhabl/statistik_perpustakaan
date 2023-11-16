@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $umumP = $_POST["umumP"];
 
     // Query untuk memasukkan data ke database
-    $sql = "INSERT INTO ruang_tiktok (tanggal, pelajarL, pelajarP, mhsL, mhsP, umumL, umumP) VALUES ('$tanggal', '$pelajarL', '$pelajarP', '$mhsL', '$mhsP', '$umumL', '$umumP' )";
+    $sql = "INSERT INTO layanan_tiktok (tanggal, pelajarL, pelajarP, mhsL, mhsP, umumL, umumP) VALUES ('$tanggal', '$pelajarL', '$pelajarP', '$mhsL', '$mhsP', '$umumL', '$umumP' )";
 
     if ($conn->query($sql) === TRUE) {
         $successMessage = "Data berhasil dimasukkan ke database.";
