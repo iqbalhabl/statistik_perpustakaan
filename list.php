@@ -68,7 +68,7 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                         </li>
                         <li class="nav-item">
                         <a class="nav-link" href="/statistik_perpustakaan/input.php">
-                            <h4>Input Data</h4>
+                            <h4>Masukkan Data</h4>
                         </a>
                         </li>
                         <li class="nav-item">
@@ -78,14 +78,14 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                         </li>
                         <li class="nav-item">
                         <a class="nav-link" href="/statistik_perpustakaan/logout.php">
-                            <h4>Logout</h4>
+                            <h4>Keluar</h4>
                         </a>
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-light" type="submit">Search</button>
-                    </form>
+            <input class="form-control me-2" type="search" placeholder="Cari" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">Cari</button>
+          </form>
                 </div>
             </div>
         </div>
@@ -1065,8 +1065,8 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                             <th scope="col" colspan="2">Umum</th>
                             <th scope="col" rowspan="2">Jumlah</th>
                             <th scope="col" rowspan="2">Keterangan</th>
-                            <th scope="col" rowspan="2">Edit</th>
-                            <th scope="col" rowspan="2">Delete</th>
+                            <th scope="col" rowspan="2">Ubah</th>
+                            <th scope="col" rowspan="2">Hapus</th>
                         </tr>
                         <tr>
                             <th>L</th>
@@ -1408,17 +1408,17 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                                                     <input type='hidden' name='mp' value='" . $throwMP . "'>
                                                     <input type='hidden' name='ul' value='" . $throwUL . "'>
                                                     <input type='hidden' name='up' value='" . $throwUP . "'>
-                                                <button type='submit' class='btn btn-edit' data-toggle='modal'>Edit</button>
+                                                <button type='submit' class='btn btn-edit' data-toggle='modal'>Ubah</button>
                                             </form>
                                         </td>";
 
                                 // Delete Button
                                 echo "<td>";
-                                    echo "<form method='post' action='delete.php'>";
-                                    echo "<input type='hidden' name='id' value='" . $id . "'>";
-                                    echo "<input type='hidden' name='ruang' value='" . $rooms[0] . "'>";
-                                    echo "<button type='submit' class='btn btn-delete' data-toggle='modal'>Delete</button>";
-                                    echo "</form>";
+                                echo "<form method='post' action='delete.php'>";
+                                echo "<input type='hidden' name='id' value='" . $id . "'>";
+                                echo "<input type='hidden' name='ruang' value='" . $rooms[0] . "'>";
+                                echo "<button type='submit' class='btn btn-delete' data-toggle='modal'>Hapus</button>";
+                                echo "</form>";
                                 echo "</td>";
 
                                 echo "</tr>";
@@ -1748,7 +1748,7 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                                                     <input type='hidden' name='mp' value='" . $throwMP . "'>
                                                     <input type='hidden' name='ul' value='" . $throwUL . "'>
                                                     <input type='hidden' name='up' value='" . $throwUP . "'>
-                                                <button type='submit' class='btn btn-edit' data-toggle='modal'>Edit</button>
+                                                <button type='submit' class='btn btn-edit' data-toggle='modal'>Ubah</button>
                                             </form>
                                         </td>";
 
@@ -1757,7 +1757,7 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                                 echo "<form method='post' action='delete.php'>";
                                 echo "<input type='hidden' name='tanggal' value='" . $throw . "'>";
                                 echo "<input type='hidden' name='ruang' value='" . $rooms[1] . "'>";
-                                echo "<button type='submit' class='btn btn-delete' data-toggle='modal'>Delete</button>";
+                                echo "<button type='submit' class='btn btn-delete' data-toggle='modal'>Hapus</button>";
                                 echo "</form>";
                                 echo "</td>";
 
@@ -2086,7 +2086,7 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                                                 <input type='hidden' name='mp' value='" . $throwMP . "'>
                                                 <input type='hidden' name='ul' value='" . $throwUL . "'>
                                                 <input type='hidden' name='up' value='" . $throwUP . "'>
-                                            <button type='submit' class='btn btn-edit' data-toggle='modal'>Edit</button>
+                                            <button type='submit' class='btn btn-edit' data-toggle='modal'>Ubah</button>
                                         </form>
                                         </td>";
 
@@ -2095,7 +2095,7 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                                 echo "<form method='post' action='delete.php'>";
                                 echo "<input type='hidden' name='id' value='" . $id . "'>";
                                 echo "<input type='hidden' name='ruang' value='" . $rooms[2] . "'>";
-                                echo "<button type='submit' class='btn btn-delete' data-toggle='modal'>Delete</button>";
+                                echo "<button type='submit' class='btn btn-delete' data-toggle='modal'>Hapus</button>";
                                 echo "</form>";
                                 echo "</td>";
                                 echo "</tr>";
@@ -2135,7 +2135,7 @@ if (!isset($_GET['tgl_mulai']) || !isset($_GET['tgl_akhir'])) {
                     </tbody>
                 </table>
                 <button class="btn btn-download" onclick="htmlTableToExcel('xlsx', null, false);
-">Download XLS</button>
+">Unduh sebagai XLSX</button>
             </div>
 
         </div>

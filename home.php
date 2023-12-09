@@ -48,7 +48,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/statistik_perpustakaan/input.php">
-                <h4>Input Data</h4>
+                <h4>Masukkan Data</h4>
               </a>
             </li>
             <li class="nav-item">
@@ -58,13 +58,13 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/statistik_perpustakaan/logout.php">
-                <h4>Logout</h4>
+                <h4>Keluar</h4>
               </a>
             </li>
           </ul>
           <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-light" type="submit">Search</button>
+            <input class="form-control me-2" type="search" placeholder="Cari" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">Cari</button>
           </form>
         </div>
       </div>
@@ -110,7 +110,7 @@
       <!-- carousel images end -->
       <div class="row text-center align-items-center">
         <div class="col">
-          <h1>Welcome to Balai Yanpus</h1>
+          <h1>Selamat Datang ke Balai Yanpus</h1>
         </div>
       </div>
 

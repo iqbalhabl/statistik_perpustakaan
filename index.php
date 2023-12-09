@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <label for="passwordInput" class="userpass">Password</label>
                             <input type="password" name="password" class="form-control" id="passwordInput">
                         </div>
-                        <button type="submit" value="Login" class="btn btn-primary">Login</button>
+                        <button type="submit" value="Login" class="btn btn-primary">Masuk</button>
                     </form>
                     <?php if (isset($error)) {
                         echo $error;

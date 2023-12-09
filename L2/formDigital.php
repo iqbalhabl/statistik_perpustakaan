@@ -97,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="/statistik_perpustakaan/input.php">
-                                <h4>Input Data</h4>
+                                <h4>Masukkan Data</h4>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -107,13 +107,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/statistik_perpustakaan/logout.php">
-                                <h4>Logout</h4>
+                                <h4>Kelluar</h4>
                             </a>
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-light" type="submit">Search</button>
+                        <input class="form-control me-2" type="search" placeholder="Cari" aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit">Cari</button>
                     </form>
                 </div>
             </div>
@@ -122,7 +122,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- nav section end -->
 
     <div class="form">
-        <h1>Input Data Ruang Digital</h1>
+        <h1>Masukkan Data Ruang Digital</h1>
         <?php if ($successMessage !== ""): ?>
             <p>
                 <?php echo $successMessage; ?>
@@ -165,7 +165,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
 
                 <div class="form-group">
-                    <button class="btn btn-form" type="submit" value="Submit">Submit form</button>
+                    <button class="btn btn-form" type="submit" value="Submit">Simpan Data</button>
                 </div>
             </form>
         <?php endif; ?>

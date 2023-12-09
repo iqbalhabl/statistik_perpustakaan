@@ -89,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </li>
                         <li class="nav-item">
                         <a class="nav-link active" href="/statistik_perpustakaan/input.php">
-                            <h4>Input Data</h4>
+                            <h4>Masukkan Data</h4>
                         </a>
                         </li>
                         <li class="nav-item">
@@ -104,8 +104,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-light" type="submit">Search</button>
+                        <input class="form-control me-2" type="Cari" placeholder="Cari" aria-label="Cari">
+                        <button class="btn btn-outline-light" type="submit">Cari</button>
                     </form>
                 </div>
             </div>
